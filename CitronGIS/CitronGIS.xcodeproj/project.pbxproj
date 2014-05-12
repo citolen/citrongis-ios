@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D5C93B1192154860038A54D /* libSVProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C93B0192154860038A54D /* libSVProgressHUD.a */; };
+		6D5C93B31921548E0038A54D /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C93B21921548E0038A54D /* libProj4.a */; };
+		6D5C93BD192155250038A54D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D5C93BA192155250038A54D /* SVProgressHUD.bundle */; };
+		6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93BC192155250038A54D /* SVProgressHUD.m */; };
 		6D923119191EBCF5009F5A5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D923118191EBCF5009F5A5A /* Foundation.framework */; };
 		6D92311B191EBCF5009F5A5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */; };
 		6D92311D191EBCF5009F5A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311C191EBCF5009F5A5A /* UIKit.framework */; };
@@ -22,6 +26,8 @@
 		6D92313D191EBCF6009F5A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311C191EBCF5009F5A5A /* UIKit.framework */; };
 		6D923145191EBCF6009F5A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D923143191EBCF6009F5A5A /* InfoPlist.strings */; };
 		6D923147191EBCF6009F5A5A /* CitronGISTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D923146191EBCF6009F5A5A /* CitronGISTests.m */; };
+		6D923158191FC237009F5A5A /* citron_citrongis120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D923157191FC236009F5A5A /* citron_citrongis120.png */; };
+		CC0DCAD5DB264F4383C70100 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F93A700A8C9B47A986A02BE0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D5C93B0192154860038A54D /* libSVProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSVProgressHUD.a; path = "../SVProgressHUD-master/build/Debug-iphoneos/libSVProgressHUD.a"; sourceTree = "<group>"; };
+		6D5C93B21921548E0038A54D /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "../Proj4-master/build/Debug-iphoneos/libProj4.a"; sourceTree = "<group>"; };
+		6D5C93BA192155250038A54D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		6D5C93BB192155250038A54D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		6D5C93BC192155250038A54D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		6D923115191EBCF5009F5A5A /* CitronGIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitronGIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D923118191EBCF5009F5A5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +66,9 @@
 		6D923142191EBCF6009F5A5A /* CitronGISTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CitronGISTests-Info.plist"; sourceTree = "<group>"; };
 		6D923144191EBCF6009F5A5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6D923146191EBCF6009F5A5A /* CitronGISTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitronGISTests.m; sourceTree = "<group>"; };
+		6D923157191FC236009F5A5A /* citron_citrongis120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = citron_citrongis120.png; sourceTree = "<group>"; };
+		EB87686F11BE42FC8F268422 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F93A700A8C9B47A986A02BE0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +76,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D5C93B31921548E0038A54D /* libProj4.a in Frameworks */,
+				6D5C93B1192154860038A54D /* libSVProgressHUD.a in Frameworks */,
 				6D92311B191EBCF5009F5A5A /* CoreGraphics.framework in Frameworks */,
 				6D92311D191EBCF5009F5A5A /* UIKit.framework in Frameworks */,
 				6D923119191EBCF5009F5A5A /* Foundation.framework in Frameworks */,
+				CC0DCAD5DB264F4383C70100 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +105,7 @@
 				6D923140191EBCF6009F5A5A /* CitronGISTests */,
 				6D923117191EBCF5009F5A5A /* Frameworks */,
 				6D923116191EBCF5009F5A5A /* Products */,
+				EB87686F11BE42FC8F268422 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +121,13 @@
 		6D923117191EBCF5009F5A5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D5C93B21921548E0038A54D /* libProj4.a */,
+				6D5C93B0192154860038A54D /* libSVProgressHUD.a */,
 				6D923118191EBCF5009F5A5A /* Foundation.framework */,
 				6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */,
 				6D92311C191EBCF5009F5A5A /* UIKit.framework */,
 				6D92313A191EBCF6009F5A5A /* XCTest.framework */,
+				F93A700A8C9B47A986A02BE0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +135,9 @@
 		6D92311E191EBCF5009F5A5A /* CitronGIS */ = {
 			isa = PBXGroup;
 			children = (
+				6DF2B608192152020053BCD0 /* Libs */,
+				6D923151191FBEC0009F5A5A /* Ressources */,
+				6D923150191FBE00009F5A5A /* Library */,
 				6D923127191EBCF5009F5A5A /* AppDelegate.h */,
 				6D923128191EBCF5009F5A5A /* AppDelegate.m */,
 				6D92312A191EBCF6009F5A5A /* Main_iPhone.storyboard */,
@@ -155,6 +179,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6D923150191FBE00009F5A5A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		6D923151191FBEC0009F5A5A /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				6D923152191FBEC4009F5A5A /* AppIcon */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		6D923152191FBEC4009F5A5A /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				6D923157191FC236009F5A5A /* citron_citrongis120.png */,
+			);
+			name = AppIcon;
+			sourceTree = "<group>";
+		};
+		6DF2B608192152020053BCD0 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93BA192155250038A54D /* SVProgressHUD.bundle */,
+				6D5C93BB192155250038A54D /* SVProgressHUD.h */,
+				6D5C93BC192155250038A54D /* SVProgressHUD.m */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D92314A191EBCF6009F5A5A /* Build configuration list for PBXNativeTarget "CitronGIS" */;
 			buildPhases = (
+				E6D734863F9149E1A7505F6A /* Check Pods Manifest.lock */,
 				6D923111191EBCF5009F5A5A /* Sources */,
 				6D923112191EBCF5009F5A5A /* Frameworks */,
 				6D923113191EBCF5009F5A5A /* Resources */,
+				51E156DE15014F76BA703A4C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,7 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D92312F191EBCF6009F5A5A /* Main_iPad.storyboard in Resources */,
+				6D5C93BD192155250038A54D /* SVProgressHUD.bundle in Resources */,
 				6D923134191EBCF6009F5A5A /* Images.xcassets in Resources */,
+				6D923158191FC237009F5A5A /* citron_citrongis120.png in Resources */,
 				6D92312C191EBCF6009F5A5A /* Main_iPhone.storyboard in Resources */,
 				6D923123191EBCF5009F5A5A /* InfoPlist.strings in Resources */,
 			);
@@ -248,12 +309,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51E156DE15014F76BA703A4C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6D734863F9149E1A7505F6A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6D923111191EBCF5009F5A5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6D923132191EBCF6009F5A5A /* ViewController.m in Sources */,
+				6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */,
 				6D923129191EBCF5009F5A5A /* AppDelegate.m in Sources */,
 				6D923125191EBCF5009F5A5A /* main.m in Sources */,
 			);
@@ -348,7 +443,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "989043F9-A1C3-4470-AB38-9A0E6948D069";
+				PROVISIONING_PROFILE = "1732DF5F-C64B-4800-8CCE-14F229C6607D";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,7 +477,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "3808FA94-8EF7-44E6-8537-31B3B849B22D";
+				PROVISIONING_PROFILE = "EB27A828-3BD7-40AB-AB6A-2AD20DD78E62";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -391,6 +486,7 @@
 		};
 		6D92314B191EBCF6009F5A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB87686F11BE42FC8F268422 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -398,21 +494,35 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitronGIS/CitronGIS-Prefix.pch";
 				INFOPLIST_FILE = "CitronGIS/CitronGIS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/charlydelaroche/Documents/citrongis-ios/SVProgressHUD-master/build/Debug-iphoneos",
+					"/Users/charlydelaroche/Documents/citrongis-ios/Proj4-master/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "989043F9-A1C3-4470-AB38-9A0E6948D069";
+				PROVISIONING_PROFILE = "1732DF5F-C64B-4800-8CCE-14F229C6607D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		6D92314C191EBCF6009F5A5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB87686F11BE42FC8F268422 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitronGIS/CitronGIS-Prefix.pch";
 				INFOPLIST_FILE = "CitronGIS/CitronGIS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/charlydelaroche/Documents/citrongis-ios/SVProgressHUD-master/build/Debug-iphoneos",
+					"/Users/charlydelaroche/Documents/citrongis-ios/Proj4-master/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "EB27A828-3BD7-40AB-AB6A-2AD20DD78E62";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

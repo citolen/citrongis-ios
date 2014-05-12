@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D5C93B1192154860038A54D /* libSVProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C93B0192154860038A54D /* libSVProgressHUD.a */; };
-		6D5C93B31921548E0038A54D /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C93B21921548E0038A54D /* libProj4.a */; };
 		6D5C93BD192155250038A54D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D5C93BA192155250038A54D /* SVProgressHUD.bundle */; };
 		6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93BC192155250038A54D /* SVProgressHUD.m */; };
+		6D5C93C0192156260038A54D /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C93BF192156260038A54D /* libProj4.a */; };
 		6D923119191EBCF5009F5A5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D923118191EBCF5009F5A5A /* Foundation.framework */; };
 		6D92311B191EBCF5009F5A5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */; };
 		6D92311D191EBCF5009F5A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311C191EBCF5009F5A5A /* UIKit.framework */; };
@@ -46,6 +45,7 @@
 		6D5C93BA192155250038A54D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		6D5C93BB192155250038A54D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		6D5C93BC192155250038A54D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		6D5C93BF192156260038A54D /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "../Proj4-master/build/Debug-iphoneos/libProj4.a"; sourceTree = "<group>"; };
 		6D923115191EBCF5009F5A5A /* CitronGIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitronGIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D923118191EBCF5009F5A5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,8 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D5C93B31921548E0038A54D /* libProj4.a in Frameworks */,
-				6D5C93B1192154860038A54D /* libSVProgressHUD.a in Frameworks */,
+				6D5C93C0192156260038A54D /* libProj4.a in Frameworks */,
 				6D92311B191EBCF5009F5A5A /* CoreGraphics.framework in Frameworks */,
 				6D92311D191EBCF5009F5A5A /* UIKit.framework in Frameworks */,
 				6D923119191EBCF5009F5A5A /* Foundation.framework in Frameworks */,
@@ -121,6 +120,7 @@
 		6D923117191EBCF5009F5A5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D5C93BF192156260038A54D /* libProj4.a */,
 				6D5C93B21921548E0038A54D /* libProj4.a */,
 				6D5C93B0192154860038A54D /* libSVProgressHUD.a */,
 				6D923118191EBCF5009F5A5A /* Foundation.framework */,

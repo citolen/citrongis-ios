@@ -15,7 +15,7 @@
 @property (nonatomic)double y;
 @property (nonatomic)double z;
 
-@property (nonatomic)projPJ *projection;
+@property (nonatomic)projPJ *proj;
 
 
 + (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjection:(NSString *)projection;

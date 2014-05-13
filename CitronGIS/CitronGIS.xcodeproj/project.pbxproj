@@ -13,6 +13,9 @@
 		6D5C93C4192157340038A54D /* GeometryPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93C3192157340038A54D /* GeometryPoint.m */; };
 		6D5C93D519226E350038A54D /* CoordinatesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93D419226E350038A54D /* CoordinatesHelper.m */; };
 		6D5C93D9192271AB0038A54D /* Projection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93D8192271AB0038A54D /* Projection.m */; };
+		6D5C93DD192275040038A54D /* BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93DC192275040038A54D /* BoundingBox.m */; };
+		6D5C93E1192277870038A54D /* GeometryViewPort.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93E0192277870038A54D /* GeometryViewPort.m */; };
+		6D5C93E5192277AC0038A54D /* ProjectionsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93E4192277AC0038A54D /* ProjectionsHelper.m */; };
 		6D923119191EBCF5009F5A5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D923118191EBCF5009F5A5A /* Foundation.framework */; };
 		6D92311B191EBCF5009F5A5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */; };
 		6D92311D191EBCF5009F5A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311C191EBCF5009F5A5A /* UIKit.framework */; };
@@ -55,6 +58,12 @@
 		6D5C93D419226E350038A54D /* CoordinatesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinatesHelper.m; sourceTree = "<group>"; };
 		6D5C93D7192271AB0038A54D /* Projection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Projection.h; sourceTree = "<group>"; };
 		6D5C93D8192271AB0038A54D /* Projection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Projection.m; sourceTree = "<group>"; };
+		6D5C93DB192275040038A54D /* BoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundingBox.h; sourceTree = "<group>"; };
+		6D5C93DC192275040038A54D /* BoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundingBox.m; sourceTree = "<group>"; };
+		6D5C93DF192277870038A54D /* GeometryViewPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryViewPort.h; sourceTree = "<group>"; };
+		6D5C93E0192277870038A54D /* GeometryViewPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeometryViewPort.m; sourceTree = "<group>"; };
+		6D5C93E3192277AC0038A54D /* ProjectionsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectionsHelper.h; sourceTree = "<group>"; };
+		6D5C93E4192277AC0038A54D /* ProjectionsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectionsHelper.m; sourceTree = "<group>"; };
 		6D923115191EBCF5009F5A5A /* CitronGIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitronGIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D923118191EBCF5009F5A5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +127,8 @@
 		6D5C93CF19226DEE0038A54D /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				6D5C93DE1922776C0038A54D /* ViewPort */,
+				6D5C93DA192274630038A54D /* BoudingBox */,
 				6D5C93C11921568D0038A54D /* Point */,
 			);
 			name = Geometry;
@@ -126,6 +137,7 @@
 		6D5C93D119226E090038A54D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6D5C93E2192277930038A54D /* ProjectionsHelper */,
 				6D5C93D219226E0E0038A54D /* CoordinatesHelper */,
 			);
 			name = Helpers;
@@ -147,6 +159,33 @@
 				6D5C93D8192271AB0038A54D /* Projection.m */,
 			);
 			name = Projection;
+			sourceTree = "<group>";
+		};
+		6D5C93DA192274630038A54D /* BoudingBox */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93DB192275040038A54D /* BoundingBox.h */,
+				6D5C93DC192275040038A54D /* BoundingBox.m */,
+			);
+			name = BoudingBox;
+			sourceTree = "<group>";
+		};
+		6D5C93DE1922776C0038A54D /* ViewPort */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93DF192277870038A54D /* GeometryViewPort.h */,
+				6D5C93E0192277870038A54D /* GeometryViewPort.m */,
+			);
+			name = ViewPort;
+			sourceTree = "<group>";
+		};
+		6D5C93E2192277930038A54D /* ProjectionsHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93E3192277AC0038A54D /* ProjectionsHelper.h */,
+				6D5C93E4192277AC0038A54D /* ProjectionsHelper.m */,
+			);
+			name = ProjectionsHelper;
 			sourceTree = "<group>";
 		};
 		6D92310C191EBCF5009F5A5A = {
@@ -402,6 +441,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D5C93E5192277AC0038A54D /* ProjectionsHelper.m in Sources */,
+				6D5C93DD192275040038A54D /* BoundingBox.m in Sources */,
 				6D923132191EBCF6009F5A5A /* ViewController.m in Sources */,
 				6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */,
 				6D923129191EBCF5009F5A5A /* AppDelegate.m in Sources */,
@@ -409,6 +450,7 @@
 				6D5C93C4192157340038A54D /* GeometryPoint.m in Sources */,
 				6D5C93D9192271AB0038A54D /* Projection.m in Sources */,
 				6D923125191EBCF5009F5A5A /* main.m in Sources */,
+				6D5C93E1192277870038A54D /* GeometryViewPort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

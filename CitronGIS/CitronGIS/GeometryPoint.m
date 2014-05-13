@@ -23,6 +23,17 @@
         @throw ([NSException exceptionWithName:@"crs_error" reason:@"Invalid projection" userInfo:nil]);
     }
     
+    return re;
+}
+
++ (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjectionPtr:(projPJ *)projection;
+{
+    GeometryPoint *re = [[GeometryPoint alloc] init];
+    re.x = x;
+    re.y = y;
+    re.z = z;
+    re.proj = projection;
+    
     
     return re;
 }

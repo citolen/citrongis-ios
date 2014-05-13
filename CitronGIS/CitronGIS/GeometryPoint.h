@@ -19,6 +19,6 @@
 
 
 + (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjection:(NSString *)projection;
-
++ (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjectionPtr:(projPJ *)projection;
 
 @end

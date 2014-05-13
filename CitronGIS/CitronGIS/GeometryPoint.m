@@ -10,6 +10,8 @@
 #import "proj_api.h"
 
 @implementation GeometryPoint
+{
+}
 
 + (GeometryPoint*)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjection:(NSString *)projection
 {
@@ -18,15 +20,12 @@
     re.y = y;
     re.z = z;
     
-    if ((re.proj = pj_init_plus(projection.UTF8String)) == NULL)
-    {
-        @throw ([NSException exceptionWithName:@"crs_error" reason:@"Invalid projection" userInfo:nil]);
-    }
+    re.proj = [Projection projectionWithName:projection];
     
     return re;
 }
 
-+ (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjectionPtr:(projPJ *)projection;
++ (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjectionPtr:(Projection *)projection;
 {
     GeometryPoint *re = [[GeometryPoint alloc] init];
     re.x = x;
@@ -34,13 +33,12 @@
     re.z = z;
     re.proj = projection;
     
-    
     return re;
 }
 
 -(NSString*)description
 {
-    return [NSString stringWithFormat:@"%f-%f-%f-%s", _x, _y, _z, pj_get_def(_proj, 0)];
+    return [NSString stringWithFormat:@"%f-%f-%f-%@", _x, _y, _z, _proj];
 }
 
 #pragma mark - NSCoding Protocol
@@ -50,7 +48,7 @@
     [aCoder encodeDouble:_x forKey:@"x"];
     [aCoder encodeDouble:_y forKey:@"y"];
     [aCoder encodeDouble:_z forKey:@"z"];
-    [aCoder encodeObject:[NSString stringWithUTF8String:pj_get_def(_proj, 0)] forKey:@"proj"];
+    [aCoder encodeObject:_proj.description forKey:@"proj"];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -61,10 +59,7 @@
     
     NSString *projection = [aDecoder decodeObjectForKey:@"proj"];
     
-    if ((_proj = pj_init_plus(projection.UTF8String)) == NULL)
-    {
-        @throw ([NSException exceptionWithName:@"crs_error" reason:@"Invalid projection" userInfo:nil]);
-    }
+    _proj = [Projection projectionWithName:projection];
     
     return self;
 }

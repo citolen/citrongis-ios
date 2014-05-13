@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#include "proj_api.h"
+#import "Projection.h"
 
 @interface GeometryPoint : NSObject <NSCoding>
 
@@ -15,10 +15,10 @@
 @property (nonatomic)double y;
 @property (nonatomic)double z;
 
-@property (nonatomic)projPJ *proj;
+@property (nonatomic)Projection *proj;
 
 
 + (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjection:(NSString *)projection;
-+ (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjectionPtr:(projPJ *)projection;
++ (GeometryPoint *)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjectionPtr:(Projection *)projection;
 
 @end

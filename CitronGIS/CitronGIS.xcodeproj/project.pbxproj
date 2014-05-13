@@ -11,6 +11,8 @@
 		6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93BC192155250038A54D /* SVProgressHUD.m */; };
 		6D5C93C0192156260038A54D /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C93BF192156260038A54D /* libProj4.a */; };
 		6D5C93C4192157340038A54D /* GeometryPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93C3192157340038A54D /* GeometryPoint.m */; };
+		6D5C93D519226E350038A54D /* CoordinatesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93D419226E350038A54D /* CoordinatesHelper.m */; };
+		6D5C93D9192271AB0038A54D /* Projection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93D8192271AB0038A54D /* Projection.m */; };
 		6D923119191EBCF5009F5A5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D923118191EBCF5009F5A5A /* Foundation.framework */; };
 		6D92311B191EBCF5009F5A5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */; };
 		6D92311D191EBCF5009F5A5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D92311C191EBCF5009F5A5A /* UIKit.framework */; };
@@ -49,6 +51,10 @@
 		6D5C93BF192156260038A54D /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "../Proj4-master/build/Debug-iphoneos/libProj4.a"; sourceTree = "<group>"; };
 		6D5C93C2192157340038A54D /* GeometryPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryPoint.h; sourceTree = "<group>"; };
 		6D5C93C3192157340038A54D /* GeometryPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeometryPoint.m; sourceTree = "<group>"; };
+		6D5C93D319226E350038A54D /* CoordinatesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinatesHelper.h; sourceTree = "<group>"; };
+		6D5C93D419226E350038A54D /* CoordinatesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinatesHelper.m; sourceTree = "<group>"; };
+		6D5C93D7192271AB0038A54D /* Projection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Projection.h; sourceTree = "<group>"; };
+		6D5C93D8192271AB0038A54D /* Projection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Projection.m; sourceTree = "<group>"; };
 		6D923115191EBCF5009F5A5A /* CitronGIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitronGIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D923118191EBCF5009F5A5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6D92311A191EBCF5009F5A5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,6 +115,40 @@
 			name = Point;
 			sourceTree = "<group>";
 		};
+		6D5C93CF19226DEE0038A54D /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93C11921568D0038A54D /* Point */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
+		6D5C93D119226E090038A54D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93D219226E0E0038A54D /* CoordinatesHelper */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		6D5C93D219226E0E0038A54D /* CoordinatesHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93D319226E350038A54D /* CoordinatesHelper.h */,
+				6D5C93D419226E350038A54D /* CoordinatesHelper.m */,
+			);
+			name = CoordinatesHelper;
+			sourceTree = "<group>";
+		};
+		6D5C93D6192271920038A54D /* Projection */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93D7192271AB0038A54D /* Projection.h */,
+				6D5C93D8192271AB0038A54D /* Projection.m */,
+			);
+			name = Projection;
+			sourceTree = "<group>";
+		};
 		6D92310C191EBCF5009F5A5A = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +187,9 @@
 		6D92311E191EBCF5009F5A5A /* CitronGIS */ = {
 			isa = PBXGroup;
 			children = (
-				6D5C93C11921568D0038A54D /* Point */,
+				6D5C93D6192271920038A54D /* Projection */,
+				6D5C93D119226E090038A54D /* Helpers */,
+				6D5C93CF19226DEE0038A54D /* Geometry */,
 				6DF2B608192152020053BCD0 /* Libs */,
 				6D923151191FBEC0009F5A5A /* Ressources */,
 				6D923150191FBE00009F5A5A /* Library */,
@@ -363,7 +405,9 @@
 				6D923132191EBCF6009F5A5A /* ViewController.m in Sources */,
 				6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */,
 				6D923129191EBCF5009F5A5A /* AppDelegate.m in Sources */,
+				6D5C93D519226E350038A54D /* CoordinatesHelper.m in Sources */,
 				6D5C93C4192157340038A54D /* GeometryPoint.m in Sources */,
+				6D5C93D9192271AB0038A54D /* Projection.m in Sources */,
 				6D923125191EBCF5009F5A5A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,4 +10,19 @@
 
 @implementation GeometryPoint
 
++ (GeometryPoint)GeometryPointWithX:(double)x andY:(double)y andZ:(double)z andProjection:(NSString *)projection
+{
+    GeometryPoint *re = [[GeometryPoint alloc] init];
+    re.x = x;
+    re.y = y;
+    re.z = z;
+    return re;
+}
+
+-(NSString*)description
+{
+    return ([NSString stringWithFormat:@”%f-%f-%f-%@”, _x, _y, _z, _projection->name]);
+}
+
+
 @end

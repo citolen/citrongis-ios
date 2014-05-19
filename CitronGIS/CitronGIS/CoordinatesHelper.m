@@ -10,20 +10,19 @@
 
 @implementation CoordinatesHelper
 
-+(void)transformTo:(GeometryPoint*)point toProjPtr:(Projection*)proj
++(GeometryPoint*)transformTo:(GeometryPoint*)point toProjPtr:(Projection*)proj
 {
     double x = point.x;
     double y = point.y;
     double z = point.z;
     pj_transform(point.proj.proj, proj.proj, 1, 0, &x, &y, &z);
     
-    point.x = x;
-    point.y = y;
-    point.z = z;
-    point.proj = proj;
+    GeometryPoint *re = [GeometryPoint GeometryPointWithX:x andY:y andZ:z andProjectionPtr:proj];
+    
+    return (re);
 }
 
-+(void)transformTo:(GeometryPoint*)point toProj:(NSString*)proj
++(GeometryPoint*)transformTo:(GeometryPoint*)point toProj:(NSString*)proj
 {
     Projection *newproj = [Projection projectionWithName:proj];
     
@@ -36,6 +35,9 @@
     point.y = y;
     point.z = z;
     point.proj = newproj;
+    
+    GeometryPoint *re = [GeometryPoint GeometryPointWithX:x andY:y andZ:z andProjectionPtr:newproj];
+    return re;
 }
 
 @end

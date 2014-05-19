@@ -36,6 +36,20 @@
     return re;
 }
 
+-(void)transformToProjPtr:(Projection*)proj
+{
+    pj_transform(_proj.proj, proj.proj, 1, 0, &_x, &_y, &_z);
+    _proj = proj;
+}
+
+-(void)transformToProj:(NSString*)proj
+{
+    Projection *newproj = [Projection projectionWithName:proj];
+    
+    pj_transform(_proj.proj, newproj.proj, 1, 0, &_x, &_y, &_z);
+    _proj = newproj;
+}
+
 -(NSString*)description
 {
     return [NSString stringWithFormat:@"%f-%f-%f-%@", _x, _y, _z, _proj];

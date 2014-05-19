@@ -37,6 +37,7 @@
 
 -(void)dealloc
 {
-        pj_dalloc(_proj);
+    pj_dalloc(_proj);
 }
+
 @end

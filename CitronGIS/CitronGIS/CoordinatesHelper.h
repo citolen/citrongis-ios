@@ -13,7 +13,7 @@
 
 @interface CoordinatesHelper : NSObject
 
-+(void)transformTo:(GeometryPoint*)point toProjPtr:(Projection*)proj;
-+(void)transformTo:(GeometryPoint*)point toProj:(NSString*)proj;
++(GeometryPoint*)transformTo:(GeometryPoint*)point toProjPtr:(Projection*)proj;
++(GeometryPoint*)transformTo:(GeometryPoint*)point toProj:(NSString*)proj;
 
 @end

@@ -22,7 +22,5 @@
 
 -(BOOL)intersectBoundingBox:(BoundingBox*)other;
 
-//-(void)compare
-
 
 @end

@@ -39,7 +39,7 @@
 {
     double result;
     
-    result = exp2((other.x - _x)) + exp2((other.y - _y));
+    result = pow(other.x - _x, 2) + pow((other.y - _y), 2);
     result = sqrt(result);
     return result;
 }
@@ -48,7 +48,7 @@
 {
     double result;
     
-    result = exp2((va.x - vb.x)) + exp2((va.y - vb.y));
+    result = pow(va.x - vb.x, 2) + pow((va.y - vb.y), 2);
     result = sqrt(result);
     return result;
 }

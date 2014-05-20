@@ -39,6 +39,8 @@
 		6D923145191EBCF6009F5A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D923143191EBCF6009F5A5A /* InfoPlist.strings */; };
 		6D923147191EBCF6009F5A5A /* CitronGISTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D923146191EBCF6009F5A5A /* CitronGISTests.m */; };
 		6D923158191FC237009F5A5A /* citron_citrongis120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D923157191FC236009F5A5A /* citron_citrongis120.png */; };
+		B9A51AF5192B32FA00C9549B /* Vector3.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A51AF4192B32FA00C9549B /* Vector3.m */; };
+		B9A91AE4192B2B0A00B2D1B8 /* Vector2.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A91AE3192B2B0A00B2D1B8 /* Vector2.m */; };
 		CC0DCAD5DB264F4383C70100 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F93A700A8C9B47A986A02BE0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,10 @@
 		6D923144191EBCF6009F5A5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6D923146191EBCF6009F5A5A /* CitronGISTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitronGISTests.m; sourceTree = "<group>"; };
 		6D923157191FC236009F5A5A /* citron_citrongis120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = citron_citrongis120.png; sourceTree = "<group>"; };
+		B9A51AF3192B32FA00C9549B /* Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
+		B9A51AF4192B32FA00C9549B /* Vector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector3.m; sourceTree = "<group>"; };
+		B9A91AE2192B2B0A00B2D1B8 /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
+		B9A91AE3192B2B0A00B2D1B8 /* Vector2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector2.m; sourceTree = "<group>"; };
 		EB87686F11BE42FC8F268422 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F93A700A8C9B47A986A02BE0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +175,7 @@
 		6D5C93CF19226DEE0038A54D /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				B9A91AE1192B2AC700B2D1B8 /* Vector */,
 				6D5C93DE1922776C0038A54D /* ViewPort */,
 				6D5C93DA192274630038A54D /* BoudingBox */,
 				6D5C93C11921568D0038A54D /* Point */,
@@ -349,6 +356,17 @@
 			name = Libs;
 			sourceTree = "<group>";
 		};
+		B9A91AE1192B2AC700B2D1B8 /* Vector */ = {
+			isa = PBXGroup;
+			children = (
+				B9A51AF3192B32FA00C9549B /* Vector3.h */,
+				B9A51AF4192B32FA00C9549B /* Vector3.m */,
+				B9A91AE2192B2B0A00B2D1B8 /* Vector2.h */,
+				B9A91AE3192B2B0A00B2D1B8 /* Vector2.m */,
+			);
+			name = Vector;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,6 +510,7 @@
 			files = (
 				6D5C93E5192277AC0038A54D /* ProjectionsHelper.m in Sources */,
 				6D5C93DD192275040038A54D /* BoundingBox.m in Sources */,
+				B9A51AF5192B32FA00C9549B /* Vector3.m in Sources */,
 				6D923132191EBCF6009F5A5A /* ViewController.m in Sources */,
 				6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */,
 				6D923129191EBCF5009F5A5A /* AppDelegate.m in Sources */,
@@ -501,6 +520,7 @@
 				6D0838ED192B2A7C004F2426 /* StyledPullableView.m in Sources */,
 				6D5C93D9192271AB0038A54D /* Projection.m in Sources */,
 				6D923125191EBCF5009F5A5A /* main.m in Sources */,
+				B9A91AE4192B2B0A00B2D1B8 /* Vector2.m in Sources */,
 				6D5C93E1192277870038A54D /* GeometryViewPort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

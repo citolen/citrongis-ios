@@ -39,8 +39,8 @@
 {
     double result;
     
-    result = (other.x - _x)^2 + (other.y - _y)^2;
-    result - sqrt(result);
+    result = exp2((other.x - _x)) + exp2((other.y - _y));
+    result = sqrt(result);
     return result;
 }
 
@@ -48,8 +48,8 @@
 {
     double result;
     
-    result = (va.x - vb.x)^2 + (va.y - vb.y)^2;
-    result - sqrt(result);
+    result = exp2((va.x - vb.x)) + exp2((va.y - vb.y));
+    result = sqrt(result);
     return result;
 }
 
@@ -57,7 +57,7 @@
 {
     double result;
     
-    result = (va.x * _x) + (va.y * _y);
+    result = (other.x * _x) + (other.y * _y);
     return result;
 }
 

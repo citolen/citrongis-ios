@@ -29,7 +29,7 @@
 
 - (BOOL)EqualsBetween:(GeometryVector3*)va and:(GeometryVector3*)vb
 {
-    if (va.x == vb.x && va.y == vb.y && va.z = vb.z)
+    if (va.x == vb.x && va.y == vb.y && va.z == vb.z)
         return TRUE;
     else
         return FALSE;
@@ -40,8 +40,8 @@
 {
     double result;
     
-    result = (other.x - _x)^2 + (other.y - _y)^2 + (other.z - _z)^2;
-    result - sqrt(result);
+    result = exp2((other.x - _x)) + exp2((other.y - _y)) + exp2((other.z - _z));
+    result = sqrt(result);
     return result;
 }
 
@@ -49,8 +49,8 @@
 {
     double result;
     
-    result = (va.x - vb.x)^2 + (va.y - vb.y)^2 + (va.z - vb.z)^2;
-    result - sqrt(result);
+    result = exp2((va.x - vb.x)) + exp2((va.y - vb.y)) + exp2((va.z - vb.z));
+    result = sqrt(result);
     return result;
 }
 
@@ -58,7 +58,7 @@
 {
     double result;
     
-    result = (va.x * _x) + (va.y * _y) + (va.z * _z);
+    result = (other.x * _x) + (other.y * _y) + (other.z * _z);
     return result;
 }
 

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PullableView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <PullableViewDelegate>
+
+
 
 @end

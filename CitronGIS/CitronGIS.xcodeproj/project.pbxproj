@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D0838EA192B2A3E004F2426 /* PullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0838E9192B2A3E004F2426 /* PullableView.m */; };
+		6D0838ED192B2A7C004F2426 /* StyledPullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0838EC192B2A7C004F2426 /* StyledPullableView.m */; };
+		6D0838F3192B2AEC004F2426 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0838F2192B2AEC004F2426 /* CoreLocation.framework */; };
+		6D0838F5192B2C7D004F2426 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0838F4192B2C7D004F2426 /* MapKit.framework */; };
+		6D0838F8192B3854004F2426 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0838F6192B3854004F2426 /* background.png */; };
+		6D0838F9192B3854004F2426 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0838F7192B3854004F2426 /* background@2x.png */; };
+		6D0838FB192B3ECA004F2426 /* background-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0838FA192B3ECA004F2426 /* background-568@2x.png */; };
 		6D5C93BD192155250038A54D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D5C93BA192155250038A54D /* SVProgressHUD.bundle */; };
 		6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93BC192155250038A54D /* SVProgressHUD.m */; };
 		6D5C93C0192156260038A54D /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C93BF192156260038A54D /* libProj4.a */; };
@@ -48,6 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D0838E8192B2A3E004F2426 /* PullableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullableView.h; sourceTree = "<group>"; };
+		6D0838E9192B2A3E004F2426 /* PullableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullableView.m; sourceTree = "<group>"; };
+		6D0838EB192B2A7C004F2426 /* StyledPullableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledPullableView.h; sourceTree = "<group>"; };
+		6D0838EC192B2A7C004F2426 /* StyledPullableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledPullableView.m; sourceTree = "<group>"; };
+		6D0838F2192B2AEC004F2426 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6D0838F4192B2C7D004F2426 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6D0838F6192B3854004F2426 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6D0838F7192B3854004F2426 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		6D0838FA192B3ECA004F2426 /* background-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-568@2x.png"; sourceTree = "<group>"; };
 		6D5C93B0192154860038A54D /* libSVProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSVProgressHUD.a; path = "../SVProgressHUD-master/build/Debug-iphoneos/libSVProgressHUD.a"; sourceTree = "<group>"; };
 		6D5C93B21921548E0038A54D /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "../Proj4-master/build/Debug-iphoneos/libProj4.a"; sourceTree = "<group>"; };
 		6D5C93BA192155250038A54D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -100,6 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0838F5192B2C7D004F2426 /* MapKit.framework in Frameworks */,
+				6D0838F3192B2AEC004F2426 /* CoreLocation.framework in Frameworks */,
 				6D5C93C0192156260038A54D /* libProj4.a in Frameworks */,
 				6D92311B191EBCF5009F5A5A /* CoreGraphics.framework in Frameworks */,
 				6D92311D191EBCF5009F5A5A /* UIKit.framework in Frameworks */,
@@ -121,6 +139,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D0838E6192B29F0004F2426 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93BA192155250038A54D /* SVProgressHUD.bundle */,
+				6D5C93BB192155250038A54D /* SVProgressHUD.h */,
+				6D5C93BC192155250038A54D /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		6D0838E7192B29FD004F2426 /* PullableView */ = {
+			isa = PBXGroup;
+			children = (
+				6D0838F6192B3854004F2426 /* background.png */,
+				6D0838F7192B3854004F2426 /* background@2x.png */,
+				6D0838FA192B3ECA004F2426 /* background-568@2x.png */,
+				6D0838EB192B2A7C004F2426 /* StyledPullableView.h */,
+				6D0838EC192B2A7C004F2426 /* StyledPullableView.m */,
+				6D0838E8192B2A3E004F2426 /* PullableView.h */,
+				6D0838E9192B2A3E004F2426 /* PullableView.m */,
+			);
+			name = PullableView;
+			sourceTree = "<group>";
+		};
 		6D5C93C11921568D0038A54D /* Point */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +260,8 @@
 		6D923117191EBCF5009F5A5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D0838F4192B2C7D004F2426 /* MapKit.framework */,
+				6D0838F2192B2AEC004F2426 /* CoreLocation.framework */,
 				6D5C93BF192156260038A54D /* libProj4.a */,
 				6D5C93B21921548E0038A54D /* libProj4.a */,
 				6D5C93B0192154860038A54D /* libSVProgressHUD.a */,
@@ -306,9 +350,8 @@
 		6DF2B608192152020053BCD0 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				6D5C93BA192155250038A54D /* SVProgressHUD.bundle */,
-				6D5C93BB192155250038A54D /* SVProgressHUD.h */,
-				6D5C93BC192155250038A54D /* SVProgressHUD.m */,
+				6D0838E7192B29FD004F2426 /* PullableView */,
+				6D0838E6192B29F0004F2426 /* SVProgressHUD */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -373,6 +416,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Charly DELAROCHE";
 				TargetAttributes = {
+					6D923114191EBCF5009F5A5A = {
+						DevelopmentTeam = 45DB4NSQF5;
+					};
 					6D923138191EBCF6009F5A5A = {
 						TestTargetID = 6D923114191EBCF5009F5A5A;
 					};
@@ -404,9 +450,12 @@
 			files = (
 				6D92312F191EBCF6009F5A5A /* Main_iPad.storyboard in Resources */,
 				6D5C93BD192155250038A54D /* SVProgressHUD.bundle in Resources */,
+				6D0838F8192B3854004F2426 /* background.png in Resources */,
+				6D0838FB192B3ECA004F2426 /* background-568@2x.png in Resources */,
 				6D923134191EBCF6009F5A5A /* Images.xcassets in Resources */,
 				6D923158191FC237009F5A5A /* citron_citrongis120.png in Resources */,
 				6D92312C191EBCF6009F5A5A /* Main_iPhone.storyboard in Resources */,
+				6D0838F9192B3854004F2426 /* background@2x.png in Resources */,
 				6D923123191EBCF5009F5A5A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +515,9 @@
 				6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */,
 				6D923129191EBCF5009F5A5A /* AppDelegate.m in Sources */,
 				6D5C93D519226E350038A54D /* CoordinatesHelper.m in Sources */,
+				6D0838EA192B2A3E004F2426 /* PullableView.m in Sources */,
 				6D5C93C4192157340038A54D /* GeometryPoint.m in Sources */,
+				6D0838ED192B2A7C004F2426 /* StyledPullableView.m in Sources */,
 				6D5C93D9192271AB0038A54D /* Projection.m in Sources */,
 				6D923125191EBCF5009F5A5A /* main.m in Sources */,
 				B9A91AE4192B2B0A00B2D1B8 /* Vector2.m in Sources */,
@@ -611,6 +662,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Charly Delaroche (75273S5FXF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charly Delaroche (75273S5FXF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitronGIS/CitronGIS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -626,7 +678,7 @@
 					"/Users/charlydelaroche/Documents/citrongis-ios/Proj4-master/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1732DF5F-C64B-4800-8CCE-14F229C6607D";
+				PROVISIONING_PROFILE = "89765905-1220-4823-BA9A-BA4EBB53822B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -637,6 +689,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Charly Delaroche (45DB4NSQF5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Charly Delaroche (45DB4NSQF5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitronGIS/CitronGIS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

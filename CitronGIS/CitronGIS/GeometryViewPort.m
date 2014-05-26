@@ -8,6 +8,18 @@
 
 #import "GeometryViewPort.h"
 
-@implementation GeometryViewPort
+@implementation SystemViewPort
+
++(SystemViewPort*)systemViewPortWithWidth: (int)width andHeight:(int)height andResolution:(double)resolution andBoundingBox:(BoundingBox*)bd
+{
+    SystemViewPort *svp;
+    
+    svp = [[SystemViewPort alloc] init];
+    svp.width = width;
+    svp.height = height;
+    svp.resolution = resolution;
+    svp.boundingBox = bd;
+    return svp;
+}
 
 @end

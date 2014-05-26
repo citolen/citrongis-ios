@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BoundingBox.h"
 
-@interface GeometryViewPort : NSObject
+@interface SystemViewPort : NSObject
 
++(SystemViewPort*)systemViewPortWithWidth: (int)width andHeight:(int)height andResolution:(double)resolution andBoundingBox:(BoundingBox*)bd;
+
+@property (nonatomic)   int width;
+@property (nonatomic)   int height;
+@property (nonatomic)   double resolution;
+@property (nonatomic)   BoundingBox *boundingBox;
 
 
 @end

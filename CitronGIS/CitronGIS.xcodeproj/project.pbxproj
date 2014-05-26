@@ -177,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				B9A91AE1192B2AC700B2D1B8 /* Vector */,
-				6D5C93DE1922776C0038A54D /* ViewPort */,
 				6D5C93DA192274630038A54D /* BoudingBox */,
 				6D5C93C11921568D0038A54D /* Point */,
 			);
@@ -278,6 +277,7 @@
 		6D92311E191EBCF5009F5A5A /* CitronGIS */ = {
 			isa = PBXGroup;
 			children = (
+				B9C7914E193396A100D37BC3 /* System */,
 				6D5C93D6192271920038A54D /* Projection */,
 				6D5C93D119226E090038A54D /* Helpers */,
 				6D5C93CF19226DEE0038A54D /* Geometry */,
@@ -367,6 +367,14 @@
 				B9A91AE3192B2B0A00B2D1B8 /* Vector2.m */,
 			);
 			name = Vector;
+			sourceTree = "<group>";
+		};
+		B9C7914E193396A100D37BC3 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93DE1922776C0038A54D /* ViewPort */,
+			);
+			name = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

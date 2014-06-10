@@ -7,6 +7,7 @@
 //
 
 #import "Vector2.h"
+#import "MathsMacros.h"
 
 @implementation GeometryVector2
 
@@ -39,7 +40,7 @@
 {
     double result;
     
-    result = exp2((other.x - _x)) + exp2((other.y - _y));
+    result = POWER2(other.x - _x) + POWER2((other.y - _y));
     result = sqrt(result);
     return result;
 }
@@ -48,7 +49,7 @@
 {
     double result;
     
-    result = exp2((va.x - vb.x)) + exp2((va.y - vb.y));
+    result = POWER2(va.x - vb.x) + POWER2(va.y - vb.y);
     result = sqrt(result);
     return result;
 }

@@ -132,6 +132,7 @@
 		6DA3CE8A193B963E0074DC1A /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		B9A51AF3192B32FA00C9549B /* Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
 		B9A51AF4192B32FA00C9549B /* Vector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector3.m; sourceTree = "<group>"; };
+		B9A6A4AF192B4CDA0086CBBF /* MathsMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathsMacros.h; sourceTree = "<group>"; };
 		B9A91AE2192B2B0A00B2D1B8 /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
 		B9A91AE3192B2B0A00B2D1B8 /* Vector2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector2.m; sourceTree = "<group>"; };
 		EB87686F11BE42FC8F268422 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -232,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				B9A91AE1192B2AC700B2D1B8 /* Vector */,
-				6D5C93DE1922776C0038A54D /* ViewPort */,
 				6D5C93DA192274630038A54D /* BoudingBox */,
 				6D5C93C11921568D0038A54D /* Point */,
 			);
@@ -442,12 +442,21 @@
 		B9A91AE1192B2AC700B2D1B8 /* Vector */ = {
 			isa = PBXGroup;
 			children = (
+				B9A6A4AF192B4CDA0086CBBF /* MathsMacros.h */,
 				B9A51AF3192B32FA00C9549B /* Vector3.h */,
 				B9A51AF4192B32FA00C9549B /* Vector3.m */,
 				B9A91AE2192B2B0A00B2D1B8 /* Vector2.h */,
 				B9A91AE3192B2B0A00B2D1B8 /* Vector2.m */,
 			);
 			name = Vector;
+			sourceTree = "<group>";
+		};
+		B9C7914E193396A100D37BC3 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				6D5C93DE1922776C0038A54D /* ViewPort */,
+			);
+			name = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

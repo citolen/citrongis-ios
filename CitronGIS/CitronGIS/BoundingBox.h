@@ -8,19 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "GeometryPoint.h"
+#import "Vector2.h"
 
 @interface BoundingBox : NSObject
 
-@property (nonatomic)   GeometryPoint   *topLeft;
-@property (nonatomic)   GeometryPoint   *topRight;
-@property (nonatomic)   GeometryPoint   *botLeft;
-@property (nonatomic)   GeometryPoint   *botRight;
+@property (nonatomic)   GeometryVector2   *topLeft;
+@property (nonatomic)   GeometryVector2   *topRight;
+@property (nonatomic)   GeometryVector2   *botLeft;
+@property (nonatomic)   GeometryVector2   *botRight;
 
--(GeometryPoint*)center;
++ (BoundingBox *)BoundingBoxWithTopLeft:(GeometryVector2*)topLeft andTopRight:(GeometryVector2*)TopRight andBotLeft:(GeometryVector2*)botLeft andBotRight:(GeometryVector2*)botLeft;
 
+-(GeometryVector2*)center;
 -(BOOL)isPointInside:(GeometryPoint*)point;
-
+-(BOOL)isVectorInside:(GeometryVector2*)vector;
 -(BOOL)intersectBoundingBox:(BoundingBox*)other;
-
+-(BOOL)equals:(BoundingBox*)other;
 
 @end

@@ -6,6 +6,9 @@
  */
 
 @implementation PullableView
+{
+    float   _lastPc;
+}
 
 @synthesize handleView;
 @synthesize closedCenter;
@@ -16,6 +19,7 @@
 @synthesize animationDuration;
 @synthesize delegate;
 @synthesize opened;
+@synthesize callBack;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -101,6 +105,14 @@
             }
         }
         
+
+        
+        if (callBack)
+        {
+            float pc = (newPos.x + 126) / 288;
+            callBack(pc);
+            _lastPc = pc;
+        }
         [sender setTranslation:translate inView:self.superview];
         
         self.center = newPos;
@@ -116,6 +128,12 @@
         CGPoint target = axisVelocity < 0 ? minPos : maxPos;
         BOOL op = CGPointEqualToPoint(target, openedCenter);
         
+        if (callBack && op == true)
+        {
+            if ([delegate respondsToSelector:@selector(pullableView:willChangeState:withDuration:)]) {
+                [delegate pullableView:self willChangeState:op withDuration:animationDuration];
+            }
+        }
         [self setOpened:op animated:animate];
     }
 }
@@ -140,31 +158,31 @@
     opened = op;
     
     if (anim) {
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:animationDuration];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-        [UIView setAnimationDelegate:self];
-        [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
+        [UIView animateWithDuration:animationDuration delay:0 options:0 animations:^{
+                self.center = opened ? openedCenter : closedCenter;
+
+        } completion:^(BOOL finished) {
+            [self animationDidStop:nil finished:[NSNumber numberWithBool:true] context:nil];
+        }];
     }
     
-    self.center = opened ? openedCenter : closedCenter;
+
     
     if (anim) {
         
         // For the duration of the animation, no further interaction with the view is permitted
         dragRecognizer.enabled = NO;
         tapRecognizer.enabled = NO;
-        
-        [UIView commitAnimations];
-        
+
     } else {
+         self.center = opened ? openedCenter : closedCenter;
         
         if ([delegate respondsToSelector:@selector(pullableView:didChangeState:)]) {
             [delegate pullableView:self didChangeState:opened];
         }
     }
 }
-         
+
 - (void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
     if (finished) {
         // Restores interaction after the animation is over
@@ -175,6 +193,15 @@
             [delegate pullableView:self didChangeState:opened];
         }
     }
+}
+
+-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+{
+    if (point.x > self.frame.size.width - 50)
+    {
+        return point.y > 38 && point.y < 85;
+    }
+    return [super pointInside:point withEvent:event];
 }
 
 @end

@@ -11,9 +11,12 @@
 		6D0838ED192B2A7C004F2426 /* StyledPullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0838EC192B2A7C004F2426 /* StyledPullableView.m */; };
 		6D0838F3192B2AEC004F2426 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0838F2192B2AEC004F2426 /* CoreLocation.framework */; };
 		6D0838F5192B2C7D004F2426 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0838F4192B2C7D004F2426 /* MapKit.framework */; };
-		6D0838F8192B3854004F2426 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0838F6192B3854004F2426 /* background.png */; };
-		6D0838F9192B3854004F2426 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0838F7192B3854004F2426 /* background@2x.png */; };
-		6D0838FB192B3ECA004F2426 /* background-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0838FA192B3ECA004F2426 /* background-568@2x.png */; };
+		6D083902192C7CCC004F2426 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D083901192C7CCC004F2426 /* background@2x.png */; };
+		6D083906192C805E004F2426 /* UIBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D083905192C805E004F2426 /* UIBlockButton.m */; };
+		6D08390A192C8422004F2426 /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D083909192C8422004F2426 /* SKBounceAnimation.m */; };
+		6D08390D192C8B47004F2426 /* my_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D08390C192C8B47004F2426 /* my_account@2x.png */; };
+		6D08390F192C8FE7004F2426 /* shop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D08390E192C8FE7004F2426 /* shop@2x.png */; };
+		6D5259EC1947859F00E4FA50 /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5259EB1947859F00E4FA50 /* libProj4.a */; };
 		6D5C93BD192155250038A54D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D5C93BA192155250038A54D /* SVProgressHUD.bundle */; };
 		6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5C93BC192155250038A54D /* SVProgressHUD.m */; };
 		6D5C93C0192156260038A54D /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C93BF192156260038A54D /* libProj4.a */; };
@@ -39,6 +42,15 @@
 		6D923145191EBCF6009F5A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D923143191EBCF6009F5A5A /* InfoPlist.strings */; };
 		6D923147191EBCF6009F5A5A /* CitronGISTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D923146191EBCF6009F5A5A /* CitronGISTests.m */; };
 		6D923158191FC237009F5A5A /* citron_citrongis120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D923157191FC236009F5A5A /* citron_citrongis120.png */; };
+		6DA3CE76193B8CAC0074DC1A /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3CE73193B8CAC0074DC1A /* menu@2x.png */; };
+		6DA3CE77193B8CAC0074DC1A /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3CE74193B8CAC0074DC1A /* search@2x.png */; };
+		6DA3CE78193B8CAC0074DC1A /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3CE75193B8CAC0074DC1A /* settings@2x.png */; };
+		6DA3CE7D193B93070074DC1A /* signin_tf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3CE7C193B93070074DC1A /* signin_tf@2x.png */; };
+		6DA3CE7F193B945C0074DC1A /* btn-standard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3CE7E193B945C0074DC1A /* btn-standard@2x.png */; };
+		6DA3CE83193B95BD0074DC1A /* facebook-connect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3CE80193B95BD0074DC1A /* facebook-connect@2x.png */; };
+		6DA3CE84193B95BD0074DC1A /* google-connect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3CE81193B95BD0074DC1A /* google-connect@2x.png */; };
+		6DA3CE87193B95EB0074DC1A /* twitter-connect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3CE86193B95EB0074DC1A /* twitter-connect@2x.png */; };
+		6DA3CE8B193B963E0074DC1A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA3CE8A193B963E0074DC1A /* SignInViewController.m */; };
 		B9A51AF5192B32FA00C9549B /* Vector3.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A51AF4192B32FA00C9549B /* Vector3.m */; };
 		B9A91AE4192B2B0A00B2D1B8 /* Vector2.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A91AE3192B2B0A00B2D1B8 /* Vector2.m */; };
 		CC0DCAD5DB264F4383C70100 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F93A700A8C9B47A986A02BE0 /* libPods.a */; };
@@ -61,9 +73,14 @@
 		6D0838EC192B2A7C004F2426 /* StyledPullableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledPullableView.m; sourceTree = "<group>"; };
 		6D0838F2192B2AEC004F2426 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6D0838F4192B2C7D004F2426 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		6D0838F6192B3854004F2426 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		6D0838F7192B3854004F2426 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
-		6D0838FA192B3ECA004F2426 /* background-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-568@2x.png"; sourceTree = "<group>"; };
+		6D083901192C7CCC004F2426 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		6D083904192C805E004F2426 /* UIBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBlockButton.h; sourceTree = "<group>"; };
+		6D083905192C805E004F2426 /* UIBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBlockButton.m; sourceTree = "<group>"; };
+		6D083908192C8422004F2426 /* SKBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBounceAnimation.h; sourceTree = "<group>"; };
+		6D083909192C8422004F2426 /* SKBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBounceAnimation.m; sourceTree = "<group>"; };
+		6D08390C192C8B47004F2426 /* my_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_account@2x.png"; sourceTree = "<group>"; };
+		6D08390E192C8FE7004F2426 /* shop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop@2x.png"; sourceTree = "<group>"; };
+		6D5259EB1947859F00E4FA50 /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "../../../Library/Developer/Xcode/DerivedData/CitronGIS-gizbphftlyuhmchcbflpjuhofvda/Build/Products/Debug-iphoneos/libProj4.a"; sourceTree = "<group>"; };
 		6D5C93B0192154860038A54D /* libSVProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSVProgressHUD.a; path = "../SVProgressHUD-master/build/Debug-iphoneos/libSVProgressHUD.a"; sourceTree = "<group>"; };
 		6D5C93B21921548E0038A54D /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "../Proj4-master/build/Debug-iphoneos/libProj4.a"; sourceTree = "<group>"; };
 		6D5C93BA192155250038A54D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -103,6 +120,16 @@
 		6D923144191EBCF6009F5A5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6D923146191EBCF6009F5A5A /* CitronGISTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitronGISTests.m; sourceTree = "<group>"; };
 		6D923157191FC236009F5A5A /* citron_citrongis120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = citron_citrongis120.png; sourceTree = "<group>"; };
+		6DA3CE73193B8CAC0074DC1A /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		6DA3CE74193B8CAC0074DC1A /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		6DA3CE75193B8CAC0074DC1A /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		6DA3CE7C193B93070074DC1A /* signin_tf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin_tf@2x.png"; sourceTree = "<group>"; };
+		6DA3CE7E193B945C0074DC1A /* btn-standard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-standard@2x.png"; sourceTree = "<group>"; };
+		6DA3CE80193B95BD0074DC1A /* facebook-connect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-connect@2x.png"; sourceTree = "<group>"; };
+		6DA3CE81193B95BD0074DC1A /* google-connect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-connect@2x.png"; sourceTree = "<group>"; };
+		6DA3CE86193B95EB0074DC1A /* twitter-connect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-connect@2x.png"; sourceTree = "<group>"; };
+		6DA3CE89193B963E0074DC1A /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		6DA3CE8A193B963E0074DC1A /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		B9A51AF3192B32FA00C9549B /* Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
 		B9A51AF4192B32FA00C9549B /* Vector3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector3.m; sourceTree = "<group>"; };
 		B9A91AE2192B2B0A00B2D1B8 /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
@@ -130,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D5259EC1947859F00E4FA50 /* libProj4.a in Frameworks */,
 				6D92313B191EBCF6009F5A5A /* XCTest.framework in Frameworks */,
 				6D92313D191EBCF6009F5A5A /* UIKit.framework in Frameworks */,
 				6D92313C191EBCF6009F5A5A /* Foundation.framework in Frameworks */,
@@ -152,15 +180,43 @@
 		6D0838E7192B29FD004F2426 /* PullableView */ = {
 			isa = PBXGroup;
 			children = (
-				6D0838F6192B3854004F2426 /* background.png */,
-				6D0838F7192B3854004F2426 /* background@2x.png */,
-				6D0838FA192B3ECA004F2426 /* background-568@2x.png */,
+				6D083901192C7CCC004F2426 /* background@2x.png */,
 				6D0838EB192B2A7C004F2426 /* StyledPullableView.h */,
 				6D0838EC192B2A7C004F2426 /* StyledPullableView.m */,
 				6D0838E8192B2A3E004F2426 /* PullableView.h */,
 				6D0838E9192B2A3E004F2426 /* PullableView.m */,
 			);
 			name = PullableView;
+			sourceTree = "<group>";
+		};
+		6D083903192C7FDB004F2426 /* UIBlockButton */ = {
+			isa = PBXGroup;
+			children = (
+				6D083904192C805E004F2426 /* UIBlockButton.h */,
+				6D083905192C805E004F2426 /* UIBlockButton.m */,
+			);
+			name = UIBlockButton;
+			sourceTree = "<group>";
+		};
+		6D083907192C8418004F2426 /* SKBounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				6D083908192C8422004F2426 /* SKBounceAnimation.h */,
+				6D083909192C8422004F2426 /* SKBounceAnimation.m */,
+			);
+			name = SKBounceAnimation;
+			sourceTree = "<group>";
+		};
+		6D08390B192C8B35004F2426 /* MenuImage */ = {
+			isa = PBXGroup;
+			children = (
+				6DA3CE73193B8CAC0074DC1A /* menu@2x.png */,
+				6DA3CE74193B8CAC0074DC1A /* search@2x.png */,
+				6DA3CE75193B8CAC0074DC1A /* settings@2x.png */,
+				6D08390E192C8FE7004F2426 /* shop@2x.png */,
+				6D08390C192C8B47004F2426 /* my_account@2x.png */,
+			);
+			name = MenuImage;
 			sourceTree = "<group>";
 		};
 		6D5C93C11921568D0038A54D /* Point */ = {
@@ -260,6 +316,7 @@
 		6D923117191EBCF5009F5A5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D5259EB1947859F00E4FA50 /* libProj4.a */,
 				6D0838F4192B2C7D004F2426 /* MapKit.framework */,
 				6D0838F2192B2AEC004F2426 /* CoreLocation.framework */,
 				6D5C93BF192156260038A54D /* libProj4.a */,
@@ -277,6 +334,7 @@
 		6D92311E191EBCF5009F5A5A /* CitronGIS */ = {
 			isa = PBXGroup;
 			children = (
+				6DA3CE88193B96260074DC1A /* ViewControllers */,
 				6D5C93D6192271920038A54D /* Projection */,
 				6D5C93D119226E090038A54D /* Helpers */,
 				6D5C93CF19226DEE0038A54D /* Geometry */,
@@ -287,8 +345,6 @@
 				6D923128191EBCF5009F5A5A /* AppDelegate.m */,
 				6D92312A191EBCF6009F5A5A /* Main_iPhone.storyboard */,
 				6D92312D191EBCF6009F5A5A /* Main_iPad.storyboard */,
-				6D923130191EBCF6009F5A5A /* ViewController.h */,
-				6D923131191EBCF6009F5A5A /* ViewController.m */,
 				6D923133191EBCF6009F5A5A /* Images.xcassets */,
 				6D92311F191EBCF5009F5A5A /* Supporting Files */,
 			);
@@ -334,6 +390,8 @@
 		6D923151191FBEC0009F5A5A /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				6DA3CE79193B92770074DC1A /* signInViewController */,
+				6D08390B192C8B35004F2426 /* MenuImage */,
 				6D923152191FBEC4009F5A5A /* AppIcon */,
 			);
 			name = Ressources;
@@ -347,9 +405,34 @@
 			name = AppIcon;
 			sourceTree = "<group>";
 		};
+		6DA3CE79193B92770074DC1A /* signInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6DA3CE80193B95BD0074DC1A /* facebook-connect@2x.png */,
+				6DA3CE81193B95BD0074DC1A /* google-connect@2x.png */,
+				6DA3CE86193B95EB0074DC1A /* twitter-connect@2x.png */,
+				6DA3CE7E193B945C0074DC1A /* btn-standard@2x.png */,
+				6DA3CE7C193B93070074DC1A /* signin_tf@2x.png */,
+			);
+			name = signInViewController;
+			sourceTree = "<group>";
+		};
+		6DA3CE88193B96260074DC1A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D923130191EBCF6009F5A5A /* ViewController.h */,
+				6D923131191EBCF6009F5A5A /* ViewController.m */,
+				6DA3CE89193B963E0074DC1A /* SignInViewController.h */,
+				6DA3CE8A193B963E0074DC1A /* SignInViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		6DF2B608192152020053BCD0 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				6D083907192C8418004F2426 /* SKBounceAnimation */,
+				6D083903192C7FDB004F2426 /* UIBlockButton */,
 				6D0838E7192B29FD004F2426 /* PullableView */,
 				6D0838E6192B29F0004F2426 /* SVProgressHUD */,
 			);
@@ -448,14 +531,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D08390D192C8B47004F2426 /* my_account@2x.png in Resources */,
+				6DA3CE78193B8CAC0074DC1A /* settings@2x.png in Resources */,
+				6DA3CE77193B8CAC0074DC1A /* search@2x.png in Resources */,
+				6DA3CE7D193B93070074DC1A /* signin_tf@2x.png in Resources */,
+				6DA3CE7F193B945C0074DC1A /* btn-standard@2x.png in Resources */,
+				6D08390F192C8FE7004F2426 /* shop@2x.png in Resources */,
+				6DA3CE84193B95BD0074DC1A /* google-connect@2x.png in Resources */,
 				6D92312F191EBCF6009F5A5A /* Main_iPad.storyboard in Resources */,
 				6D5C93BD192155250038A54D /* SVProgressHUD.bundle in Resources */,
-				6D0838F8192B3854004F2426 /* background.png in Resources */,
-				6D0838FB192B3ECA004F2426 /* background-568@2x.png in Resources */,
+				6DA3CE87193B95EB0074DC1A /* twitter-connect@2x.png in Resources */,
 				6D923134191EBCF6009F5A5A /* Images.xcassets in Resources */,
 				6D923158191FC237009F5A5A /* citron_citrongis120.png in Resources */,
+				6DA3CE83193B95BD0074DC1A /* facebook-connect@2x.png in Resources */,
 				6D92312C191EBCF6009F5A5A /* Main_iPhone.storyboard in Resources */,
-				6D0838F9192B3854004F2426 /* background@2x.png in Resources */,
+				6DA3CE76193B8CAC0074DC1A /* menu@2x.png in Resources */,
+				6D083902192C7CCC004F2426 /* background@2x.png in Resources */,
 				6D923123191EBCF5009F5A5A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,16 +602,19 @@
 				6D5C93E5192277AC0038A54D /* ProjectionsHelper.m in Sources */,
 				6D5C93DD192275040038A54D /* BoundingBox.m in Sources */,
 				B9A51AF5192B32FA00C9549B /* Vector3.m in Sources */,
+				6DA3CE8B193B963E0074DC1A /* SignInViewController.m in Sources */,
 				6D923132191EBCF6009F5A5A /* ViewController.m in Sources */,
 				6D5C93BE192155250038A54D /* SVProgressHUD.m in Sources */,
 				6D923129191EBCF5009F5A5A /* AppDelegate.m in Sources */,
 				6D5C93D519226E350038A54D /* CoordinatesHelper.m in Sources */,
 				6D0838EA192B2A3E004F2426 /* PullableView.m in Sources */,
+				6D08390A192C8422004F2426 /* SKBounceAnimation.m in Sources */,
 				6D5C93C4192157340038A54D /* GeometryPoint.m in Sources */,
 				6D0838ED192B2A7C004F2426 /* StyledPullableView.m in Sources */,
 				6D5C93D9192271AB0038A54D /* Projection.m in Sources */,
 				6D923125191EBCF5009F5A5A /* main.m in Sources */,
 				B9A91AE4192B2B0A00B2D1B8 /* Vector2.m in Sources */,
+				6D083906192C805E004F2426 /* UIBlockButton.m in Sources */,
 				6D5C93E1192277870038A54D /* GeometryViewPort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,7 +820,16 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../Proj4-master/\"",
+				);
 				INFOPLIST_FILE = "CitronGISTests/CitronGISTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/CitronGIS-gizbphftlyuhmchcbflpjuhofvda/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -744,7 +847,16 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CitronGIS/CitronGIS-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../Proj4-master/\"",
+				);
 				INFOPLIST_FILE = "CitronGISTests/CitronGISTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/CitronGIS-gizbphftlyuhmchcbflpjuhofvda/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

@@ -3,6 +3,8 @@
 
 @class PullableView;
 
+
+typedef void (^percentCallBack)(float);
 /**
  Protocol for objects that wish to be notified when the state of a
  PullableView changes
@@ -15,6 +17,8 @@
  @param opened The new state of the view
  */
 - (void)pullableView:(PullableView *)pView didChangeState:(BOOL)opened;
+
+-(void)pullableView:(PullableView *)pView willChangeState:(BOOL)opened withDuration:(float)duration;
 
 @end
 
@@ -117,5 +121,7 @@
  @param anim Flag indicating if the transition should be animated
  */
 - (void)setOpened:(BOOL)op animated:(BOOL)anim;
+
+@property (nonatomic, strong)   percentCallBack callBack;
 
 @end

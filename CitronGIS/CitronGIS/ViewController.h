@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PullableView.h"
+#import "CCDirector.h"
 
-@interface ViewController : UIViewController <PullableViewDelegate>
+@interface ViewController : CCDirector <PullableViewDelegate>
 
 
 @end

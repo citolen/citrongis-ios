@@ -39,6 +39,7 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
     var pullRightView:StyledPullableView!
     var webView:UIWebView!
     var jscontext:JSContext!
+    var storyboardCG:UIStoryboard!
     
     override init() {
         super.init()
@@ -46,6 +47,8 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.setupExtensions()
+        UITabBar.appearance().tintColor = UIColor(red: 0, green: 148/255.0, blue: 130/255.0, alpha: 1.0)
+        storyboardCG = UIStoryboard(name: "CitrongisStoryboard", bundle: NSBundle.mainBundle())
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -54,7 +57,6 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -70,6 +72,8 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
         {
             self.setupInterface()
         }
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Fade)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -157,11 +161,13 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
         
         account_btn.backgroundColor = UIColor(red: 103.0/256.0, green: 187.0/256.0, blue: 156.0/256.0, alpha: 1.0)
         account_btn.setImage(UIImage(named: "my_account"), forState: UIControlState.Normal)
+        account_btn.addTarget(self, action: "pressAccount", forControlEvents: UIControlEvents.TouchUpInside)
         pullRightView.addSubview(account_btn)
         
         var shopBtn = UIButton(frame: CGRectMake(sqWidth, 0, sqWidth, sqWidth))
         shopBtn.backgroundColor = UIColor(red: 112.0/256.0, green: 204.0/256.0, blue: 112.0/256.0, alpha: 1.0)
         shopBtn.setImage(UIImage(named: "shop"), forState: UIControlState.Normal)
+        shopBtn.addTarget(self, action: "pressStore", forControlEvents: UIControlEvents.TouchUpInside)
         pullRightView.addSubview(shopBtn)
         
         var searchBtn = UIButton(frame: CGRectMake(0, sqWidth, sqWidth, sqWidth))
@@ -196,6 +202,21 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
         
     }
     
+    func pressAccount()
+    {
+        let vc = self.storyboardCG?.instantiateViewControllerWithIdentifier("mainNavigation")! as UIViewController
+        self.navigationController?.presentViewController(vc, animated: true, completion: { () -> Void in
+            
+        })
+    }
+    func pressStore()
+    {
+        let vc = self.storyboardCG?.instantiateViewControllerWithIdentifier("storeNavigation")! as UIViewController
+        self.navigationController?.presentViewController(vc, animated: true, completion: { () -> Void in
+            
+        })
+
+    }
     func pullableView(pView: PullableView!, didChangeState opened: Bool) {
         
     }

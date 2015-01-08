@@ -71,6 +71,7 @@ static inline void __CC_CHECK_GL_ERROR_DEBUG(const char *function, int line)
 #define glMapBuffer					glMapBufferOES
 #define glUnmapBuffer				glUnmapBufferOES
 
+#undef GL_DEPTH24_STENCIL8
 #define GL_DEPTH24_STENCIL8			GL_DEPTH24_STENCIL8_OES
 #define GL_WRITE_ONLY				GL_WRITE_ONLY_OES
 

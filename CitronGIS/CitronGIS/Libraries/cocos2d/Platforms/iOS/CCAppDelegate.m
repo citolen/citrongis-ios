@@ -31,6 +31,7 @@
 #import "CCFileUtils.h"
 #import "CCDirector_Private.h"
 #import "CCScheduler.h"
+#import "TapDetectingWindow.h"
 
 #import "OALSimpleAudio.h"
 
@@ -161,7 +162,7 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 - (void) setupCocos2dWithOptions:(NSDictionary*)config
 {
 	// Create the main window
-	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	window_ = [[TapDetectingWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
 	
 	// CCGLView creation

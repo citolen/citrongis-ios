@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "IntroScene.h"
 #import "HelloWorldScene.h"
+#import "TapDetectingWindow.h"
 
 @implementation AppDelegate
 

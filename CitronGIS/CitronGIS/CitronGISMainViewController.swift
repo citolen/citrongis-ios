@@ -10,8 +10,13 @@ import UIKit
 import JavaScriptCore
 import MessageUI
 
-class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
+class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, UIWebViewDelegate {
 
+    var layerManager:LayerManager!
+    var viewport:Viewport!
+    var currentScene:CCScene!
+    var renderer:RendererBase!
+    
     let scriptToLoad = ["jszip",
                         "proj4",
                         "ejs",
@@ -49,6 +54,12 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
         self.setupExtensions()
         UITabBar.appearance().tintColor = UIColor(red: 0, green: 148/255.0, blue: 130/255.0, alpha: 1.0)
         storyboardCG = UIStoryboard(name: "CitrongisStoryboard", bundle: NSBundle.mainBundle())
+        
+        
+    }
+    
+    override func mainLoop(sender: AnyObject!) {
+        super.mainLoop(sender)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -78,11 +89,35 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        viewport = Viewport(width: UInt(self.view.frame.size.width), andHeight: UInt(self.view.frame.size.height), andResolution: ResolutionHelper.resolutionReference(), andSchema: SphericalMercator(), andOrigin: Vector2(fromPosx: 0, andY: 0), andRotation: 0)
+        layerManager = LayerManager()
+        renderer = CocosRenderer(layerManager: layerManager, andScene: CCDirector.sharedDirector().runningScene, andViewPort: viewport)
+        
+        self.currentScene = CCDirector.sharedDirector().runningScene
+        
+        //Test code
+        let grp = Group()
+        layerManager.addGroup(grp)
+        let layer = Layer()
+        grp.addLayer(layer)
+        let feature = Rect()
+        feature.setSize(CGSizeMake(100, 100))
+        feature.setColor(CCColor.blueColor())
+        feature.location = GeometryPoint(fromPosx: 40, andY: 0, andZ: 0, andProj: Projection(fromName: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
+        layer.addFeature(feature)
+        
+        let feature2 = Rect()
+        feature2.setSize(CGSizeMake(10, 10))
+        feature2.setColor(CCColor.whiteColor()) 
+        feature2.location = GeometryPoint(fromPosx: 0, andY: 0.69813170079, andZ: 0, andProj: Projection(fromName: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
+//        feature.location.transformToProj(fromProj: Projection(fromName: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs"))
+        layer.addFeature(feature2)
     }
     
     func addTestExtension()
     {
-        var filePath = NSBundle.mainBundle().pathForResource("citrongis-app", ofType: "zip")
+        var filePath = NSBundle.mainBundle().pathForResource("Archive", ofType: "zip")
         var data = NSFileManager.defaultManager().contentsAtPath(filePath!)
         
         var base64Str = data?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
@@ -91,31 +126,62 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
         data = NSFileManager.defaultManager().contentsAtPath(filePath!)
         let script = NSString(data: data!, encoding: NSUTF8StringEncoding)
         
+        jscontext.exceptionHandler = {(context : JSContext!, val : JSValue!) -> Void in
+            println(val.description)
+        }
+        
+        
         var re = self.jscontext.evaluateScript(script)
+        
+        
+        //
 //        println("\(re.toBool()), \(re.description)");
+//        
+//        
+//        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
+//        
+//        
+//        filePath = NSBundle.mainBundle().pathForResource("chat", ofType: "zip")
+//        data = NSFileManager.defaultManager().contentsAtPath(filePath!)
+//        base64Str = data?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
+//        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
+//
+//        filePath = NSBundle.mainBundle().pathForResource("chat1", ofType: "zip")
+//        data = NSFileManager.defaultManager().contentsAtPath(filePath!)
+//        base64Str = data?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
+//        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
+//        self.jscontext.evaluateScript(base64Str)
+//        
+        //
         
+    }
+    
+    func forwardLastEvent()
+    {
+        let view:CCGLView = self.view as CCGLView
+        let tapDetect:TapDetectingWindow = UIApplication.sharedApplication().delegate?.window as TapDetectingWindow
         
-        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
-        
-        
-        filePath = NSBundle.mainBundle().pathForResource("chat", ofType: "zip")
-        data = NSFileManager.defaultManager().contentsAtPath(filePath!)
-        base64Str = data?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
-        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
-        
-        filePath = NSBundle.mainBundle().pathForResource("chat1", ofType: "zip")
-        data = NSFileManager.defaultManager().contentsAtPath(filePath!)
-        base64Str = data?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
-        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
-        self.jscontext.evaluateScript(base64Str)
-        
-        
-//        println("test extension : \(re.toBool()), \(re.description)");
+        for touch in tapDetect.lastEvent.allTouches()?.allObjects as [UITouch]
+        {
+            switch touch.phase {
+            case UITouchPhase.Began:
+                view.touchesBegan(tapDetect.lastEvent.allTouches()!, withEvent:tapDetect.lastEvent)
+            case UITouchPhase.Moved:
+                view.touchesMoved(tapDetect.lastEvent.allTouches()!, withEvent: tapDetect.lastEvent)
+            case UITouchPhase.Ended:
+                view.touchesEnded(tapDetect.lastEvent.allTouches()!, withEvent: tapDetect.lastEvent)
+            case UITouchPhase.Cancelled:
+                view.touchesCancelled(tapDetect.lastEvent.allTouches(), withEvent: tapDetect.lastEvent)
+            default:
+                return
+            }
+        }
         
     }
     func setupExtensions()
     {
         webView = UIWebView()
+        webView.delegate = self
         self.jscontext = webView.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as JSContext
         
         var block : @objc_block (NSString!) -> Void = {
@@ -127,7 +193,20 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
         jscontext.exceptionHandler = {(context : JSContext!, val : JSValue!) -> Void in
             println(val.description)
         }
-//        jscontext.evaluateScript("log('toto')")
+        
+        var block2 : @objc_block () -> Void = {
+            () -> Void in
+            self.forwardLastEvent()
+        }
+        
+        jscontext.setObject(unsafeBitCast(block2, AnyObject.self), forKeyedSubscript: "touchBeganNative")
+        
+        jscontext.setObject(unsafeBitCast(block2, AnyObject.self), forKeyedSubscript: "touchMovedNative")
+        
+        jscontext.setObject(unsafeBitCast(block2, AnyObject.self), forKeyedSubscript: "touchEndedNative")
+        
+        jscontext.setObject(unsafeBitCast(block2, AnyObject.self), forKeyedSubscript: "touchCancelNative")
+        
         for toload in scriptToLoad
         {
             
@@ -136,14 +215,18 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
             let script = NSString(data: data!, encoding: NSUTF8StringEncoding)
             
             let re = self.jscontext.evaluateScript(script)
-//            println("\(re.toBool()), \(re.description), \(self.jscontext.exception.description)");
             if (self.jscontext.exception != nil)
             {
                 println(self.jscontext.exception.description)
             }
-//            toload
         }
-//
+        
+        self.webView.multipleTouchEnabled = true
+        let scriptTouch = "document.body.ontouchstart = function(event) {\ntouchBeganNative()\n};\n" + "document.body.ontouchmove = function(event) {\ntouchMovedNative()\n};\n" +
+            "document.body.ontouchend = function(event) {\ntouchEndedNative()\n};\n" +
+            "document.body.ontouchcancel = function(event) {\ntouchCancelledNative()\n};\n"
+        self.jscontext.evaluateScript(scriptTouch)
+        println(scriptTouch)
     }
     
     func setupInterface()
@@ -190,16 +273,13 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
         pullRightView.addSubview(lastBtn)
         
         self.webView.frame = self.view.frame
-        
         self.webView.backgroundColor = UIColor.clearColor()
         self.webView.opaque = false
-        
         
         self.view.addSubview(webView)
         self.view.addSubview(pullRightView)
         
         self.addTestExtension();
-        
     }
     
     func pressAccount()
@@ -217,6 +297,7 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate {
         })
 
     }
+    
     func pullableView(pView: PullableView!, didChangeState opened: Bool) {
         
     }

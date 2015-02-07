@@ -6,4 +6,7 @@
 #import "cocos2d-ui.h"
 #import "StyledPullableView.h"
 #import "ZipArchive.h"
+#import "CCGLView.h"
+#import "IntroScene.h"
+#import "TapDetectingWindow.h"
 #include "proj_api.h"

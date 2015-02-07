@@ -238,7 +238,8 @@
     
     // go through all touches
     for (UITouch *touch in touches)
-    {
+    {        
+        
         CGPoint worldTouchLocation = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[CCDirector sharedDirector].view]];
         
         // scan backwards through touch responders

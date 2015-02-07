@@ -26,6 +26,37 @@
 		6D05BACA1A5E29F800160116 /* launch-retina-ipad-portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BAC61A5E29F800160116 /* launch-retina-ipad-portrait.png */; };
 		6D05BACB1A5E29F800160116 /* launch-retina-ipad-portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BAC71A5E29F800160116 /* launch-retina-ipad-portrait@2x.png */; };
 		6D05BACD1A5E2ABE00160116 /* launch-retina5.5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BACC1A5E2ABE00160116 /* launch-retina5.5.png */; };
+		6D05BB431A5F783200160116 /* BoundingBox.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB241A5F783100160116 /* BoundingBox.js */; };
+		6D05BB441A5F783200160116 /* Bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB251A5F783100160116 /* Bridge.js */; };
+		6D05BB451A5F783200160116 /* Comparison.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB261A5F783100160116 /* Comparison.js */; };
+		6D05BB461A5F783200160116 /* Context.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB271A5F783100160116 /* Context.js */; };
+		6D05BB471A5F783200160116 /* CoordinatesHelper.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB281A5F783100160116 /* CoordinatesHelper.js */; };
+		6D05BB481A5F783200160116 /* ejs.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB291A5F783100160116 /* ejs.js */; };
+		6D05BB491A5F783200160116 /* EventEmitter.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB2A1A5F783100160116 /* EventEmitter.js */; };
+		6D05BB4A1A5F783200160116 /* EventEmitter.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB2B1A5F783100160116 /* EventEmitter.min.js */; };
+		6D05BB4B1A5F783200160116 /* Extension.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB2C1A5F783100160116 /* Extension.js */; };
+		6D05BB4C1A5F783200160116 /* include.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB2D1A5F783100160116 /* include.js */; };
+		6D05BB4D1A5F783200160116 /* Inheritance.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB2E1A5F783100160116 /* Inheritance.js */; };
+		6D05BB4E1A5F783200160116 /* Intersection.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB2F1A5F783100160116 /* Intersection.js */; };
+		6D05BB4F1A5F783200160116 /* jszip.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB301A5F783100160116 /* jszip.js */; };
+		6D05BB501A5F783200160116 /* jszip.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB311A5F783100160116 /* jszip.min.js */; };
+		6D05BB511A5F783200160116 /* Manager.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB321A5F783100160116 /* Manager.js */; };
+		6D05BB521A5F783200160116 /* Module.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB331A5F783100160116 /* Module.js */; };
+		6D05BB531A5F783200160116 /* Object.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB341A5F783100160116 /* Object.js */; };
+		6D05BB541A5F783200160116 /* Path.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB351A5F783100160116 /* Path.js */; };
+		6D05BB551A5F783200160116 /* pixi.dev.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB361A5F783100160116 /* pixi.dev.js */; };
+		6D05BB561A5F783200160116 /* pixi.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB371A5F783100160116 /* pixi.js */; };
+		6D05BB571A5F783200160116 /* Point.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB381A5F783100160116 /* Point.js */; };
+		6D05BB581A5F783200160116 /* proj4-src.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB391A5F783100160116 /* proj4-src.js */; };
+		6D05BB591A5F783200160116 /* proj4.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB3A1A5F783100160116 /* proj4.js */; };
+		6D05BB5A1A5F783200160116 /* ProjectionsHelper.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB3B1A5F783100160116 /* ProjectionsHelper.js */; };
+		6D05BB5B1A5F783200160116 /* Require.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB3C1A5F783100160116 /* Require.js */; };
+		6D05BB5C1A5F783200160116 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB3D1A5F783100160116 /* test.js */; };
+		6D05BB5D1A5F783200160116 /* trigger.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB3E1A5F783100160116 /* trigger.js */; };
+		6D05BB5E1A5F783200160116 /* UI.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB3F1A5F783100160116 /* UI.js */; };
+		6D05BB5F1A5F783200160116 /* Vector2.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB401A5F783100160116 /* Vector2.js */; };
+		6D05BB601A5F783200160116 /* Vector3.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB411A5F783100160116 /* Vector3.js */; };
+		6D05BB611A5F783200160116 /* Viewport.js in Resources */ = {isa = PBXBuildFile; fileRef = 6D05BB421A5F783100160116 /* Viewport.js */; };
 		6D0614CD1A5E1CE900E6F38F /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0614CB1A5E1CE900E6F38F /* cancel@2x.png */; };
 		6D0614CE1A5E1CE900E6F38F /* cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0614CC1A5E1CE900E6F38F /* cancel@3x.png */; };
 		6D099D9E1A5B6D7A001D0538 /* maj-tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D099D9A1A5B6D7A001D0538 /* maj-tab@2x.png */; };
@@ -44,6 +75,20 @@
 		6D2751771A15423800591610 /* chat.zip in Resources */ = {isa = PBXBuildFile; fileRef = 6D2751761A15423800591610 /* chat.zip */; };
 		6D2751791A15427300591610 /* chat1.zip in Resources */ = {isa = PBXBuildFile; fileRef = 6D2751781A15427300591610 /* chat1.zip */; };
 		6D2EDCEC1A5A186800B69413 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2EDCEB1A5A186800B69413 /* SignUpViewController.swift */; };
+		6D35795D1A83E692001BCADA /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35795C1A83E692001BCADA /* Feature.swift */; };
+		6D35795F1A83E6F0001BCADA /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35795E1A83E6F0001BCADA /* Layer.swift */; };
+		6D3579611A83E7D5001BCADA /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579601A83E7D5001BCADA /* Group.swift */; };
+		6D3579631A83E857001BCADA /* LayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579621A83E857001BCADA /* LayerManager.swift */; };
+		6D3579651A84053E001BCADA /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579641A84053E001BCADA /* EventType.swift */; };
+		6D3579681A84085A001BCADA /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579671A84085A001BCADA /* BoundingBox.swift */; };
+		6D35796A1A8408C9001BCADA /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579691A8408C9001BCADA /* Vector2.swift */; };
+		6D35796D1A840DC7001BCADA /* SchemaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35796C1A840DC7001BCADA /* SchemaBase.swift */; };
+		6D35796F1A8412B8001BCADA /* SphericalMercator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35796E1A8412B8001BCADA /* SphericalMercator.swift */; };
+		6D3579711A84138E001BCADA /* Projection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579701A84138E001BCADA /* Projection.swift */; };
+		6D3579761A8415B7001BCADA /* Extent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579751A8415B7001BCADA /* Extent.swift */; };
+		6D3579781A84183E001BCADA /* Viewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579771A84183E001BCADA /* Viewport.swift */; };
+		6D35797B1A8422A9001BCADA /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35797A1A8422A9001BCADA /* Rect.swift */; };
+		6D35797D1A8423C7001BCADA /* GeometryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35797C1A8423C7001BCADA /* GeometryPoint.swift */; };
 		6D5973B41A5B28F0005BE114 /* GeneralConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5973B31A5B28F0005BE114 /* GeneralConditionsViewController.swift */; };
 		6D5973B71A5B2D32005BE114 /* star-tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5973B61A5B2D32005BE114 /* star-tab@2x.png */; };
 		6D6280351A5C5820004D9541 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6280341A5C5820004D9541 /* RatingViewController.swift */; };
@@ -52,6 +97,10 @@
 		6D62803C1A5C8502004D9541 /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62803B1A5C8502004D9541 /* NearMeViewController.swift */; };
 		6D62803E1A5C8580004D9541 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62803D1A5C8580004D9541 /* SearchViewController.swift */; };
 		6D62D27E1A12B18C00DB54BA /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D62D27D1A12B18C00DB54BA /* libProj4.a */; };
+		6D8EE6FB1A8496AE0077A0F1 /* ResolutionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE6FA1A8496AE0077A0F1 /* ResolutionHelper.swift */; };
+		6D8EE6FE1A84A4550077A0F1 /* RendererBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE6FD1A84A4550077A0F1 /* RendererBase.swift */; };
+		6D8EE7001A84A6B60077A0F1 /* CocosRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE6FF1A84A6B60077A0F1 /* CocosRenderer.swift */; };
+		6D8EE7041A8529200077A0F1 /* CoordinateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE7031A8529200077A0F1 /* CoordinateHelper.swift */; };
 		6DD88FEF1A12A4E300C81F0E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD88FEE1A12A4E300C81F0E /* Default.png */; };
 		6DD88FF11A12A4E300C81F0E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD88FF01A12A4E300C81F0E /* Default@2x.png */; };
 		6DD88FF31A12A4E300C81F0E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD88FF21A12A4E300C81F0E /* Default-568h@2x.png */; };
@@ -246,55 +295,15 @@
 		6DF81C911A12D8500096DACE /* shop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81C8C1A12D8500096DACE /* shop@2x.png */; };
 		6DF81C921A12D8500096DACE /* my_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81C8D1A12D8500096DACE /* my_account@2x.png */; };
 		6DF81CC81A12DF710096DACE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF81CC71A12DF710096DACE /* JavaScriptCore.framework */; };
-		6DF81D311A12E6130096DACE /* jszip.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D2B1A12E6130096DACE /* jszip.js */; };
-		6DF81D321A12E6130096DACE /* jszip.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D2C1A12E6130096DACE /* jszip.min.js */; };
-		6DF81D331A12E6130096DACE /* pixi.dev.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D2D1A12E6130096DACE /* pixi.dev.js */; };
-		6DF81D341A12E6130096DACE /* pixi.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D2E1A12E6130096DACE /* pixi.js */; };
-		6DF81D351A12E6130096DACE /* proj4-src.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D2F1A12E6130096DACE /* proj4-src.js */; };
-		6DF81D361A12E6130096DACE /* proj4.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D301A12E6130096DACE /* proj4.js */; };
-		6DF81D381A12E7230096DACE /* ejs.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D371A12E7230096DACE /* ejs.js */; };
-		6DF81D491A12E7960096DACE /* Manager.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D391A12E7960096DACE /* Manager.js */; };
-		6DF81D4A1A12E7960096DACE /* Module.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D3A1A12E7960096DACE /* Module.js */; };
-		6DF81D4B1A12E7960096DACE /* Object.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D3B1A12E7960096DACE /* Object.js */; };
-		6DF81D4C1A12E7960096DACE /* Path.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D3C1A12E7960096DACE /* Path.js */; };
-		6DF81D4D1A12E7960096DACE /* pixi.dev.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D3D1A12E7960096DACE /* pixi.dev.js */; };
-		6DF81D4E1A12E7960096DACE /* pixi.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D3E1A12E7960096DACE /* pixi.js */; };
-		6DF81D4F1A12E7960096DACE /* Point.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D3F1A12E7960096DACE /* Point.js */; };
-		6DF81D501A12E7960096DACE /* proj4-src.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D401A12E7960096DACE /* proj4-src.js */; };
-		6DF81D511A12E7960096DACE /* proj4.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D411A12E7960096DACE /* proj4.js */; };
-		6DF81D521A12E7960096DACE /* ProjectionsHelper.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D421A12E7960096DACE /* ProjectionsHelper.js */; };
-		6DF81D531A12E7960096DACE /* Require.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D431A12E7960096DACE /* Require.js */; };
-		6DF81D541A12E7960096DACE /* trigger.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D441A12E7960096DACE /* trigger.js */; };
-		6DF81D551A12E7960096DACE /* UI.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D451A12E7960096DACE /* UI.js */; };
-		6DF81D561A12E7960096DACE /* Vector2.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D461A12E7960096DACE /* Vector2.js */; };
-		6DF81D571A12E7960096DACE /* Vector3.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D471A12E7960096DACE /* Vector3.js */; };
-		6DF81D581A12E7960096DACE /* Viewport.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D481A12E7960096DACE /* Viewport.js */; };
-		6DF81D5C1A12E7CC0096DACE /* EventEmitter.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D591A12E7CC0096DACE /* EventEmitter.js */; };
-		6DF81D5D1A12E7CC0096DACE /* EventEmitter.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D5A1A12E7CC0096DACE /* EventEmitter.min.js */; };
-		6DF81D5E1A12E7CC0096DACE /* Extension.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D5B1A12E7CC0096DACE /* Extension.js */; };
-		6DF81D601A12E7E60096DACE /* Intersection.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D5F1A12E7E60096DACE /* Intersection.js */; };
-		6DF81D621A12E7EE0096DACE /* Inheritance.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D611A12E7EE0096DACE /* Inheritance.js */; };
-		6DF81D651A12E7F80096DACE /* Object.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D631A12E7F80096DACE /* Object.js */; };
-		6DF81D661A12E7F80096DACE /* Point.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D641A12E7F80096DACE /* Point.js */; };
-		6DF81D691A12E8030096DACE /* Vector2.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D671A12E8030096DACE /* Vector2.js */; };
-		6DF81D6A1A12E8030096DACE /* Vector3.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D681A12E8030096DACE /* Vector3.js */; };
-		6DF81D6C1A12E80A0096DACE /* CoordinatesHelper.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D6B1A12E80A0096DACE /* CoordinatesHelper.js */; };
-		6DF81D6E1A12E8240096DACE /* BoundingBox.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D6D1A12E8240096DACE /* BoundingBox.js */; };
-		6DF81D701A12E8340096DACE /* ProjectionsHelper.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D6F1A12E8340096DACE /* ProjectionsHelper.js */; };
-		6DF81D721A12E86F0096DACE /* Extension.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D711A12E86F0096DACE /* Extension.js */; };
 		6DF81D831A12EA430096DACE /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DF81D791A12EA430096DACE /* ioapi.c */; };
 		6DF81D841A12EA430096DACE /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DF81D7B1A12EA430096DACE /* mztools.c */; };
 		6DF81D851A12EA430096DACE /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DF81D7D1A12EA430096DACE /* unzip.c */; };
 		6DF81D861A12EA430096DACE /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DF81D7F1A12EA430096DACE /* zip.c */; };
 		6DF81D871A12EA430096DACE /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6DF81D821A12EA430096DACE /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6DF81D891A12ED030096DACE /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D881A12ED030096DACE /* test.js */; };
-		6DF81D8D1A12F7C20096DACE /* citrongis-app.zip in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D8C1A12F7C20096DACE /* citrongis-app.zip */; };
 		6DF81D8F1A12FA2A0096DACE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF81D8E1A12FA2A0096DACE /* MessageUI.framework */; };
-		6DF81D911A12FDC90096DACE /* Context.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D901A12FDC90096DACE /* Context.js */; };
-		6DF81D931A12FDD00096DACE /* Path.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D921A12FDD00096DACE /* Path.js */; };
-		6DF81D951A1307FF0096DACE /* Comparison.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D941A1307FF0096DACE /* Comparison.js */; };
-		6DF81D971A1308160096DACE /* include.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D961A1308160096DACE /* include.js */; };
-		6DF81D991A1308270096DACE /* Bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81D981A1308270096DACE /* Bridge.js */; };
+		6DFF4AE81A6763D500D7C0A1 /* Archive.zip in Resources */ = {isa = PBXBuildFile; fileRef = 6DFF4AE71A6763D500D7C0A1 /* Archive.zip */; };
+		6DFF4AF01A679A5000D7C0A1 /* TapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF4AEF1A679A5000D7C0A1 /* TapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -317,6 +326,37 @@
 		6D05BAC61A5E29F800160116 /* launch-retina-ipad-portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-retina-ipad-portrait.png"; sourceTree = "<group>"; };
 		6D05BAC71A5E29F800160116 /* launch-retina-ipad-portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-retina-ipad-portrait@2x.png"; sourceTree = "<group>"; };
 		6D05BACC1A5E2ABE00160116 /* launch-retina5.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-retina5.5.png"; sourceTree = "<group>"; };
+		6D05BB241A5F783100160116 /* BoundingBox.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = BoundingBox.js; sourceTree = "<group>"; };
+		6D05BB251A5F783100160116 /* Bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Bridge.js; sourceTree = "<group>"; };
+		6D05BB261A5F783100160116 /* Comparison.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Comparison.js; sourceTree = "<group>"; };
+		6D05BB271A5F783100160116 /* Context.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Context.js; sourceTree = "<group>"; };
+		6D05BB281A5F783100160116 /* CoordinatesHelper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CoordinatesHelper.js; sourceTree = "<group>"; };
+		6D05BB291A5F783100160116 /* ejs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ejs.js; sourceTree = "<group>"; };
+		6D05BB2A1A5F783100160116 /* EventEmitter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EventEmitter.js; sourceTree = "<group>"; };
+		6D05BB2B1A5F783100160116 /* EventEmitter.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EventEmitter.min.js; sourceTree = "<group>"; };
+		6D05BB2C1A5F783100160116 /* Extension.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Extension.js; sourceTree = "<group>"; };
+		6D05BB2D1A5F783100160116 /* include.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = include.js; sourceTree = "<group>"; };
+		6D05BB2E1A5F783100160116 /* Inheritance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Inheritance.js; sourceTree = "<group>"; };
+		6D05BB2F1A5F783100160116 /* Intersection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Intersection.js; sourceTree = "<group>"; };
+		6D05BB301A5F783100160116 /* jszip.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jszip.js; sourceTree = "<group>"; };
+		6D05BB311A5F783100160116 /* jszip.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jszip.min.js; sourceTree = "<group>"; };
+		6D05BB321A5F783100160116 /* Manager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Manager.js; sourceTree = "<group>"; };
+		6D05BB331A5F783100160116 /* Module.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Module.js; sourceTree = "<group>"; };
+		6D05BB341A5F783100160116 /* Object.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Object.js; sourceTree = "<group>"; };
+		6D05BB351A5F783100160116 /* Path.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Path.js; sourceTree = "<group>"; };
+		6D05BB361A5F783100160116 /* pixi.dev.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = pixi.dev.js; sourceTree = "<group>"; };
+		6D05BB371A5F783100160116 /* pixi.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = pixi.js; sourceTree = "<group>"; };
+		6D05BB381A5F783100160116 /* Point.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Point.js; sourceTree = "<group>"; };
+		6D05BB391A5F783100160116 /* proj4-src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "proj4-src.js"; sourceTree = "<group>"; };
+		6D05BB3A1A5F783100160116 /* proj4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = proj4.js; sourceTree = "<group>"; };
+		6D05BB3B1A5F783100160116 /* ProjectionsHelper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ProjectionsHelper.js; sourceTree = "<group>"; };
+		6D05BB3C1A5F783100160116 /* Require.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Require.js; sourceTree = "<group>"; };
+		6D05BB3D1A5F783100160116 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
+		6D05BB3E1A5F783100160116 /* trigger.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = trigger.js; sourceTree = "<group>"; };
+		6D05BB3F1A5F783100160116 /* UI.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = UI.js; sourceTree = "<group>"; };
+		6D05BB401A5F783100160116 /* Vector2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Vector2.js; sourceTree = "<group>"; };
+		6D05BB411A5F783100160116 /* Vector3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Vector3.js; sourceTree = "<group>"; };
+		6D05BB421A5F783100160116 /* Viewport.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Viewport.js; sourceTree = "<group>"; };
 		6D0614CB1A5E1CE900E6F38F /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
 		6D0614CC1A5E1CE900E6F38F /* cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@3x.png"; sourceTree = "<group>"; };
 		6D099D9A1A5B6D7A001D0538 /* maj-tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maj-tab@2x.png"; sourceTree = "<group>"; };
@@ -335,6 +375,20 @@
 		6D2751761A15423800591610 /* chat.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = chat.zip; sourceTree = "<group>"; };
 		6D2751781A15427300591610 /* chat1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = chat1.zip; sourceTree = "<group>"; };
 		6D2EDCEB1A5A186800B69413 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6D35795C1A83E692001BCADA /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		6D35795E1A83E6F0001BCADA /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
+		6D3579601A83E7D5001BCADA /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		6D3579621A83E857001BCADA /* LayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerManager.swift; sourceTree = "<group>"; };
+		6D3579641A84053E001BCADA /* EventType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		6D3579671A84085A001BCADA /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		6D3579691A8408C9001BCADA /* Vector2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector2.swift; sourceTree = "<group>"; };
+		6D35796C1A840DC7001BCADA /* SchemaBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaBase.swift; sourceTree = "<group>"; };
+		6D35796E1A8412B8001BCADA /* SphericalMercator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SphericalMercator.swift; sourceTree = "<group>"; };
+		6D3579701A84138E001BCADA /* Projection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projection.swift; sourceTree = "<group>"; };
+		6D3579751A8415B7001BCADA /* Extent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extent.swift; sourceTree = "<group>"; };
+		6D3579771A84183E001BCADA /* Viewport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viewport.swift; sourceTree = "<group>"; };
+		6D35797A1A8422A9001BCADA /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		6D35797C1A8423C7001BCADA /* GeometryPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryPoint.swift; sourceTree = "<group>"; };
 		6D5973B31A5B28F0005BE114 /* GeneralConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralConditionsViewController.swift; sourceTree = "<group>"; };
 		6D5973B61A5B2D32005BE114 /* star-tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-tab@2x.png"; sourceTree = "<group>"; };
 		6D6280341A5C5820004D9541 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +398,10 @@
 		6D62803D1A5C8580004D9541 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6D62D27D1A12B18C00DB54BA /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "Proj4-master/build/Debug-iphoneos/libProj4.a"; sourceTree = "<group>"; };
 		6D62D27F1A12B30B00DB54BA /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
+		6D8EE6FA1A8496AE0077A0F1 /* ResolutionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolutionHelper.swift; sourceTree = "<group>"; };
+		6D8EE6FD1A84A4550077A0F1 /* RendererBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererBase.swift; sourceTree = "<group>"; };
+		6D8EE6FF1A84A6B60077A0F1 /* CocosRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocosRenderer.swift; sourceTree = "<group>"; };
+		6D8EE7031A8529200077A0F1 /* CoordinateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateHelper.swift; sourceTree = "<group>"; };
 		6DD88FE71A12A4E200C81F0E /* CitronGIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitronGIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD88FEB1A12A4E200C81F0E /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveChipmunk.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD88FEE1A12A4E300C81F0E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
@@ -744,42 +802,6 @@
 		6DF81C8C1A12D8500096DACE /* shop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop@2x.png"; sourceTree = "<group>"; };
 		6DF81C8D1A12D8500096DACE /* my_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my_account@2x.png"; sourceTree = "<group>"; };
 		6DF81CC71A12DF710096DACE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		6DF81D2B1A12E6130096DACE /* jszip.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jszip.js; sourceTree = "<group>"; };
-		6DF81D2C1A12E6130096DACE /* jszip.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jszip.min.js; sourceTree = "<group>"; };
-		6DF81D2D1A12E6130096DACE /* pixi.dev.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = pixi.dev.js; sourceTree = "<group>"; };
-		6DF81D2E1A12E6130096DACE /* pixi.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = pixi.js; sourceTree = "<group>"; };
-		6DF81D2F1A12E6130096DACE /* proj4-src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "proj4-src.js"; sourceTree = "<group>"; };
-		6DF81D301A12E6130096DACE /* proj4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = proj4.js; sourceTree = "<group>"; };
-		6DF81D371A12E7230096DACE /* ejs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ejs.js; sourceTree = "<group>"; };
-		6DF81D391A12E7960096DACE /* Manager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Manager.js; sourceTree = "<group>"; };
-		6DF81D3A1A12E7960096DACE /* Module.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Module.js; sourceTree = "<group>"; };
-		6DF81D3B1A12E7960096DACE /* Object.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Object.js; sourceTree = "<group>"; };
-		6DF81D3C1A12E7960096DACE /* Path.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Path.js; sourceTree = "<group>"; };
-		6DF81D3D1A12E7960096DACE /* pixi.dev.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = pixi.dev.js; sourceTree = "<group>"; };
-		6DF81D3E1A12E7960096DACE /* pixi.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = pixi.js; sourceTree = "<group>"; };
-		6DF81D3F1A12E7960096DACE /* Point.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Point.js; sourceTree = "<group>"; };
-		6DF81D401A12E7960096DACE /* proj4-src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "proj4-src.js"; sourceTree = "<group>"; };
-		6DF81D411A12E7960096DACE /* proj4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = proj4.js; sourceTree = "<group>"; };
-		6DF81D421A12E7960096DACE /* ProjectionsHelper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ProjectionsHelper.js; sourceTree = "<group>"; };
-		6DF81D431A12E7960096DACE /* Require.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Require.js; sourceTree = "<group>"; };
-		6DF81D441A12E7960096DACE /* trigger.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = trigger.js; sourceTree = "<group>"; };
-		6DF81D451A12E7960096DACE /* UI.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = UI.js; sourceTree = "<group>"; };
-		6DF81D461A12E7960096DACE /* Vector2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Vector2.js; sourceTree = "<group>"; };
-		6DF81D471A12E7960096DACE /* Vector3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Vector3.js; sourceTree = "<group>"; };
-		6DF81D481A12E7960096DACE /* Viewport.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Viewport.js; sourceTree = "<group>"; };
-		6DF81D591A12E7CC0096DACE /* EventEmitter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EventEmitter.js; sourceTree = "<group>"; };
-		6DF81D5A1A12E7CC0096DACE /* EventEmitter.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EventEmitter.min.js; sourceTree = "<group>"; };
-		6DF81D5B1A12E7CC0096DACE /* Extension.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Extension.js; sourceTree = "<group>"; };
-		6DF81D5F1A12E7E60096DACE /* Intersection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Intersection.js; sourceTree = "<group>"; };
-		6DF81D611A12E7EE0096DACE /* Inheritance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Inheritance.js; sourceTree = "<group>"; };
-		6DF81D631A12E7F80096DACE /* Object.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Object.js; sourceTree = "<group>"; };
-		6DF81D641A12E7F80096DACE /* Point.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Point.js; sourceTree = "<group>"; };
-		6DF81D671A12E8030096DACE /* Vector2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Vector2.js; sourceTree = "<group>"; };
-		6DF81D681A12E8030096DACE /* Vector3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Vector3.js; sourceTree = "<group>"; };
-		6DF81D6B1A12E80A0096DACE /* CoordinatesHelper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CoordinatesHelper.js; sourceTree = "<group>"; };
-		6DF81D6D1A12E8240096DACE /* BoundingBox.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = BoundingBox.js; sourceTree = "<group>"; };
-		6DF81D6F1A12E8340096DACE /* ProjectionsHelper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ProjectionsHelper.js; sourceTree = "<group>"; };
-		6DF81D711A12E86F0096DACE /* Extension.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Extension.js; sourceTree = "<group>"; };
 		6DF81D781A12EA430096DACE /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		6DF81D791A12EA430096DACE /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		6DF81D7A1A12EA430096DACE /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -792,13 +814,10 @@
 		6DF81D811A12EA430096DACE /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		6DF81D821A12EA430096DACE /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		6DF81D881A12ED030096DACE /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
-		6DF81D8C1A12F7C20096DACE /* citrongis-app.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "citrongis-app.zip"; sourceTree = "<group>"; };
 		6DF81D8E1A12FA2A0096DACE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		6DF81D901A12FDC90096DACE /* Context.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Context.js; sourceTree = "<group>"; };
-		6DF81D921A12FDD00096DACE /* Path.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Path.js; sourceTree = "<group>"; };
-		6DF81D941A1307FF0096DACE /* Comparison.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Comparison.js; sourceTree = "<group>"; };
-		6DF81D961A1308160096DACE /* include.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = include.js; sourceTree = "<group>"; };
-		6DF81D981A1308270096DACE /* Bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Bridge.js; sourceTree = "<group>"; };
+		6DFF4AE71A6763D500D7C0A1 /* Archive.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Archive.zip; sourceTree = "<group>"; };
+		6DFF4AEE1A679A5000D7C0A1 /* TapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingWindow.h; sourceTree = "<group>"; };
+		6DFF4AEF1A679A5000D7C0A1 /* TapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingWindow.m; sourceTree = "<group>"; };
 		BE0757C88AD67772AF40A5E1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C51678FCA48C0B627100CF3C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -912,6 +931,49 @@
 			name = "SignUp-SignIn";
 			sourceTree = "<group>";
 		};
+		6D3579591A83E5F7001BCADA /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				6D8EE6FC1A84A43D0077A0F1 /* RendererBase */,
+				6D8EE6F91A8496870077A0F1 /* Helper */,
+				6D3579791A842292001BCADA /* Features */,
+				6D35795E1A83E6F0001BCADA /* Layer.swift */,
+				6D3579601A83E7D5001BCADA /* Group.swift */,
+				6D3579621A83E857001BCADA /* LayerManager.swift */,
+				6D3579641A84053E001BCADA /* EventType.swift */,
+			);
+			name = Architecture;
+			sourceTree = "<group>";
+		};
+		6D3579661A840847001BCADA /* BoudingBox */ = {
+			isa = PBXGroup;
+			children = (
+				6D3579671A84085A001BCADA /* BoundingBox.swift */,
+			);
+			name = BoudingBox;
+			sourceTree = "<group>";
+		};
+		6D35796B1A840DAF001BCADA /* SchemaBase */ = {
+			isa = PBXGroup;
+			children = (
+				6D35797C1A8423C7001BCADA /* GeometryPoint.swift */,
+				6D35796C1A840DC7001BCADA /* SchemaBase.swift */,
+				6D35796E1A8412B8001BCADA /* SphericalMercator.swift */,
+				6D3579751A8415B7001BCADA /* Extent.swift */,
+				6D3579771A84183E001BCADA /* Viewport.swift */,
+			);
+			name = SchemaBase;
+			sourceTree = "<group>";
+		};
+		6D3579791A842292001BCADA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				6D35795C1A83E692001BCADA /* Feature.swift */,
+				6D35797A1A8422A9001BCADA /* Rect.swift */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
 		6D5973B51A5B2BF7005BE114 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,6 +994,24 @@
 				6D05BAA51A5E1F0500160116 /* UpdateStoreTableViewCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		6D8EE6F91A8496870077A0F1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6D8EE6FA1A8496AE0077A0F1 /* ResolutionHelper.swift */,
+				6D8EE7031A8529200077A0F1 /* CoordinateHelper.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		6D8EE6FC1A84A43D0077A0F1 /* RendererBase */ = {
+			isa = PBXGroup;
+			children = (
+				6D8EE6FD1A84A4550077A0F1 /* RendererBase.swift */,
+				6D8EE6FF1A84A6B60077A0F1 /* CocosRenderer.swift */,
+			);
+			name = RendererBase;
 			sourceTree = "<group>";
 		};
 		6DD88FDE1A12A4E200C81F0E = {
@@ -1719,6 +1799,7 @@
 		6DD8924B1A12A4E400C81F0E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6DFF4AE91A67933B00D7C0A1 /* CitronGISWindow */,
 				6D19EB221A4790FE00956371 /* ViewControllers */,
 				6DD895181A12ACB500C81F0E /* CitronGIS-Classes */,
 				6DD8924C1A12A4E400C81F0E /* AppDelegate.h */,
@@ -1736,6 +1817,7 @@
 		6DD895181A12ACB500C81F0E /* CitronGIS-Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6D3579591A83E5F7001BCADA /* Architecture */,
 				6DD8951D1A12AD0A00C81F0E /* Projection */,
 				6DD895191A12ACDA00C81F0E /* Geometry */,
 			);
@@ -1745,6 +1827,8 @@
 		6DD895191A12ACDA00C81F0E /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				6D35796B1A840DAF001BCADA /* SchemaBase */,
+				6D3579661A840847001BCADA /* BoudingBox */,
 				6DD8951C1A12AD0000C81F0E /* Point */,
 				6DD8951B1A12ACF400C81F0E /* ViewPort */,
 				6DD8951A1A12ACEA00C81F0E /* Vector */,
@@ -1755,6 +1839,7 @@
 		6DD8951A1A12ACEA00C81F0E /* Vector */ = {
 			isa = PBXGroup;
 			children = (
+				6D3579691A8408C9001BCADA /* Vector2.swift */,
 			);
 			name = Vector;
 			sourceTree = "<group>";
@@ -1776,6 +1861,7 @@
 		6DD8951D1A12AD0A00C81F0E /* Projection */ = {
 			isa = PBXGroup;
 			children = (
+				6D3579701A84138E001BCADA /* Projection.swift */,
 			);
 			name = Projection;
 			sourceTree = "<group>";
@@ -1832,47 +1918,37 @@
 		6DF81C931A12DDF80096DACE /* JS-src */ = {
 			isa = PBXGroup;
 			children = (
-				6DF81D981A1308270096DACE /* Bridge.js */,
-				6DF81D711A12E86F0096DACE /* Extension.js */,
-				6DF81D6F1A12E8340096DACE /* ProjectionsHelper.js */,
-				6DF81D961A1308160096DACE /* include.js */,
-				6DF81D941A1307FF0096DACE /* Comparison.js */,
-				6DF81D6D1A12E8240096DACE /* BoundingBox.js */,
-				6DF81D671A12E8030096DACE /* Vector2.js */,
-				6DF81D681A12E8030096DACE /* Vector3.js */,
-				6DF81D631A12E7F80096DACE /* Object.js */,
-				6DF81D6B1A12E80A0096DACE /* CoordinatesHelper.js */,
-				6DF81D641A12E7F80096DACE /* Point.js */,
-				6DF81D611A12E7EE0096DACE /* Inheritance.js */,
-				6DF81D5F1A12E7E60096DACE /* Intersection.js */,
-				6DF81D591A12E7CC0096DACE /* EventEmitter.js */,
-				6DF81D5A1A12E7CC0096DACE /* EventEmitter.min.js */,
-				6DF81D5B1A12E7CC0096DACE /* Extension.js */,
-				6DF81D391A12E7960096DACE /* Manager.js */,
-				6DF81D3A1A12E7960096DACE /* Module.js */,
-				6DF81D3B1A12E7960096DACE /* Object.js */,
-				6DF81D3C1A12E7960096DACE /* Path.js */,
-				6DF81D3D1A12E7960096DACE /* pixi.dev.js */,
-				6DF81D3E1A12E7960096DACE /* pixi.js */,
-				6DF81D3F1A12E7960096DACE /* Point.js */,
-				6DF81D401A12E7960096DACE /* proj4-src.js */,
-				6DF81D411A12E7960096DACE /* proj4.js */,
-				6DF81D421A12E7960096DACE /* ProjectionsHelper.js */,
-				6DF81D431A12E7960096DACE /* Require.js */,
-				6DF81D441A12E7960096DACE /* trigger.js */,
-				6DF81D451A12E7960096DACE /* UI.js */,
-				6DF81D461A12E7960096DACE /* Vector2.js */,
-				6DF81D471A12E7960096DACE /* Vector3.js */,
-				6DF81D921A12FDD00096DACE /* Path.js */,
-				6DF81D901A12FDC90096DACE /* Context.js */,
-				6DF81D481A12E7960096DACE /* Viewport.js */,
-				6DF81D371A12E7230096DACE /* ejs.js */,
-				6DF81D2B1A12E6130096DACE /* jszip.js */,
-				6DF81D2C1A12E6130096DACE /* jszip.min.js */,
-				6DF81D2D1A12E6130096DACE /* pixi.dev.js */,
-				6DF81D2E1A12E6130096DACE /* pixi.js */,
-				6DF81D2F1A12E6130096DACE /* proj4-src.js */,
-				6DF81D301A12E6130096DACE /* proj4.js */,
+				6D05BB241A5F783100160116 /* BoundingBox.js */,
+				6D05BB251A5F783100160116 /* Bridge.js */,
+				6D05BB261A5F783100160116 /* Comparison.js */,
+				6D05BB271A5F783100160116 /* Context.js */,
+				6D05BB281A5F783100160116 /* CoordinatesHelper.js */,
+				6D05BB291A5F783100160116 /* ejs.js */,
+				6D05BB2A1A5F783100160116 /* EventEmitter.js */,
+				6D05BB2B1A5F783100160116 /* EventEmitter.min.js */,
+				6D05BB2C1A5F783100160116 /* Extension.js */,
+				6D05BB2D1A5F783100160116 /* include.js */,
+				6D05BB2E1A5F783100160116 /* Inheritance.js */,
+				6D05BB2F1A5F783100160116 /* Intersection.js */,
+				6D05BB301A5F783100160116 /* jszip.js */,
+				6D05BB311A5F783100160116 /* jszip.min.js */,
+				6D05BB321A5F783100160116 /* Manager.js */,
+				6D05BB331A5F783100160116 /* Module.js */,
+				6D05BB341A5F783100160116 /* Object.js */,
+				6D05BB351A5F783100160116 /* Path.js */,
+				6D05BB361A5F783100160116 /* pixi.dev.js */,
+				6D05BB371A5F783100160116 /* pixi.js */,
+				6D05BB381A5F783100160116 /* Point.js */,
+				6D05BB391A5F783100160116 /* proj4-src.js */,
+				6D05BB3A1A5F783100160116 /* proj4.js */,
+				6D05BB3B1A5F783100160116 /* ProjectionsHelper.js */,
+				6D05BB3C1A5F783100160116 /* Require.js */,
+				6D05BB3D1A5F783100160116 /* test.js */,
+				6D05BB3E1A5F783100160116 /* trigger.js */,
+				6D05BB3F1A5F783100160116 /* UI.js */,
+				6D05BB401A5F783100160116 /* Vector2.js */,
+				6D05BB411A5F783100160116 /* Vector3.js */,
+				6D05BB421A5F783100160116 /* Viewport.js */,
 			);
 			name = "JS-src";
 			sourceTree = "<group>";
@@ -1880,8 +1956,8 @@
 		6DF81D731A12E9DA0096DACE /* testApp */ = {
 			isa = PBXGroup;
 			children = (
+				6DFF4AE71A6763D500D7C0A1 /* Archive.zip */,
 				6DF81D881A12ED030096DACE /* test.js */,
-				6DF81D8C1A12F7C20096DACE /* citrongis-app.zip */,
 				6D2751761A15423800591610 /* chat.zip */,
 				6D2751781A15427300591610 /* chat1.zip */,
 			);
@@ -1912,6 +1988,15 @@
 				6DF81D801A12EA430096DACE /* zip.h */,
 			);
 			path = minizip;
+			sourceTree = "<group>";
+		};
+		6DFF4AE91A67933B00D7C0A1 /* CitronGISWindow */ = {
+			isa = PBXGroup;
+			children = (
+				6DFF4AEE1A679A5000D7C0A1 /* TapDetectingWindow.h */,
+				6DFF4AEF1A679A5000D7C0A1 /* TapDetectingWindow.m */,
+			);
+			name = CitronGISWindow;
 			sourceTree = "<group>";
 		};
 		83E89F6DD890A4CE523F98BF /* Pods */ = {
@@ -2000,94 +2085,84 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF81D8D1A12F7C20096DACE /* citrongis-app.zip in Resources */,
-				6DF81D561A12E7960096DACE /* Vector2.js in Resources */,
+				6D05BB461A5F783200160116 /* Context.js in Resources */,
 				6DD88FF11A12A4E300C81F0E /* Default@2x.png in Resources */,
+				6D05BB5D1A5F783200160116 /* trigger.js in Resources */,
+				6D05BB481A5F783200160116 /* ejs.js in Resources */,
 				6DF81D891A12ED030096DACE /* test.js in Resources */,
-				6DF81D691A12E8030096DACE /* Vector2.js in Resources */,
-				6DF81D331A12E6130096DACE /* pixi.dev.js in Resources */,
 				6D2751771A15423800591610 /* chat.zip in Resources */,
 				6D5973B71A5B2D32005BE114 /* star-tab@2x.png in Resources */,
+				6D05BB5B1A5F783200160116 /* Require.js in Resources */,
 				6D0614CE1A5E1CE900E6F38F /* cancel@3x.png in Resources */,
-				6DF81D5E1A12E7CC0096DACE /* Extension.js in Resources */,
 				6D05BAB61A5E259500160116 /* citron_citrongis-60@3x.png in Resources */,
 				6D099D9F1A5B6D7A001D0538 /* near-tab@2x.png in Resources */,
-				6DF81D4B1A12E7960096DACE /* Object.js in Resources */,
-				6DF81D991A1308270096DACE /* Bridge.js in Resources */,
-				6DF81D971A1308160096DACE /* include.js in Resources */,
-				6DF81D6A1A12E8030096DACE /* Vector3.js in Resources */,
+				6DFF4AE81A6763D500D7C0A1 /* Archive.zip in Resources */,
 				6D05BAB71A5E259500160116 /* citron_citrongis-76.png in Resources */,
+				6D05BB4E1A5F783200160116 /* Intersection.js in Resources */,
+				6D05BB431A5F783200160116 /* BoundingBox.js in Resources */,
 				6DF81C911A12D8500096DACE /* shop@2x.png in Resources */,
 				6DF81C8E1A12D8500096DACE /* menu@2x.png in Resources */,
-				6DF81D581A12E7960096DACE /* Viewport.js in Resources */,
-				6DF81D4C1A12E7960096DACE /* Path.js in Resources */,
-				6DF81D4E1A12E7960096DACE /* pixi.js in Resources */,
-				6DF81D721A12E86F0096DACE /* Extension.js in Resources */,
+				6D05BB5A1A5F783200160116 /* ProjectionsHelper.js in Resources */,
 				6D05BACB1A5E29F800160116 /* launch-retina-ipad-portrait@2x.png in Resources */,
-				6DF81D911A12FDC90096DACE /* Context.js in Resources */,
 				6D05BAC11A5E28DE00160116 /* launch-retina4.png in Resources */,
-				6DF81D701A12E8340096DACE /* ProjectionsHelper.js in Resources */,
-				6DF81D6E1A12E8240096DACE /* BoundingBox.js in Resources */,
 				6D099D9E1A5B6D7A001D0538 /* maj-tab@2x.png in Resources */,
-				6DF81D951A1307FF0096DACE /* Comparison.js in Resources */,
 				6D05BAB51A5E259500160116 /* citron_citrongis-60@2x.png in Resources */,
+				6D05BB581A5F783200160116 /* proj4-src.js in Resources */,
 				6DD88FEF1A12A4E300C81F0E /* Default.png in Resources */,
-				6DF81D931A12FDD00096DACE /* Path.js in Resources */,
-				6DF81D501A12E7960096DACE /* proj4-src.js in Resources */,
-				6DF81D311A12E6130096DACE /* jszip.js in Resources */,
 				6D099DA11A5B6D7A001D0538 /* search-tab@2x.png in Resources */,
 				6DD88FF51A12A4E300C81F0E /* Default-Landscape~ipad.png in Resources */,
+				6D05BB4B1A5F783200160116 /* Extension.js in Resources */,
+				6D05BB601A5F783200160116 /* Vector3.js in Resources */,
 				6D05BAB81A5E259500160116 /* citron_citrongis-76@2x.png in Resources */,
 				6D05BABF1A5E28DE00160116 /* launch-retina3.5.png in Resources */,
 				6D19EB331A47ACB400956371 /* twitter-log@2x.png in Resources */,
 				6DF81C901A12D8500096DACE /* settings@2x.png in Resources */,
 				6DF81C871A12D3200096DACE /* Images.xcassets in Resources */,
-				6DF81D541A12E7960096DACE /* trigger.js in Resources */,
-				6DF81D5C1A12E7CC0096DACE /* EventEmitter.js in Resources */,
-				6DF81D321A12E6130096DACE /* jszip.min.js in Resources */,
 				6D62803A1A5C7DE8004D9541 /* vlibIcon@2x.png in Resources */,
+				6D05BB5F1A5F783200160116 /* Vector2.js in Resources */,
 				6D0614CD1A5E1CE900E6F38F /* cancel@2x.png in Resources */,
-				6DF81D661A12E7F80096DACE /* Point.js in Resources */,
+				6D05BB551A5F783200160116 /* pixi.dev.js in Resources */,
 				6DD892461A12A4E400C81F0E /* LICENSE_Chipmunk.txt in Resources */,
+				6D05BB471A5F783200160116 /* CoordinatesHelper.js in Resources */,
 				6D05BAC81A5E29F800160116 /* launch-retina-ipad-landscape.png in Resources */,
 				6DD891D81A12A4E400C81F0E /* LICENSE_CCBReader.txt in Resources */,
 				6DD891481A12A4E400C81F0E /* LICENSE_cocos2d.txt in Resources */,
-				6DF81D5D1A12E7CC0096DACE /* EventEmitter.min.js in Resources */,
+				6D05BB571A5F783200160116 /* Point.js in Resources */,
+				6D05BB561A5F783200160116 /* pixi.js in Resources */,
 				6DD88FF31A12A4E300C81F0E /* Default-568h@2x.png in Resources */,
 				6D19EB321A47ACB400956371 /* googleplus-log@2x.png in Resources */,
 				6D19EB311A47ACB400956371 /* facebook-log@2x.png in Resources */,
 				6DD890131A12A4E300C81F0E /* iTunesArtwork in Resources */,
-				6DF81D361A12E6130096DACE /* proj4.js in Resources */,
-				6DF81D491A12E7960096DACE /* Manager.js in Resources */,
 				6D05BACD1A5E2ABE00160116 /* launch-retina5.5.png in Resources */,
+				6D05BB591A5F783200160116 /* proj4.js in Resources */,
+				6D05BB451A5F783200160116 /* Comparison.js in Resources */,
 				6D05BAC91A5E29F800160116 /* launch-retina-ipad-landscape@2x.png in Resources */,
-				6DF81D6C1A12E80A0096DACE /* CoordinatesHelper.js in Resources */,
+				6D05BB521A5F783200160116 /* Module.js in Resources */,
+				6D05BB541A5F783200160116 /* Path.js in Resources */,
 				6D099DA01A5B6D7A001D0538 /* rate-tab@2x.png in Resources */,
-				6DF81D341A12E6130096DACE /* pixi.js in Resources */,
-				6DF81D351A12E6130096DACE /* proj4-src.js in Resources */,
+				6D05BB441A5F783200160116 /* Bridge.js in Resources */,
+				6D05BB611A5F783200160116 /* Viewport.js in Resources */,
 				6D05BAB41A5E259500160116 /* citron_citrongis-40@2x.png in Resources */,
-				6DF81D4D1A12E7960096DACE /* pixi.dev.js in Resources */,
-				6DF81D381A12E7230096DACE /* ejs.js in Resources */,
-				6DF81D4F1A12E7960096DACE /* Point.js in Resources */,
 				6D05BAB11A5E259500160116 /* citron_citrongis-29.png in Resources */,
-				6DF81D521A12E7960096DACE /* ProjectionsHelper.js in Resources */,
-				6DF81D651A12E7F80096DACE /* Object.js in Resources */,
+				6D05BB4C1A5F783200160116 /* include.js in Resources */,
+				6D05BB491A5F783200160116 /* EventEmitter.js in Resources */,
 				6D05BAC01A5E28DE00160116 /* launch-retina4.7.png in Resources */,
+				6D05BB511A5F783200160116 /* Manager.js in Resources */,
 				6D05BAB21A5E259500160116 /* citron_citrongis-29@2x.png in Resources */,
-				6DF81D551A12E7960096DACE /* UI.js in Resources */,
 				6DF81C921A12D8500096DACE /* my_account@2x.png in Resources */,
+				6D05BB4D1A5F783200160116 /* Inheritance.js in Resources */,
 				6D19EB211A478C7D00956371 /* CitrongisStoryboard.storyboard in Resources */,
-				6DF81D621A12E7EE0096DACE /* Inheritance.js in Resources */,
-				6DF81D531A12E7960096DACE /* Require.js in Resources */,
 				6D05BACA1A5E29F800160116 /* launch-retina-ipad-portrait.png in Resources */,
+				6D05BB531A5F783200160116 /* Object.js in Resources */,
+				6D05BB5E1A5F783200160116 /* UI.js in Resources */,
 				6D2751791A15427300591610 /* chat1.zip in Resources */,
-				6DF81D511A12E7960096DACE /* proj4.js in Resources */,
-				6DF81D601A12E7E60096DACE /* Intersection.js in Resources */,
-				6DF81D4A1A12E7960096DACE /* Module.js in Resources */,
+				6D05BB5C1A5F783200160116 /* test.js in Resources */,
 				6D19EB2D1A479B8F00956371 /* portrait-sign@2x.png in Resources */,
 				6DF81C7E1A12BF580096DACE /* background@2x.png in Resources */,
-				6DF81D571A12E7960096DACE /* Vector3.js in Resources */,
+				6D05BB501A5F783200160116 /* jszip.min.js in Resources */,
 				6D19EB271A47997E00956371 /* Localizable.strings in Resources */,
+				6D05BB4F1A5F783200160116 /* jszip.js in Resources */,
+				6D05BB4A1A5F783200160116 /* EventEmitter.min.js in Resources */,
 				6D05BAB31A5E259500160116 /* citron_citrongis-40.png in Resources */,
 				6DF81C8F1A12D8500096DACE /* search@2x.png in Resources */,
 				6DD890151A12A4E300C81F0E /* iTunesArtwork@2x in Resources */,
@@ -2140,11 +2215,13 @@
 				6DD891CB1A12A4E400C81F0E /* CCBReader.m in Sources */,
 				6DD8916A1A12A4E400C81F0E /* ALBuffer.m in Sources */,
 				6DD891701A12A4E400C81F0E /* ALChannelSource.m in Sources */,
+				6D3579651A84053E001BCADA /* EventType.swift in Sources */,
 				6DD891931A12A4E400C81F0E /* IOSVersion.m in Sources */,
 				6DD891791A12A4E400C81F0E /* ALListener.m in Sources */,
 				6DD891191A12A4E300C81F0E /* CCGLView.m in Sources */,
 				6DD8910C1A12A4E300C81F0E /* CCGLView.m in Sources */,
 				6DD891641A12A4E400C81F0E /* OALSimpleAudio.m in Sources */,
+				6D3579631A83E857001BCADA /* LayerManager.swift in Sources */,
 				6DD890CC1A12A4E300C81F0E /* CCScene.m in Sources */,
 				6DD890F41A12A4E300C81F0E /* CCTiledMapObjectGroup.m in Sources */,
 				6DD891461A12A4E400C81F0E /* ZipUtils.m in Sources */,
@@ -2152,8 +2229,10 @@
 				6DD8919F1A12A4E400C81F0E /* OALAudioFile.m in Sources */,
 				6DD890761A12A4E300C81F0E /* CCDrawNode.m in Sources */,
 				6DF81C851A12BF7A0096DACE /* PullableView.m in Sources */,
+				6D3579611A83E7D5001BCADA /* Group.swift in Sources */,
 				6DD891611A12A4E400C81F0E /* OALAudioTracks.m in Sources */,
 				6DD8902D1A12A4E300C81F0E /* CCEffectColor.m in Sources */,
+				6DFF4AF01A679A5000D7C0A1 /* TapDetectingWindow.m in Sources */,
 				6DF81D831A12EA430096DACE /* ioapi.c in Sources */,
 				6DD890271A12A4E300C81F0E /* CCEffect.m in Sources */,
 				6D62803E1A5C8580004D9541 /* SearchViewController.swift in Sources */,
@@ -2165,6 +2244,7 @@
 				6D099DA31A5B7018001D0538 /* StoreTabBarController.swift in Sources */,
 				6DF81D841A12EA430096DACE /* mztools.c in Sources */,
 				6DD891211A12A4E300C81F0E /* base64.c in Sources */,
+				6D35796D1A840DC7001BCADA /* SchemaBase.swift in Sources */,
 				6DD890AA1A12A4E300C81F0E /* CCParticleSystemBase.m in Sources */,
 				6DD8910F1A12A4E300C81F0E /* UITouch+CC.m in Sources */,
 				6DF81D871A12EA430096DACE /* ZipArchive.mm in Sources */,
@@ -2181,6 +2261,7 @@
 				6DD890AF1A12A4E300C81F0E /* CCPhysicsBody.m in Sources */,
 				6DD8911F1A12A4E300C81F0E /* NSEvent+CC.m in Sources */,
 				6DD891761A12A4E400C81F0E /* ALDevice.m in Sources */,
+				6D3579761A8415B7001BCADA /* Extent.swift in Sources */,
 				6D19EB241A47918700956371 /* SignInViewController.swift in Sources */,
 				6DD8913C1A12A4E400C81F0E /* NSThread+performBlock.m in Sources */,
 				6DD890D91A12A4E300C81F0E /* CCSpriteBatchNode.m in Sources */,
@@ -2193,13 +2274,16 @@
 				6DD891B91A12A4E400C81F0E /* CCTableView.m in Sources */,
 				6D62803C1A5C8502004D9541 /* NearMeViewController.swift in Sources */,
 				6DD890881A12A4E300C81F0E /* CCLayout.m in Sources */,
+				6D3579681A84085A001BCADA /* BoundingBox.swift in Sources */,
 				6D6280351A5C5820004D9541 /* RatingViewController.swift in Sources */,
 				6DD890B81A12A4E300C81F0E /* CCPhysicsShape.m in Sources */,
 				6DD8903E1A12A4E300C81F0E /* CCRenderer.m in Sources */,
 				6DD890D31A12A4E300C81F0E /* CCSprite.m in Sources */,
+				6D8EE7041A8529200077A0F1 /* CoordinateHelper.swift in Sources */,
 				6DD8915B1A12A4E400C81F0E /* OALAudioTrack.m in Sources */,
 				6D099DA61A5B7303001D0538 /* FeaturedViewController.swift in Sources */,
 				6D6280381A5C7A1D004D9541 /* RatingStoreTableViewCell.swift in Sources */,
+				6D3579711A84138E001BCADA /* Projection.swift in Sources */,
 				6DF81D861A12EA430096DACE /* zip.c in Sources */,
 				6DD8919C1A12A4E400C81F0E /* NSMutableDictionary+WeakReferences.m in Sources */,
 				6DD8905A1A12A4E300C81F0E /* CCActionManager.m in Sources */,
@@ -2215,6 +2299,7 @@
 				6DD891871A12A4E400C81F0E /* OpenALManager.m in Sources */,
 				6DF81C841A12BF7A0096DACE /* StyledPullableView.m in Sources */,
 				6DD890F71A12A4E300C81F0E /* CCTMXXMLParser.m in Sources */,
+				6D8EE6FE1A84A4550077A0F1 /* RendererBase.swift in Sources */,
 				6DD8912C1A12A4E400C81F0E /* CCProfiling.m in Sources */,
 				6DD8918E1A12A4E400C81F0E /* OALSuspendHandler.m in Sources */,
 				6DD891BC1A12A4E400C81F0E /* CCTextField.m in Sources */,
@@ -2224,12 +2309,15 @@
 				6DD890E71A12A4E300C81F0E /* CCTextureCache.m in Sources */,
 				6DD895171A12A98400C81F0E /* CitronGISMainViewController.swift in Sources */,
 				6DD8902B1A12A4E300C81F0E /* CCEffectContrast.m in Sources */,
+				6D8EE7001A84A6B60077A0F1 /* CocosRenderer.swift in Sources */,
 				6DD891B61A12A4E400C81F0E /* CCSlider.m in Sources */,
 				6DD890331A12A4E300C81F0E /* CCEffectPixellate.m in Sources */,
 				6DD891D11A12A4E400C81F0E /* CCBSequenceProperty.m in Sources */,
 				6DD890811A12A4E300C81F0E /* CCLabelTTF.m in Sources */,
+				6D35795D1A83E692001BCADA /* Feature.swift in Sources */,
 				6D5973B41A5B28F0005BE114 /* GeneralConditionsViewController.swift in Sources */,
 				6DD891801A12A4E400C81F0E /* ALSource.m in Sources */,
+				6D35795F1A83E6F0001BCADA /* Layer.swift in Sources */,
 				6DD891A31A12A4E400C81F0E /* OALTools.m in Sources */,
 				6DD890FE1A12A4E300C81F0E /* cocos2d.m in Sources */,
 				6DD890D61A12A4E300C81F0E /* CCSprite9Slice.m in Sources */,
@@ -2239,10 +2327,12 @@
 				6DD890A21A12A4E300C81F0E /* CCParticleExamples.m in Sources */,
 				6DD8906E1A12A4E300C81F0E /* CCConfiguration.m in Sources */,
 				6DD891731A12A4E400C81F0E /* ALContext.m in Sources */,
+				6D35797D1A8423C7001BCADA /* GeometryPoint.swift in Sources */,
 				6DD8904D1A12A4E300C81F0E /* CCActionCatmullRom.m in Sources */,
 				6DD890DF1A12A4E300C81F0E /* CCSpriteFrameCache.m in Sources */,
 				6DD8906A1A12A4E300C81F0E /* CCClippingNode.m in Sources */,
 				6DD891951A12A4E400C81F0E /* mach_timing.c in Sources */,
+				6D35796A1A8408C9001BCADA /* Vector2.swift in Sources */,
 				6DD890CF1A12A4E300C81F0E /* CCScheduler.m in Sources */,
 				6D05BAA61A5E1F0500160116 /* UpdateStoreTableViewCell.swift in Sources */,
 				6DD890ED1A12A4E300C81F0E /* CCTiledMap.m in Sources */,
@@ -2257,17 +2347,20 @@
 				6DD8905D1A12A4E300C81F0E /* CCActionProgressTimer.m in Sources */,
 				6DD891401A12A4E400C81F0E /* TGAlib.m in Sources */,
 				6DD890531A12A4E300C81F0E /* CCActionInstant.m in Sources */,
+				6D35797B1A8422A9001BCADA /* Rect.swift in Sources */,
 				6DD890561A12A4E300C81F0E /* CCActionInterval.m in Sources */,
 				6DD890841A12A4E300C81F0E /* CCNodeColor.m in Sources */,
 				6DD891121A12A4E300C81F0E /* CCAppDelegate.m in Sources */,
 				6DD890721A12A4E300C81F0E /* CCDirector.m in Sources */,
 				6DD890501A12A4E300C81F0E /* CCActionEase.m in Sources */,
 				6DD890311A12A4E300C81F0E /* CCEffectGlow.m in Sources */,
+				6D3579781A84183E001BCADA /* Viewport.swift in Sources */,
 				6DD8917D1A12A4E400C81F0E /* ALSoundSourcePool.m in Sources */,
 				6DD891C81A12A4E400C81F0E /* CCBKeyframe.m in Sources */,
 				6DD8907E1A12A4E300C81F0E /* CCLabelBMFont.m in Sources */,
 				6DD8916D1A12A4E400C81F0E /* ALCaptureDevice.m in Sources */,
 				6DD890F11A12A4E300C81F0E /* CCTiledMapLayer.m in Sources */,
+				6D8EE6FB1A8496AE0077A0F1 /* ResolutionHelper.swift in Sources */,
 				6DD890391A12A4E300C81F0E /* CCEffectTexture.m in Sources */,
 				6DD891281A12A4E400C81F0E /* CCColor.m in Sources */,
 				6DD890421A12A4E300C81F0E /* CCShader.m in Sources */,
@@ -2276,6 +2369,7 @@
 				6DF81D851A12EA430096DACE /* unzip.c in Sources */,
 				6DD891541A12A4E400C81F0E /* OALAudioActions.m in Sources */,
 				6DD8924E1A12A4E400C81F0E /* AppDelegate.m in Sources */,
+				6D35796F1A8412B8001BCADA /* SphericalMercator.swift in Sources */,
 				6DD891051A12A4E300C81F0E /* CCDirectorIOS.m in Sources */,
 				6DD8909F1A12A4E300C81F0E /* CCParticleBatchNode.m in Sources */,
 				6DD891391A12A4E400C81F0E /* NSAttributedString+CCAdditions.m in Sources */,

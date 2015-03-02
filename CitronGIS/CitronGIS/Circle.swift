@@ -8,16 +8,27 @@
 
 import Foundation
 
-class Rect : Feature {
+class Circle : Feature {
     var location:GeometryPoint = GeometryPoint()
     var borderColor:CCColor = CCColor.blueColor()
     var borderWidth:Double = 0
-    
-    var node:CCNodeColor!
+    var node:CCDrawNode!
+    var radius:Double = 5.0
+    var color:CCColor = CCColor.redColor()
     
     override init() {
         super.init()
-        node = CCNodeColor(color: CCColor.redColor(), width: 10, height: 10)
+        node = CCDrawNode()
+        node.anchorPoint = ccp(0.5, 0.5)
+        updateDraw()
+        
+
+
+    }
+    func updateDraw()
+    {
+        node.clear()
+        node.drawDot(ccp(0, 0), radius: CGFloat(radius), color: color)
     }
     
     func setLocation(location:GeometryPoint)
@@ -27,11 +38,13 @@ class Rect : Feature {
     }
     func setColor(color:CCColor)
     {
-        node.color = color
+        self.color = color
+        self.updateDraw()
     }
-    func setSize(size:CGSize)
+    func setRadius(size:Double)
     {
-        self.node.contentSize = size
+        radius = size / Double(CCDirector.sharedDirector().contentScaleFactor)
+        self.updateDraw()
         self.setDirty()
     }
     func setBorderColor(borderColor:CCColor)
@@ -46,8 +59,8 @@ class Rect : Feature {
     }
     override func render(renderer:CocosRenderer ) {
         node.position = renderer.getLocationOfPoint(location)
-        println("\(node.position.x), \(node.position.y)")
     }
+    
     override func addToScene(renderer: CocosRenderer) {
         renderer.scene.addChild(node)
     }

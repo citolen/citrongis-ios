@@ -25,6 +25,7 @@
 	// If you want more flexibility, you can configure Cocos2D yourself instead of calling setupCocos2dWithOptions:.
 	[self setupCocos2dWithOptions:@{
 		// Show the FPS and draw call label.
+                                    
 		CCSetupShowDebugStats: @(YES),
         CCSetupScreenOrientation: CCScreenOrientationPortrait
 		// More examples of options you might want to fiddle with:

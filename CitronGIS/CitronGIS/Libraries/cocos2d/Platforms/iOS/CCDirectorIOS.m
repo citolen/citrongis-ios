@@ -392,6 +392,7 @@
 #else
 	// setup DisplayLink in main thread
 	[_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:UITrackingRunLoopMode];
 #endif
 
     _animating = YES;

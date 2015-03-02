@@ -24,8 +24,6 @@ class Feature {
         self.throwEventDirty()
     }
     
-    
-    
     //Events
     var eventDirty:[String:(Feature) -> Void] = [:]
     

@@ -52,7 +52,18 @@ protocol    GeometryPointExport : JSExport
     }
     func transformToProj(fromProj proj:Projection)
     {
-        var re = pj_transform(self.proj.projection, proj.projection, 1, 0, &x, &y, &z)
+        if (self.proj.isLatLong())
+        {
+            x *= M_PI / 180.0
+            y *= M_PI / 180.0
+        }
+        pj_transform(self.proj.projection, proj.projection, 1, 0, &x, &y, &z)
+        if (proj.isLatLong())
+        {
+            x *= 180.0 / M_PI
+            y *= 180.0 / M_PI
+        }
+        
         self.proj = proj
     }
     var description: String {

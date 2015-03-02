@@ -23,8 +23,20 @@ class CocosRenderer: RendererBase {
     override func getLocationOfPoint(p: GeometryPoint) -> CGPoint {
         var l:GeometryPoint = CoordinateHelper.transformTo(p, proj: self.viewPort.schema.crs)
         
-        var pos = self.viewPort.worldToScreen(l.x, wy: l.y)
-        return CGPointMake(CGFloat(pos.x), CGFloat(pos.y))
+        var pos = self.viewPort.worldToScreen(l.x, wy:l.y)
+        return CGPointMake(CGFloat(pos.x), CGFloat(Double(self.viewPort.height) - pos.y))
     }
     
+    override func updatePositions(manager:LayerManager) {
+        for grp in manager.groups
+        {
+            for layer in grp.layers
+            {
+                for feature in layer.features
+                {
+                    feature.render(self)
+                }
+            }
+        }
+    }
 }

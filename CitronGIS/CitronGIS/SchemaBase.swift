@@ -24,7 +24,11 @@ class SchemaBase {
         self.extent = extent
     }
     
-    func translate(viewport:Viewport, tx:Int, ty:Int)
+    func translate(viewport:Viewport, tx:Double, ty:Double)
+    {
+        fatalError("To Implement")
+    }
+    func setTranslation(viewport:Viewport, tx:Double, ty:Double)
     {
         fatalError("To Implement")
     }

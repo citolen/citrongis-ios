@@ -72,6 +72,7 @@
 		6D19EB311A47ACB400956371 /* facebook-log@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D19EB2E1A47ACB400956371 /* facebook-log@2x.png */; };
 		6D19EB321A47ACB400956371 /* googleplus-log@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D19EB2F1A47ACB400956371 /* googleplus-log@2x.png */; };
 		6D19EB331A47ACB400956371 /* twitter-log@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D19EB301A47ACB400956371 /* twitter-log@2x.png */; };
+		6D2154011AA3FD1E00395693 /* CircleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2154001AA3FD1E00395693 /* CircleNode.m */; };
 		6D2751771A15423800591610 /* chat.zip in Resources */ = {isa = PBXBuildFile; fileRef = 6D2751761A15423800591610 /* chat.zip */; };
 		6D2751791A15427300591610 /* chat1.zip in Resources */ = {isa = PBXBuildFile; fileRef = 6D2751781A15427300591610 /* chat1.zip */; };
 		6D2EDCEC1A5A186800B69413 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2EDCEB1A5A186800B69413 /* SignUpViewController.swift */; };
@@ -87,7 +88,7 @@
 		6D3579711A84138E001BCADA /* Projection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579701A84138E001BCADA /* Projection.swift */; };
 		6D3579761A8415B7001BCADA /* Extent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579751A8415B7001BCADA /* Extent.swift */; };
 		6D3579781A84183E001BCADA /* Viewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3579771A84183E001BCADA /* Viewport.swift */; };
-		6D35797B1A8422A9001BCADA /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35797A1A8422A9001BCADA /* Rect.swift */; };
+		6D35797B1A8422A9001BCADA /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35797A1A8422A9001BCADA /* Circle.swift */; };
 		6D35797D1A8423C7001BCADA /* GeometryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35797C1A8423C7001BCADA /* GeometryPoint.swift */; };
 		6D5973B41A5B28F0005BE114 /* GeneralConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5973B31A5B28F0005BE114 /* GeneralConditionsViewController.swift */; };
 		6D5973B71A5B2D32005BE114 /* star-tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5973B61A5B2D32005BE114 /* star-tab@2x.png */; };
@@ -285,6 +286,9 @@
 		6DD895131A12A95400C81F0E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD895071A12A95400C81F0E /* CoreText.framework */; };
 		6DD895141A12A95400C81F0E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD895081A12A95400C81F0E /* GLKit.framework */; };
 		6DD895171A12A98400C81F0E /* CitronGISMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD895161A12A98400C81F0E /* CitronGISMainViewController.swift */; };
+		6DDD8E721A918F8500C8FF29 /* ProjectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDD8E711A918F8500C8FF29 /* ProjectionHelper.swift */; };
+		6DDD8E741A91913F00C8FF29 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDD8E731A91913F00C8FF29 /* Image.swift */; };
+		6DDD8E771A91954900C8FF29 /* baseImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDD8E761A91954900C8FF29 /* baseImage.png */; };
 		6DF81C7E1A12BF580096DACE /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF81C7D1A12BF580096DACE /* background@2x.png */; };
 		6DF81C841A12BF7A0096DACE /* StyledPullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF81C811A12BF7A0096DACE /* StyledPullableView.m */; };
 		6DF81C851A12BF7A0096DACE /* PullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF81C831A12BF7A0096DACE /* PullableView.m */; };
@@ -372,6 +376,8 @@
 		6D19EB2E1A47ACB400956371 /* facebook-log@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-log@2x.png"; sourceTree = "<group>"; };
 		6D19EB2F1A47ACB400956371 /* googleplus-log@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "googleplus-log@2x.png"; sourceTree = "<group>"; };
 		6D19EB301A47ACB400956371 /* twitter-log@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-log@2x.png"; sourceTree = "<group>"; };
+		6D2153FF1AA3FD1E00395693 /* CircleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleNode.h; sourceTree = "<group>"; };
+		6D2154001AA3FD1E00395693 /* CircleNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleNode.m; sourceTree = "<group>"; };
 		6D2751761A15423800591610 /* chat.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = chat.zip; sourceTree = "<group>"; };
 		6D2751781A15427300591610 /* chat1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = chat1.zip; sourceTree = "<group>"; };
 		6D2EDCEB1A5A186800B69413 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -387,7 +393,7 @@
 		6D3579701A84138E001BCADA /* Projection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projection.swift; sourceTree = "<group>"; };
 		6D3579751A8415B7001BCADA /* Extent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extent.swift; sourceTree = "<group>"; };
 		6D3579771A84183E001BCADA /* Viewport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viewport.swift; sourceTree = "<group>"; };
-		6D35797A1A8422A9001BCADA /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		6D35797A1A8422A9001BCADA /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		6D35797C1A8423C7001BCADA /* GeometryPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryPoint.swift; sourceTree = "<group>"; };
 		6D5973B31A5B28F0005BE114 /* GeneralConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralConditionsViewController.swift; sourceTree = "<group>"; };
 		6D5973B61A5B2D32005BE114 /* star-tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-tab@2x.png"; sourceTree = "<group>"; };
@@ -790,6 +796,9 @@
 		6DD895081A12A95400C81F0E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		6DD895151A12A98400C81F0E /* CitronGIS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CitronGIS-Bridging-Header.h"; sourceTree = "<group>"; };
 		6DD895161A12A98400C81F0E /* CitronGISMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitronGISMainViewController.swift; sourceTree = "<group>"; };
+		6DDD8E711A918F8500C8FF29 /* ProjectionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectionHelper.swift; sourceTree = "<group>"; };
+		6DDD8E731A91913F00C8FF29 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		6DDD8E761A91954900C8FF29 /* baseImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseImage.png; sourceTree = "<group>"; };
 		6DF81C7D1A12BF580096DACE /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		6DF81C801A12BF7A0096DACE /* StyledPullableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledPullableView.h; sourceTree = "<group>"; };
 		6DF81C811A12BF7A0096DACE /* StyledPullableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledPullableView.m; sourceTree = "<group>"; };
@@ -931,6 +940,15 @@
 			name = "SignUp-SignIn";
 			sourceTree = "<group>";
 		};
+		6D2153FE1AA3FCEF00395693 /* CocosFeature */ = {
+			isa = PBXGroup;
+			children = (
+				6D2153FF1AA3FD1E00395693 /* CircleNode.h */,
+				6D2154001AA3FD1E00395693 /* CircleNode.m */,
+			);
+			name = CocosFeature;
+			sourceTree = "<group>";
+		};
 		6D3579591A83E5F7001BCADA /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -969,7 +987,8 @@
 			isa = PBXGroup;
 			children = (
 				6D35795C1A83E692001BCADA /* Feature.swift */,
-				6D35797A1A8422A9001BCADA /* Rect.swift */,
+				6D35797A1A8422A9001BCADA /* Circle.swift */,
+				6DDD8E731A91913F00C8FF29 /* Image.swift */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -1001,6 +1020,7 @@
 			children = (
 				6D8EE6FA1A8496AE0077A0F1 /* ResolutionHelper.swift */,
 				6D8EE7031A8529200077A0F1 /* CoordinateHelper.swift */,
+				6DDD8E711A918F8500C8FF29 /* ProjectionHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -1061,6 +1081,7 @@
 		6DD88FED1A12A4E300C81F0E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6DDD8E751A91954100C8FF29 /* tmp */,
 				6D05BAB91A5E28BB00160116 /* Launch */,
 				6D19EB2A1A479B7400956371 /* ViewControllers */,
 				6DF81D731A12E9DA0096DACE /* testApp */,
@@ -1817,6 +1838,7 @@
 		6DD895181A12ACB500C81F0E /* CitronGIS-Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6D2153FE1AA3FCEF00395693 /* CocosFeature */,
 				6D3579591A83E5F7001BCADA /* Architecture */,
 				6DD8951D1A12AD0A00C81F0E /* Projection */,
 				6DD895191A12ACDA00C81F0E /* Geometry */,
@@ -1864,6 +1886,14 @@
 				6D3579701A84138E001BCADA /* Projection.swift */,
 			);
 			name = Projection;
+			sourceTree = "<group>";
+		};
+		6DDD8E751A91954100C8FF29 /* tmp */ = {
+			isa = PBXGroup;
+			children = (
+				6DDD8E761A91954900C8FF29 /* baseImage.png */,
+			);
+			name = tmp;
 			sourceTree = "<group>";
 		};
 		6DF81C741A12BF2A0096DACE /* Lib */ = {
@@ -2147,6 +2177,7 @@
 				6D05BB4C1A5F783200160116 /* include.js in Resources */,
 				6D05BB491A5F783200160116 /* EventEmitter.js in Resources */,
 				6D05BAC01A5E28DE00160116 /* launch-retina4.7.png in Resources */,
+				6DDD8E771A91954900C8FF29 /* baseImage.png in Resources */,
 				6D05BB511A5F783200160116 /* Manager.js in Resources */,
 				6D05BAB21A5E259500160116 /* citron_citrongis-29@2x.png in Resources */,
 				6DF81C921A12D8500096DACE /* my_account@2x.png in Resources */,
@@ -2260,6 +2291,7 @@
 				6DD890351A12A4E300C81F0E /* CCEffectNode.m in Sources */,
 				6DD890AF1A12A4E300C81F0E /* CCPhysicsBody.m in Sources */,
 				6DD8911F1A12A4E300C81F0E /* NSEvent+CC.m in Sources */,
+				6D2154011AA3FD1E00395693 /* CircleNode.m in Sources */,
 				6DD891761A12A4E400C81F0E /* ALDevice.m in Sources */,
 				6D3579761A8415B7001BCADA /* Extent.swift in Sources */,
 				6D19EB241A47918700956371 /* SignInViewController.swift in Sources */,
@@ -2332,6 +2364,7 @@
 				6DD890DF1A12A4E300C81F0E /* CCSpriteFrameCache.m in Sources */,
 				6DD8906A1A12A4E300C81F0E /* CCClippingNode.m in Sources */,
 				6DD891951A12A4E400C81F0E /* mach_timing.c in Sources */,
+				6DDD8E741A91913F00C8FF29 /* Image.swift in Sources */,
 				6D35796A1A8408C9001BCADA /* Vector2.swift in Sources */,
 				6DD890CF1A12A4E300C81F0E /* CCScheduler.m in Sources */,
 				6D05BAA61A5E1F0500160116 /* UpdateStoreTableViewCell.swift in Sources */,
@@ -2347,7 +2380,7 @@
 				6DD8905D1A12A4E300C81F0E /* CCActionProgressTimer.m in Sources */,
 				6DD891401A12A4E400C81F0E /* TGAlib.m in Sources */,
 				6DD890531A12A4E300C81F0E /* CCActionInstant.m in Sources */,
-				6D35797B1A8422A9001BCADA /* Rect.swift in Sources */,
+				6D35797B1A8422A9001BCADA /* Circle.swift in Sources */,
 				6DD890561A12A4E300C81F0E /* CCActionInterval.m in Sources */,
 				6DD890841A12A4E300C81F0E /* CCNodeColor.m in Sources */,
 				6DD891121A12A4E300C81F0E /* CCAppDelegate.m in Sources */,
@@ -2367,6 +2400,7 @@
 				6DD890641A12A4E300C81F0E /* CCAnimation.m in Sources */,
 				6DD891B01A12A4E400C81F0E /* CCControlTextureFactory.m in Sources */,
 				6DF81D851A12EA430096DACE /* unzip.c in Sources */,
+				6DDD8E721A918F8500C8FF29 /* ProjectionHelper.swift in Sources */,
 				6DD891541A12A4E400C81F0E /* OALAudioActions.m in Sources */,
 				6DD8924E1A12A4E400C81F0E /* AppDelegate.m in Sources */,
 				6D35796F1A8412B8001BCADA /* SphericalMercator.swift in Sources */,

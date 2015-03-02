@@ -31,7 +31,6 @@ class RendererBase {
             
             }, key: "renderGroupChanged")
     }
-    
     func featureChanged(feature:Feature, type:EventType)
     {
         fatalError("To Implement")
@@ -44,7 +43,7 @@ class RendererBase {
     {
         fatalError("To Implement")
     }
-    func updatePositions()
+    func updatePositions(manager:LayerManager)
     {
         fatalError("To Implement")
     }

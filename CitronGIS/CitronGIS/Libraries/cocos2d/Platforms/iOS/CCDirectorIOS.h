@@ -66,6 +66,7 @@
 	CFTimeInterval	_lastDisplayTime;
 }
 -(void) mainLoop:(id)sender;
+
 @end
 
 #endif // __CC_PLATFORM_IOS

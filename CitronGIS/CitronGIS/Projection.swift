@@ -21,6 +21,10 @@ class Projection
     {
         projection = proj
     }
+    func isLatLong() -> Bool
+    {
+        return pj_is_latlong(projection) == 1 ? true : false
+    }
     var description: String {
         return "\(pj_get_def(projection, 0))"
     }

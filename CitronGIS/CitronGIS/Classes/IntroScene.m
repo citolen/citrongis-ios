@@ -33,10 +33,11 @@
     self = [super init];
     if (!self) return(nil);
     
+    
     // Create a colored background (Dark Grey)
-//    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
-//    [self addChild:background];
-//    
+    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
+    [self addChild:background];
+//
 //    // Hello world
 //    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Chalkduster" fontSize:36.0f];
 //    label.positionType = CCPositionTypeNormalized;
@@ -52,8 +53,13 @@
     [self addChild:helloWorldButton];
 
 
-    
 	return self;
+}
+
+
+-(void)update:(CCTime)delta
+{
+//    NSLog(@"update");
 }
 
 

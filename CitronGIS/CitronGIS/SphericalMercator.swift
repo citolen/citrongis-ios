@@ -14,14 +14,20 @@ class SphericalMercator : SchemaBase
     {
         super.init(name: "SphericalMercator", andCrs:Projection(fromName:"+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs") , withOriginX: -20037508.342789, withOriginY: -20037508.342789, andBoudingBox: Extent(minX: -20037508.342789, andMinY: -20037508.342789, andMaxX: 20037508.342789, andMaxY: 20037508.342789))
     }
-    override func translate(viewport: Viewport, tx: Int, ty: Int) {
+    override func translate(viewport: Viewport, tx: Double, ty: Double) {
         var mx = viewport.resolution * Double(tx)
         var my = viewport.resolution * Double(ty)
         
-        viewport.origin.x -= mx
-        viewport.origin.y += my
+        viewport.origin.x += mx
+        viewport.origin.y -= my
     }
-    
+    override func setTranslation(viewport: Viewport, tx: Double, ty: Double) {
+        var mx = viewport.resolution * Double(tx)
+        var my = viewport.resolution * Double(ty)
+        
+        viewport.origin.x = -mx
+        viewport.origin.y = my
+    }
     override func rotate(viewport: Viewport, angle: Double) {
         var pid = 2.0 * M_PI
         

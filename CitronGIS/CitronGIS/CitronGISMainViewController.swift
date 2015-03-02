@@ -10,12 +10,18 @@ import UIKit
 import JavaScriptCore
 import MessageUI
 
-class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, UIWebViewDelegate {
+class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, UIWebViewDelegate, UIGestureRecognizerDelegate {
 
     var layerManager:LayerManager!
     var viewport:Viewport!
     var currentScene:CCScene!
     var renderer:RendererBase!
+    
+    var pangesture:UIPanGestureRecognizer!
+    var pinchGesture:UIPinchGestureRecognizer!
+    var firstX:CGFloat!
+    var firstY:CGFloat!
+    var firstZ:Double!
     
     let scriptToLoad = ["jszip",
                         "proj4",
@@ -68,8 +74,50 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
+    func didPinch(sender:UIPinchGestureRecognizer!)
+    {
+        var scale = sender.scale
+        if (sender.state == UIGestureRecognizerState.Began) {
+            firstZ = Double(scale)
+        }
+        else if (sender.state == UIGestureRecognizerState.Ended)
+        {
+            firstZ = nil
+        }
+        else
+        {
+            self.viewport.zoomT((firstZ - Double(scale)) * 15)
+            firstZ = Double(scale)
+            self.renderer.updatePositions(layerManager)
+        }
+    }
+    func didPan(sender:UIPanGestureRecognizer!)
+    {
+        var translatedPoint = sender.translationInView(self.webView)
+        
+        if (sender.state == UIGestureRecognizerState.Began) {
+            firstX = 0
+            firstY = 0
+        }
+        else if (sender.state == UIGestureRecognizerState.Ended)
+        {
+            firstX = nil
+            firstY = nil
+        }
+        else
+        {
+            
+            self.viewport.translate(Double(firstX - translatedPoint.x), ty: Double(firstY - translatedPoint.y))
+            firstX = translatedPoint.x
+            firstY = translatedPoint.y
+            self.renderer.updatePositions(layerManager)
+        }
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -83,6 +131,10 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         {
             self.setupInterface()
         }
+        if (self.currentScene != nil)
+        {
+            self.currentScene.removeAllChildren()
+        }
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Fade)
     }
@@ -93,26 +145,37 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         viewport = Viewport(width: UInt(self.view.frame.size.width), andHeight: UInt(self.view.frame.size.height), andResolution: ResolutionHelper.resolutionReference(), andSchema: SphericalMercator(), andOrigin: Vector2(fromPosx: 0, andY: 0), andRotation: 0)
         layerManager = LayerManager()
         renderer = CocosRenderer(layerManager: layerManager, andScene: CCDirector.sharedDirector().runningScene, andViewPort: viewport)
-        
+        webView.scrollView.scrollEnabled = false
+        webView.addGestureRecognizer(pangesture)
+        webView.addGestureRecognizer(pinchGesture)
+//        CCDirector.sharedDirector().view.addGestureRecognizer(pangesture)
+//        CCDirector.sharedDirector().view.addGestureRecognizer(pinchGesture)
         self.currentScene = CCDirector.sharedDirector().runningScene
         
-        //Test code
+        
+        
         let grp = Group()
         layerManager.addGroup(grp)
         let layer = Layer()
         grp.addLayer(layer)
-        let feature = Rect()
-        feature.setSize(CGSizeMake(100, 100))
+        
+        let feature3 = Image(name: "baseImage.png")
+        feature3.setSize(CGSizeMake(256, 256))
+        feature3.location = GeometryPoint(fromPosx: 0, andY: 0, andZ: 0, andProj: ProjectionHelper.WSG84())
+        layer.addFeature(feature3)
+        
+        let feature = Circle()
+        feature.setRadius(5.0)
         feature.setColor(CCColor.blueColor())
-        feature.location = GeometryPoint(fromPosx: 40, andY: 0, andZ: 0, andProj: Projection(fromName: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
+        feature.location = GeometryPoint(fromPosx: 0, andY: 40, andZ: 0, andProj: ProjectionHelper.WSG84())
         layer.addFeature(feature)
         
-        let feature2 = Rect()
-        feature2.setSize(CGSizeMake(10, 10))
-        feature2.setColor(CCColor.whiteColor()) 
-        feature2.location = GeometryPoint(fromPosx: 0, andY: 0.69813170079, andZ: 0, andProj: Projection(fromName: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
-//        feature.location.transformToProj(fromProj: Projection(fromName: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs"))
-        layer.addFeature(feature2)
+        let feature2 = Circle()
+        feature.setRadius(10.0)
+        feature2.setColor(CCColor.yellowColor())
+        feature2.location = GeometryPoint(fromPosx: 0, andY: 0, andZ: 0, andProj: ProjectionHelper.WSG84())
+        layer.addFeature(feature2);
+
     }
     
     func addTestExtension()
@@ -178,9 +241,17 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         }
         
     }
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     func setupExtensions()
     {
         webView = UIWebView()
+        pangesture = UIPanGestureRecognizer(target: self, action: "didPan:")
+        pangesture.delegate = self
+        pinchGesture = UIPinchGestureRecognizer(target: self, action: "didPinch:")
+        pinchGesture.delegate = self
+        
         webView.delegate = self
         self.jscontext = webView.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as JSContext
         

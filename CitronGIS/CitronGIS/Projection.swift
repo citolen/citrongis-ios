@@ -11,11 +11,11 @@ import Foundation
 class Projection
 {
     var projection: projPJ
-    
+    var name = ""
     init(fromName name:NSString)
     {
         self.projection = pj_init_plus(name.UTF8String)
-        
+        self.name = name as String
     }
     init(fromProj proj:projPJ)
     {

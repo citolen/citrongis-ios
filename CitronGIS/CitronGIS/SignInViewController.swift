@@ -25,7 +25,7 @@ class SignInViewController: UIViewController {
         })
     }
     @IBAction func pressSignUp(sender: AnyObject) {
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("signup")! as UIViewController
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("signup")! as! UIViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

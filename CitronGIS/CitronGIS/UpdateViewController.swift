@@ -25,7 +25,7 @@ class UpdateViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = "updateCell"
         
-        var cell:UpdateStoreTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as UpdateStoreTableViewCell
+        var cell:UpdateStoreTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as! UpdateStoreTableViewCell
         if (cell == nil)
         {
             cell = UpdateStoreTableViewCell()

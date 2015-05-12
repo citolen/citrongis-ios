@@ -57,7 +57,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = "ratingCell"
         
-        var cell:RatingStoreTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as RatingStoreTableViewCell
+        var cell:RatingStoreTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as! RatingStoreTableViewCell
         if (cell == nil)
         {
             cell = RatingStoreTableViewCell()

@@ -1,18 +1,18 @@
 //
-//  Circle.swift
+//  Polygon.swift
 //  CitronGIS
 //
-//  Created by Charly DELAROCHE on 2/5/15.
+//  Created by Charly DELAROCHE on 3/3/15.
 //  Copyright (c) 2015 Charly DELAROCHE. All rights reserved.
 //
 
 import Foundation
 
-class Circle : Feature {
-    var location:GeometryPoint = GeometryPoint()
+class Polygon: Feature {
+    var locations:[GeometryPoint] = []
     var borderColor:CCColor = CCColor.blueColor()
     var fillColor:CCColor = CCColor.clearColor()
-    var borderWidth:Double = 0
+    var borderWidth:Double = 2
     var node:CCDrawNode!
     var radius:Double = 5.0
     
@@ -20,32 +20,33 @@ class Circle : Feature {
         super.init()
         node = CCDrawNode()
         node.anchorPoint = ccp(0.5, 0.5)
-        updateDraw()
-    }
-    func updateDraw()
-    {
-        node.clear()
-        if (borderWidth > 0)
-        {
-            node.drawDot(ccp(0, 0), radius: CGFloat(radius + borderWidth), color: borderColor)
-        }
-        node.drawDot(ccp(0, 0), radius: CGFloat(radius), color: fillColor)
     }
     
-    func setLocation(location:GeometryPoint)
+    func addVertex(pt:GeometryPoint)
     {
-        self.location = location
-        self.setDirty()
+        locations.append(pt)
     }
+    
+    func updateDraw(renderer:CocosRenderer)
+    {
+        node.clear()
+        var pt:[CGPoint] = []
+        for loc in locations
+        {
+            pt.append(renderer.getLocationOfPoint(loc))
+        }
+        
+        var bb = pt.withUnsafeBufferPointer { (cArray: UnsafeBufferPointer<CGPoint>) -> UnsafePointer<CGPoint> in
+            return cArray.baseAddress
+
+        }
+        
+        self.node.drawPolyWithVerts(bb, count: UInt(pt.count), fillColor:self.fillColor, borderWidth:CGFloat(self.borderWidth), borderColor: self.borderColor)
+    }
+    
     func setColor(color:CCColor)
     {
         self.fillColor = color
-        self.updateDraw()
-    }
-    func setRadius(size:Double)
-    {
-        radius = size
-        self.updateDraw()
         self.setDirty()
     }
     func setBorderColor(borderColor:CCColor)
@@ -59,10 +60,12 @@ class Circle : Feature {
         self.setDirty()
     }
     override func render(renderer:CocosRenderer ) {
-        node.position = renderer.getLocationOfPoint(location)
+        self.updateDraw(renderer)
     }
     
     override func addToScene(renderer: CocosRenderer) {
         renderer.scene.addChild(node)
+        self.updateDraw(renderer)
     }
+    
 }

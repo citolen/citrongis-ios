@@ -9,4 +9,5 @@
 #import "CCGLView.h"
 #import "IntroScene.h"
 #import "TapDetectingWindow.h"
+#import "AFNetworking.h"
 #include "proj_api.h"

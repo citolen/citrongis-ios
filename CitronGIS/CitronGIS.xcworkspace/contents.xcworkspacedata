@@ -5,9 +5,6 @@
       location = "group:CitronGIS.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Proj4-master/Proj4.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

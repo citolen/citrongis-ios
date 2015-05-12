@@ -46,13 +46,26 @@
 //    [self addChild:label];
 //    
     // Helloworld scene button
-    CCButton *helloWorldButton = [CCButton buttonWithTitle:@"[ Start ]" fontName:@"Verdana-Bold" fontSize:18.0f];
-    helloWorldButton.positionType = CCPositionTypeNormalized;
-    helloWorldButton.position = ccp(0.6f, 0.70f);
-    [helloWorldButton setTarget:self selector:@selector(onSpinningClicked:)];
-    [self addChild:helloWorldButton];
+//    CCButton *helloWorldButton = [CCButton buttonWithTitle:@"[ Start ]" fontName:@"Verdana-Bold" fontSize:18.0f];
+////    helloWorldButton.positionType = CCPositionTypeNormalized;
+//    helloWorldButton.position = ccp(0, 736);
+//    helloWorldButton.anchorPoint = ccp(0.5, 0.5);
+////    helloWorldButton.position = ccp(0.6f, 0.70f);
+//    [helloWorldButton setTarget:self selector:@selector(onSpinningClicked:)];
+//    [self addChild:helloWorldButton];
 
-
+//    CCDrawNode *test = [[CCDrawNode alloc] init];
+    
+    
+//    CGPoint *test2 = (CGPoint*)malloc(4 * sizeof(CGPoint));
+//    test2[0] = CGPointMake(207.0,368.0);
+//    test2[1] = CGPointMake(207.0,399.083735623851);
+//    test2[2] = CGPointMake(207.0,382.520166566081);
+//    test2[3] = CGPointMake(207.0, 0);
+//    
+//    [test drawPolyWithVerts:test2 count:4 fillColor:[CCColor blueColor] borderWidth:1 borderColor:[CCColor blackColor]];
+//    [self addChild:test];
+    
 	return self;
 }
 

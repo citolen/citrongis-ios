@@ -52,9 +52,9 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
     var jscontext:JSContext!
     var storyboardCG:UIStoryboard!
     
-    override init() {
-        super.init()
-    }
+//    override init() {
+//        super.init()
+//    }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.setupExtensions()
@@ -89,7 +89,7 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         }
         else
         {
-            self.viewport.zoomT((firstZ - Double(scale)) * 15)
+            self.viewport.zoomT((firstZ - Double(scale)) * 30000)
             firstZ = Double(scale)
             self.renderer.updatePositions(layerManager)
         }
@@ -142,14 +142,14 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        viewport = Viewport(width: UInt(self.view.frame.size.width), andHeight: UInt(self.view.frame.size.height), andResolution: ResolutionHelper.resolutionReference(), andSchema: SphericalMercator(), andOrigin: Vector2(fromPosx: 0, andY: 0), andRotation: 0)
+        
+        
+        viewport = Viewport(width: UInt(self.view.frame.size.width) , andHeight: UInt(self.view.frame.size.height), andResolution: ResolutionHelper.resolutionReference(), andSchema: SphericalMercator(), andOrigin: Vector2(fromPosx: 0, andY: 0), andRotation: 0)
         layerManager = LayerManager()
         renderer = CocosRenderer(layerManager: layerManager, andScene: CCDirector.sharedDirector().runningScene, andViewPort: viewport)
         webView.scrollView.scrollEnabled = false
         webView.addGestureRecognizer(pangesture)
         webView.addGestureRecognizer(pinchGesture)
-//        CCDirector.sharedDirector().view.addGestureRecognizer(pangesture)
-//        CCDirector.sharedDirector().view.addGestureRecognizer(pinchGesture)
         self.currentScene = CCDirector.sharedDirector().runningScene
         
         
@@ -160,22 +160,87 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         grp.addLayer(layer)
         
         let feature3 = Image(name: "baseImage.png")
+//        let feature3 = Image(url: "http://www.progonos.com/furuti/MapProj/Dither/ProjConf/Img/ad36-s200-0.5.png", success: { () -> () in
+//        
+//        }) { (op, err) -> () in
+//            
+//        }
         feature3.setSize(CGSizeMake(256, 256))
         feature3.location = GeometryPoint(fromPosx: 0, andY: 0, andZ: 0, andProj: ProjectionHelper.WSG84())
         layer.addFeature(feature3)
         
-        let feature = Circle()
-        feature.setRadius(5.0)
-        feature.setColor(CCColor.blueColor())
-        feature.location = GeometryPoint(fromPosx: 0, andY: 40, andZ: 0, andProj: ProjectionHelper.WSG84())
-        layer.addFeature(feature)
         
         let feature2 = Circle()
-        feature.setRadius(10.0)
-        feature2.setColor(CCColor.yellowColor())
-        feature2.location = GeometryPoint(fromPosx: 0, andY: 0, andZ: 0, andProj: ProjectionHelper.WSG84())
+        feature2.setRadius(3.0)
+        feature2.setBorderWidth(2.0)
+        feature2.setBorderColor(CCColor.yellowColor())
+        feature2.setColor(CCColor.redColor())
+        feature2.location = GeometryPoint(fromPosx: 2.346030, andY:48.851913, andZ: 0, andProj: ProjectionHelper.WSG84())
         layer.addFeature(feature2);
-
+        
+        let feature4 = Polygon()
+        feature4.setBorderColor(CCColor.redColor())
+        feature4.setColor(CCColor.yellowColor())
+        feature4.addVertex(GeometryPoint(fromPosx: -68.288577, andY:-55.679726 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature4.addVertex(GeometryPoint(fromPosx:-70.573733, andY:-18.316418 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature4.addVertex(GeometryPoint(fromPosx:-81.823733, andY:-5.094729 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature4.addVertex(GeometryPoint(fromPosx:-73.913577, andY:12.722377 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature4.addVertex(GeometryPoint(fromPosx:-34.187013, andY:-6.493759 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        layer.addFeature(feature4)
+        
+        
+        
+        let feature5 = Polyline()
+        feature5.setLineWidth(1.0)
+        feature5.setColor(CCColor.purpleColor())
+        feature5.addVertex(GeometryPoint(fromPosx: -40.288577, andY:-55.679726 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature5.addVertex(GeometryPoint(fromPosx:-42.573733, andY:-18.316418 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature5.addVertex(GeometryPoint(fromPosx:-53.823733, andY:-5.094729 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature5.addVertex(GeometryPoint(fromPosx:-45.913577, andY:12.722377 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature5.addVertex(GeometryPoint(fromPosx:-6.187013, andY:-6.493759 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        feature5.addVertex(GeometryPoint(fromPosx: -40.288577, andY:-55.679726 , andZ: 0, andProj: ProjectionHelper.WSG84()))
+        
+        layer.addFeature(feature5)
+        
+        
+        let line = Polyline()
+        line.setLineWidth(1.0)
+        line.setColor(CCColor.redColor())
+        line.addVertex(GeometryPoint(fromPosx:2.346030, andY:48.851913, andZ: 0, andProj: ProjectionHelper.WSG84()))
+        line.addVertex(GeometryPoint(fromPosx:-118.136604, andY:33.790271, andZ: 0, andProj: ProjectionHelper.WSG84()))
+        layer.addFeature(line)
+        
+        let circle = Circle()
+        circle.setRadius(3.0)
+        circle.setBorderWidth(2.0)
+        circle.setBorderColor(CCColor.yellowColor())
+        circle.setColor(CCColor.redColor())
+        circle.location = GeometryPoint(fromPosx: -118.136604, andY:33.790271, andZ: 0, andProj: ProjectionHelper.WSG84())
+        layer.addFeature(circle);
+        
+        let line2 = Polyline()
+        line2.setLineWidth(1.0)
+        line2.setColor(CCColor.redColor())
+        line2.addVertex(GeometryPoint(fromPosx: 2.346030, andY:48.851913, andZ: 0, andProj: ProjectionHelper.WSG84()))
+        line2.addVertex(GeometryPoint(fromPosx:-117.157433, andY:33.154932, andZ: 0, andProj: ProjectionHelper.WSG84()))
+        layer.addFeature(line2)
+        
+        
+        let line3 = Polyline()
+        line3.setLineWidth(1.0)
+        line3.setColor(CCColor.redColor())
+        line3.addVertex(GeometryPoint(fromPosx: 2.346030, andY:48.851913, andZ: 0, andProj: ProjectionHelper.WSG84()))
+        line3.addVertex(GeometryPoint(fromPosx:-71.245136, andY:46.795288, andZ: 0, andProj: ProjectionHelper.WSG84()))
+        layer.addFeature(line3)
+        
+        
+        let circle2 = Circle()
+        circle2.setRadius(3.0)
+        circle2.setBorderWidth(2.0)
+        circle2.setBorderColor(CCColor.yellowColor())
+        circle2.setColor(CCColor.redColor())
+        circle2.location = GeometryPoint(fromPosx:-71.245136, andY:46.795288, andZ: 0, andProj: ProjectionHelper.WSG84())
+        layer.addFeature(circle2);
     }
     
     func addTestExtension()
@@ -194,13 +259,13 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         }
         
         
-        var re = self.jscontext.evaluateScript(script)
+        var re = self.jscontext.evaluateScript(script! as String)
         
         
         //
 //        println("\(re.toBool()), \(re.description)");
-//        
-//        
+        
+        
 //        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
 //        
 //        
@@ -214,31 +279,31 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
 //        base64Str = data?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
 //        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
 //        self.jscontext.evaluateScript(base64Str)
-//        
+        
         //
         
     }
     
     func forwardLastEvent()
     {
-        let view:CCGLView = self.view as CCGLView
-        let tapDetect:TapDetectingWindow = UIApplication.sharedApplication().delegate?.window as TapDetectingWindow
+        let view:CCGLView = self.view as! CCGLView
+        let tapDetect:TapDetectingWindow = UIApplication.sharedApplication().delegate?.window as! TapDetectingWindow
         
-        for touch in tapDetect.lastEvent.allTouches()?.allObjects as [UITouch]
-        {
-            switch touch.phase {
-            case UITouchPhase.Began:
-                view.touchesBegan(tapDetect.lastEvent.allTouches()!, withEvent:tapDetect.lastEvent)
-            case UITouchPhase.Moved:
-                view.touchesMoved(tapDetect.lastEvent.allTouches()!, withEvent: tapDetect.lastEvent)
-            case UITouchPhase.Ended:
-                view.touchesEnded(tapDetect.lastEvent.allTouches()!, withEvent: tapDetect.lastEvent)
-            case UITouchPhase.Cancelled:
-                view.touchesCancelled(tapDetect.lastEvent.allTouches(), withEvent: tapDetect.lastEvent)
-            default:
-                return
-            }
-        }
+//        for touch in tapDetect.lastEvent.allTouches()?.allObjects as [UITouch]
+//        {
+//            switch touch.phase {
+//            case UITouchPhase.Began:
+//                view.touchesBegan(tapDetect.lastEvent.allTouches()!, withEvent:tapDetect.lastEvent)
+//            case UITouchPhase.Moved:
+//                view.touchesMoved(tapDetect.lastEvent.allTouches()!, withEvent: tapDetect.lastEvent)
+//            case UITouchPhase.Ended:
+//                view.touchesEnded(tapDetect.lastEvent.allTouches()!, withEvent: tapDetect.lastEvent)
+//            case UITouchPhase.Cancelled:
+//                view.touchesCancelled(tapDetect.lastEvent.allTouches(), withEvent: tapDetect.lastEvent)
+//            default:
+//                return
+//            }
+//        }
         
     }
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -253,7 +318,7 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         pinchGesture.delegate = self
         
         webView.delegate = self
-        self.jscontext = webView.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as JSContext
+        self.jscontext = webView.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as! JSContext
         
         var block : @objc_block (NSString!) -> Void = {
             (string : NSString!) -> Void in
@@ -285,7 +350,7 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
             let data = NSFileManager.defaultManager().contentsAtPath(filePath!)
             let script = NSString(data: data!, encoding: NSUTF8StringEncoding)
             
-            let re = self.jscontext.evaluateScript(script)
+            let re = self.jscontext.evaluateScript(script! as String)
             if (self.jscontext.exception != nil)
             {
                 println(self.jscontext.exception.description)
@@ -355,14 +420,14 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
     
     func pressAccount()
     {
-        let vc = self.storyboardCG?.instantiateViewControllerWithIdentifier("mainNavigation")! as UIViewController
+        let vc = self.storyboardCG?.instantiateViewControllerWithIdentifier("mainNavigation")! as! UIViewController
         self.navigationController?.presentViewController(vc, animated: true, completion: { () -> Void in
             
         })
     }
     func pressStore()
     {
-        let vc = self.storyboardCG?.instantiateViewControllerWithIdentifier("storeNavigation")! as UIViewController
+        let vc = self.storyboardCG?.instantiateViewControllerWithIdentifier("storeNavigation")! as! UIViewController
         self.navigationController?.presentViewController(vc, animated: true, completion: { () -> Void in
             
         })

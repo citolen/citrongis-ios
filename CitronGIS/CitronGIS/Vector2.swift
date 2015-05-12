@@ -11,7 +11,6 @@ import Foundation
 class Vector2
 {
     var x: Double
-    
     var y: Double
     
     
@@ -33,8 +32,7 @@ class Vector2
     {
         return p.x * x + p.y * y;
     }
-    var description: String
-        {
+    var description: String {
             return "\(x)-\(y)"
     }
 }

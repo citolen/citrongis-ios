@@ -83,7 +83,7 @@ protocol    GeometryPointExport : JSExport
         let fonc = jscontext.objectForKeyedSubscript("sqrtOf")
         let val = fonc.callWithArguments([testPt])
         
-        let jsRe:GeometryPoint = val.toObject() as GeometryPoint
+        let jsRe:GeometryPoint = val.toObject() as! GeometryPoint
         
         println("\(jsRe.mustBeSettable)")
     }

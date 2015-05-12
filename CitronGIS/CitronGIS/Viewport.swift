@@ -13,8 +13,8 @@ class Viewport
     var width:UInt = 0
     var height:UInt = 0
     var resolution:Double = 0
+    var rotation = 0.0
     var schema:SchemaBase
-    var rotation:Double = 0
     var boundingBox:BoundingBox = BoundingBox()
     var origin:Vector2
     var scaleFactor = CCDirector.sharedDirector().contentScaleFactor
@@ -48,6 +48,7 @@ class Viewport
     func zoomT(resolution:Double)
     {
         self.resolution += resolution
+        println("\(self.resolution)")
         schema.update(self)
     }
     func zoom(resolution:Double)

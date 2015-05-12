@@ -19,7 +19,7 @@ class CoordinateHelper {
             re.y *= M_PI / 180.0
         }
         
-        var tmp = pj_transform(point.proj.projection, proj.projection, 1, 0, &re.x, &re.y, &re.z)
+        var tmp = pj_transform(point.proj.projection, proj.projection, 1, 1, &re.x, &re.y, nil)
 
         if (proj.isLatLong())
         {

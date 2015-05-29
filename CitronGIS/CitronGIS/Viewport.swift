@@ -8,6 +8,8 @@
 
 import Foundation
 
+var VIEWPORT:Viewport!
+
 class Viewport
 {
     var width:UInt = 0
@@ -18,6 +20,7 @@ class Viewport
     var boundingBox:BoundingBox = BoundingBox()
     var origin:Vector2
     var scaleFactor = CCDirector.sharedDirector().contentScaleFactor
+    var onResolutionChange:[String:() -> Void] = [:]
     
     init(width:UInt, andHeight height:UInt, andResolution resolution:Double, andSchema schema:SchemaBase, andOrigin origin:Vector2, andRotation rotation:Double)
     {
@@ -28,6 +31,23 @@ class Viewport
         self.rotation = rotation
         self.origin = origin
         self.schema.update(self)
+        VIEWPORT = self
+    }
+    
+    func registerToEventResolutionChange(block: () -> Void, key:String)
+    {
+        onResolutionChange[key] = block
+    }
+    func unregisterToEventResolutionChange(key:String)
+    {
+        onResolutionChange.removeValueForKey(key)
+    }
+    private func throwEventResolutionChange()
+    {
+        for (key, value) in onResolutionChange
+        {
+            value()
+        }
     }
     
     func translate(tx:Double, ty:Double)

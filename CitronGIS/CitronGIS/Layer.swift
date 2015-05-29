@@ -118,7 +118,14 @@ class Layer {
         }, key: "FeatureDirty")
         throwEventFeatureAdded(feature)
     }
-    
+    func onRemove()
+    {
+        
+    }
+    func onAdd()
+    {
+        
+    }
     func setDirty()
     {
         isDirty = true

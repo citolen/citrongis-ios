@@ -16,21 +16,24 @@ enum yAxisMode
 
 class TileSchema
 {
-    let _tileWidth:Int
-    let _tileHeight:Int
+    let _tileWidth:Double
+    let _tileHeight:Double
     let _yAxisType:yAxisMode
     let _resolutions:[Double]
     let _originX:Double
     let _originY:Double
     var _bounds:[Int]
-    let _resolution:Double
+    var _resolution:Double
     var _unchangedTiles = [Int64: TileIndex]()
     var _removedTiles = [Int64: TileIndex]()
     var _addedTiles = [Int64: TileIndex]()
+    var _onAddTiles:[String:([Int64: TileIndex]) -> Void] = [:]
+    var _onRegister:[String:() -> Void] = [:]
+    var _onUnRegister:[String:() -> Void] = [:]
+    var _onRemoveTiles:[String:([Int64: TileIndex]) -> Void] = [:]
     
-    init(tileWidth:Int, tileHeight:Int, yAxisType:yAxisMode, resolutions:[Double], originX:Double, originY:Double, bounds:[Int], resolution:Double)
+    init(tileWidth:Double, tileHeight:Double, yAxisType:yAxisMode, resolutions:[Double], originX:Double, originY:Double, bounds:[Int], resolution:Double)
     {
-        
         _tileWidth = tileWidth
         _tileHeight = tileHeight
         _yAxisType = yAxisType
@@ -40,6 +43,69 @@ class TileSchema
         _bounds = bounds
         _resolution = resolution
     }
+    func registerForEventRegister(block: ()->Void, key:String)
+    {
+        _onRegister[key] = block
+    }
+    func unregisterForRegister(key:String)
+    {
+        _onRegister.removeValueForKey(key)
+    }
+    func throwEventRegister()
+    {
+        for (key, value) in _onRegister
+        {
+            value()
+        }
+    }
+    
+    func registerForEventUnRegister(block: ()->Void, key:String)
+    {
+        _onUnRegister[key] = block
+    }
+    func unregisterForUnRegister(key:String)
+    {
+        _onUnRegister.removeValueForKey(key)
+    }
+    func throwEventUnRegister()
+    {
+        for (key, value) in _onUnRegister
+        {
+            value()
+        }
+    }
+    
+    func registerToEventAddTiles(block: ([Int64: TileIndex]) -> Void, key:String)
+    {
+        _onAddTiles[key] = block
+    }
+    func unregisterToEventAddTiles(key:String)
+    {
+        _onAddTiles.removeValueForKey(key)
+    }
+    private func throwEventAddTiles()
+    {
+        for (key, value) in _onAddTiles
+        {
+            value(_addedTiles)
+        }
+    }
+    
+    func registerToEventRemoveTiles(block: ([Int64: TileIndex]) -> Void, key:String)
+    {
+        _onRemoveTiles[key] = block
+    }
+    func unregisterToEventRemoveTiles(key:String)
+    {
+        _onRemoveTiles.removeValueForKey(key)
+    }
+    private func throwEventRemoveTiles()
+    {
+        for (key, value) in _onRemoveTiles
+        {
+            value(_removedTiles)
+        }
+    }
     
     
     func tileToWorld(index:TileIndex, resolution:Double, size:Double, anchor:Double = 0.5) -> Vector2
@@ -47,9 +113,9 @@ class TileSchema
         fatalError("To Implement")
     }
     
-    func worldToTile(world:Vector2, resolution:Double, size:Double)
+    func worldToTile(world:Vector2, resolution:Double, size:Double) -> TileIndex
     {
-        
+        return TileIndex(x: 0, y: 0, z: 0)
     }
     
     func calculeBounds()
@@ -137,153 +203,87 @@ class TileSchema
         return [topLeft, topRight, bottomLeft, bottomRight]
     }
     
+    
     func computeTile(viewport:Viewport)
     {
-        
         if (viewport.rotation == 0)
         {
+            var zoom = self.getZoomLevel(viewport.resolution)
+            _resolution = _resolutions[zoom]
             
+            let size = Double(_resolution) / Double(viewport.resolution) * Double(_tileWidth)
+            
+            let bound = _bounds[zoom]
+            let center = self.worldToTile(viewport.origin, resolution: viewport.resolution, size: size)
+            center._x = floor(center._x)
+            center._y = floor(center._y)
+            
+            let polyBox = [viewport.boundingBox.topLeft, viewport.boundingBox.topRight, viewport.boundingBox.botLeft, viewport.boundingBox.botRight]
+            
+            var cost = 0
+            self.mergeTiles()
+            
+            var addedTilesCount = 0
+            _addedTiles.removeAll(keepCapacity: true)
+            
+            var removedTilesCount = 0
+            _removedTiles.removeAll(keepCapacity: true)
+            
+            var explored = Set<Int64>()
+            var tiles = Set<Int64>()
+
+            var rSearch:TileIndex->Void = recursiveBlockTile{tile, search in
+                
+                explored.insert(tile._BId)
+                var tilePoly = self.tileToPoly(tile, resolution: self._resolution, size: size)
+
+                
+                if (IntersectionHelper.polygonContainsPolygon(polyBox, p2: tilePoly))
+                {
+                    if (tile._x >= 0 && tile._x < Double(bound) && tile._y >= 0 && tile._y < Double(bound))
+                    {
+                        tiles.insert(tile._BId)
+                        if ((self._unchangedTiles[tile._BId]) != nil) {
+                            self._addedTiles[tile._BId] = tile
+                            ++addedTilesCount
+                        }
+                    }
+                    var x = floor(tile._x)
+                    var y = floor(tile._y)
+                    
+                    var nb = [TileIndex(x: x - 1, y: y, z: tile._z),
+                        TileIndex(x: x + 1, y: y, z: tile._z),
+                        TileIndex(x: x, y: y - 1, z: tile._z),
+                        TileIndex(x: x, y: y + 1, z: tile._z)]
+                    for idx in nb {
+                        if explored.contains(idx._BId) == false {
+                            search(idx)
+                        }
+                    }
+                }
+            }
+            rSearch(center)
+            
+            for key in _unchangedTiles {
+                if (tiles.contains(key.0) == false) {
+                    _removedTiles[key.0] = _unchangedTiles[key.0]
+                    ++removedTilesCount
+                }
+            }
+            if (removedTilesCount > 0) {
+                throwEventRemoveTiles()
+            }
+            if (addedTilesCount > 0) {
+                throwEventAddTiles()
+            }
         }
         else
         {
-            
+            //ROtation
         }
-//        computeTiles = function (viewport) {
-//            
-//            'use strict';
-//            
-//            if (!C.Utils.Comparison.Equals(viewport._rotation, 0)) { // Compute tile with rotation
-//                
-//                var zoom = this.getZoomLevel(viewport._resolution);
-//                this._resolution = this._resolutions[zoom];
-//                
-//                var size = this._resolution / viewport._resolution * this._tileWidth;
-//                var bound = this._bounds[zoom];
-//                
-//                var center = this.worldToTile(viewport._origin, viewport._resolution, size);
-//                center._x = Math.floor(center._x);
-//                center._y = Math.floor(center._y);
-//                
-//                var polyBox = [
-//                    [ viewport._bbox._topLeft.X, viewport._bbox._topLeft.Y ],
-//                    [ viewport._bbox._topRight.X, viewport._bbox._topRight.Y ],
-//                    [ viewport._bbox._bottomRight.X, viewport._bbox._bottomRight.Y ],
-//                    [ viewport._bbox._bottomLeft.X, viewport._bbox._bottomLeft.Y ]
-//                ];
-//                
-//                var self = this;
-//                
-//                var explored = {};
-//                var cost = 0;
-//                var tiles = {};
-//                this._mergeTiles();
-//                var addedTilesCount = 0;
-//                this._addedTiles = {};  // reset added tiles
-//                var removedTilesCount = 0;
-//                this._removedTiles = {}; // reset removed tiles
-//                
-//                (function rSearch(tile) {
-//                    
-//                    explored[tile._BId] = 1;
-//                    
-//                    var tilePoly = self.tileToPoly(tile, viewport._resolution, size, viewport._rotation);
-//                    
-//                    if (C.Helpers.IntersectionHelper.polygonContainsPolygon(polyBox, tilePoly)) {
-//                        // tile is in bbox
-//                        
-//                        if (tile._x >= 0 && tile._x < bound && tile._y >= 0 && tile._y < bound) {
-//                            // this is a valid tile in view
-//                            tiles[tile._BId] = tile;
-//                            if (!(tile._BId in self._unchangedTiles)) { // this is a new tile
-//                                self._addedTiles[tile._BId] = tile;
-//                                ++addedTilesCount;
-//                            }
-//                        }
-//                        var x = Math.floor(tile._x);
-//                        var y = Math.floor(tile._y);
-//                        
-//                        var neighbours = [
-//                            C.Layer.Tile.TileIndex.fromXYZ(x - 1, y     , tile._z),
-//                            C.Layer.Tile.TileIndex.fromXYZ(x + 1, y     , tile._z),
-//                            C.Layer.Tile.TileIndex.fromXYZ(x    , y - 1 , tile._z),
-//                            C.Layer.Tile.TileIndex.fromXYZ(x    , y + 1 , tile._z)
-//                        ];
-//                        
-//                        for (var i = 0; i < 4; ++i) {
-//                            if (!(neighbours[i]._BId in explored))
-//                            rSearch(neighbours[i]);
-//                        }
-//                    }
-//                    })(center);
-//                
-//                /** Compute removed tiles **/
-//                for (var key in this._unchangedTiles) {
-//                    if (!(key in tiles)) { // this is a removed tile
-//                        this._removedTiles[key] = this._unchangedTiles[key];
-//                        delete this._unchangedTiles[key];
-//                        ++removedTilesCount;
-//                    }
-//                }
-//                
-//                if (removedTilesCount > 0)
-//                this.emit('removedTiles', this._removedTiles, viewport);
-//                if (addedTilesCount > 0)
-//                this.emit('addedTiles', this._addedTiles, viewport);
-//                
-//            } else {
-//                
-//                var zoom = this.getZoomLevel(viewport._resolution);
-//                this._resolution = this._resolutions[zoom];
-//                
-//                var size = this._resolution / viewport._resolution * this._tileWidth;
-//                
-//                var topLeft = this.worldToTile(viewport._bbox._topLeft, viewport._resolution, size);
-//                var topRight = this.worldToTile(viewport._bbox._topRight, viewport._resolution, size);
-//                var bottomRight = this.worldToTile(viewport._bbox._bottomRight, viewport._resolution, size);
-//                var bottomLeft = this.worldToTile(viewport._bbox._bottomLeft, viewport._resolution, size);
-//                
-//                var bound = this._bounds[zoom];
-//                
-//                this.fitToBounds(topLeft, bound, true);
-//                this.fitToBounds(topRight, bound);
-//                this.fitToBounds(bottomRight, bound);
-//                this.fitToBounds(bottomLeft, bound);
-//                
-//                
-//                
-//                var tiles = {};
-//                
-//                this._mergeTiles();
-//                var addedTilesCount = 0;
-//                this._addedTiles = {};  // reset added tiles
-//                var removedTilesCount = 0;
-//                this._removedTiles = {}; // reset removed tiles
-//                
-//                for (var y = topLeft._y; y < bottomLeft._y; ++y) {
-//                    for (var x = topLeft._x; x < topRight._x; ++x) {
-//                        var tile = C.Layer.Tile.TileIndex.fromXYZ(x, y, zoom);
-//                        tiles[tile._BId] = tile;
-//                        if (!(tile._BId in this._unchangedTiles)) { // this is a new tile
-//                            this._addedTiles[tile._BId] = tile;
-//                            ++addedTilesCount;
-//                        }
-//                    }
-//                }
-//                
-//                /** Compute removed tiles **/
-//                for (var key in this._unchangedTiles) {
-//                    if (!(key in tiles)) { // this is a removed tile
-//                        this._removedTiles[key] = this._unchangedTiles[key];
-//                        delete this._unchangedTiles[key];
-//                        ++removedTilesCount;
-//                    }
-//                }
-//                
-//                if (removedTilesCount > 0)
-//                this.emit('removedTiles', this._removedTiles, viewport);
-//                if (addedTilesCount > 0)
-//                this.emit('addedTiles', this._addedTiles, viewport);
-//            }
-//        };
     }
+    
+}
+func recursiveBlockTile<T>(block: (T, T->Void)->Void) -> T->Void {
+    return { param in block(param, recursiveBlockTile(block)) }
 }

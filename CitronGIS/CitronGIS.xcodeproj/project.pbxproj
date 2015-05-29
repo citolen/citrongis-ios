@@ -100,6 +100,10 @@
 		6D8EE6FE1A84A4550077A0F1 /* RendererBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE6FD1A84A4550077A0F1 /* RendererBase.swift */; };
 		6D8EE7001A84A6B60077A0F1 /* CocosRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE6FF1A84A6B60077A0F1 /* CocosRenderer.swift */; };
 		6D8EE7041A8529200077A0F1 /* CoordinateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE7031A8529200077A0F1 /* CoordinateHelper.swift */; };
+		6DA30CF01B16C0F7007A3005 /* IntersectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA30CEF1B16C0F7007A3005 /* IntersectionHelper.swift */; };
+		6DA30CF61B177FFF007A3005 /* TileLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA30CF51B177FFF007A3005 /* TileLayer.swift */; };
+		6DA30CF91B1780CE007A3005 /* TMSSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA30CF81B1780CE007A3005 /* TMSSource.swift */; };
+		6DA30CFB1B178630007A3005 /* TileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA30CFA1B178630007A3005 /* TileSource.swift */; };
 		6DA9F27B1B017634008A0981 /* TileSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9F27A1B017634008A0981 /* TileSchema.swift */; };
 		6DA9F27D1B018430008A0981 /* TileIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9F27C1B018430008A0981 /* TileIndex.swift */; };
 		6DA9F27F1B01A8D4008A0981 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9F27E1B01A8D4008A0981 /* Vector3.swift */; };
@@ -411,6 +415,10 @@
 		6D8EE6FD1A84A4550077A0F1 /* RendererBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererBase.swift; sourceTree = "<group>"; };
 		6D8EE6FF1A84A6B60077A0F1 /* CocosRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocosRenderer.swift; sourceTree = "<group>"; };
 		6D8EE7031A8529200077A0F1 /* CoordinateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateHelper.swift; sourceTree = "<group>"; };
+		6DA30CEF1B16C0F7007A3005 /* IntersectionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntersectionHelper.swift; sourceTree = "<group>"; };
+		6DA30CF51B177FFF007A3005 /* TileLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileLayer.swift; sourceTree = "<group>"; };
+		6DA30CF81B1780CE007A3005 /* TMSSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSSource.swift; sourceTree = "<group>"; };
+		6DA30CFA1B178630007A3005 /* TileSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileSource.swift; sourceTree = "<group>"; };
 		6DA9F27A1B017634008A0981 /* TileSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileSchema.swift; sourceTree = "<group>"; };
 		6DA9F27C1B018430008A0981 /* TileIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileIndex.swift; sourceTree = "<group>"; };
 		6DA9F27E1B01A8D4008A0981 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
@@ -992,6 +1000,9 @@
 				6D3579771A84183E001BCADA /* Viewport.swift */,
 				6DA9F27A1B017634008A0981 /* TileSchema.swift */,
 				6DA9F27C1B018430008A0981 /* TileIndex.swift */,
+				6DA30CF51B177FFF007A3005 /* TileLayer.swift */,
+				6DA30CF81B1780CE007A3005 /* TMSSource.swift */,
+				6DA30CFA1B178630007A3005 /* TileSource.swift */,
 			);
 			name = SchemaBase;
 			sourceTree = "<group>";
@@ -1036,6 +1047,7 @@
 				6D8EE6FA1A8496AE0077A0F1 /* ResolutionHelper.swift */,
 				6D8EE7031A8529200077A0F1 /* CoordinateHelper.swift */,
 				6DDD8E711A918F8500C8FF29 /* ProjectionHelper.swift */,
+				6DA30CEF1B16C0F7007A3005 /* IntersectionHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -2282,6 +2294,7 @@
 				6DD891611A12A4E400C81F0E /* OALAudioTracks.m in Sources */,
 				6DD8902D1A12A4E300C81F0E /* CCEffectColor.m in Sources */,
 				6DFF4AF01A679A5000D7C0A1 /* TapDetectingWindow.m in Sources */,
+				6DA30CFB1B178630007A3005 /* TileSource.swift in Sources */,
 				6DF81D831A12EA430096DACE /* ioapi.c in Sources */,
 				6DD890271A12A4E300C81F0E /* CCEffect.m in Sources */,
 				6D62803E1A5C8580004D9541 /* SearchViewController.swift in Sources */,
@@ -2344,6 +2357,7 @@
 				6DD891511A12A4E400C81F0E /* OALActionManager.m in Sources */,
 				6DD890B51A12A4E300C81F0E /* CCPhysicsNode.m in Sources */,
 				6DD891571A12A4E400C81F0E /* OALUtilityActions.m in Sources */,
+				6DA30CF61B177FFF007A3005 /* TileLayer.swift in Sources */,
 				6DD8908F1A12A4E300C81F0E /* CCMotionStreak.m in Sources */,
 				6DD891991A12A4E400C81F0E /* NSMutableArray+WeakReferences.m in Sources */,
 				6DD891871A12A4E400C81F0E /* OpenALManager.m in Sources */,
@@ -2362,6 +2376,7 @@
 				6D8EE7001A84A6B60077A0F1 /* CocosRenderer.swift in Sources */,
 				6DD891B61A12A4E400C81F0E /* CCSlider.m in Sources */,
 				6DD890331A12A4E300C81F0E /* CCEffectPixellate.m in Sources */,
+				6DA30CF01B16C0F7007A3005 /* IntersectionHelper.swift in Sources */,
 				6DD891D11A12A4E400C81F0E /* CCBSequenceProperty.m in Sources */,
 				6DD890811A12A4E300C81F0E /* CCLabelTTF.m in Sources */,
 				6D35795D1A83E692001BCADA /* Feature.swift in Sources */,
@@ -2403,6 +2418,7 @@
 				6DD890841A12A4E300C81F0E /* CCNodeColor.m in Sources */,
 				6DD891121A12A4E300C81F0E /* CCAppDelegate.m in Sources */,
 				6DD890721A12A4E300C81F0E /* CCDirector.m in Sources */,
+				6DA30CF91B1780CE007A3005 /* TMSSource.swift in Sources */,
 				6DD890501A12A4E300C81F0E /* CCActionEase.m in Sources */,
 				6DD890311A12A4E300C81F0E /* CCEffectGlow.m in Sources */,
 				6D3579781A84183E001BCADA /* Viewport.swift in Sources */,

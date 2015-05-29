@@ -8,11 +8,14 @@
 
 import Foundation
 
-class TileIndex {
+class TileIndex : Hashable {
     var _BId = Int64(0)
     var _x = 0.0
     var _y = 0.0
     var _z = 0.0
+    var hashValue: Int {
+        return Int(_BId)
+    }
     
     init(x:Double, y:Double, z:Double, bid:Int64)
     {
@@ -86,4 +89,9 @@ class TileIndex {
         
         return re
     }
+}
+
+func ==(lhs: TileIndex, rhs: TileIndex) -> Bool
+{
+    return lhs._BId == rhs._BId
 }

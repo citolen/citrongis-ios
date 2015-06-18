@@ -108,6 +108,7 @@ class Group {
     func addLayer(layer:Layer)
     {
         layers.append(layer)
+        layer.onAdd()
         layer.registerToEventLayerDirty({ (layer:Layer) -> Void in
             self.throwEventLayerChanged(layer, type: EventType.Dirty)
         }, key: "LayerFeatureDirty")

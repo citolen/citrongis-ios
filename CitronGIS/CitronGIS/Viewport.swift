@@ -10,8 +10,15 @@ import Foundation
 
 var VIEWPORT:Viewport!
 
+enum ZoomDirection {
+    case In
+    case Out
+}
+
+
 class Viewport
 {
+    var zoomDirection = ZoomDirection.Out
     var width:UInt = 0
     var height:UInt = 0
     var resolution:Double = 0
@@ -21,6 +28,7 @@ class Viewport
     var origin:Vector2
     var scaleFactor = CCDirector.sharedDirector().contentScaleFactor
     var onResolutionChange:[String:() -> Void] = [:]
+    var onMove:[String:() -> Void] = [:]
     
     init(width:UInt, andHeight height:UInt, andResolution resolution:Double, andSchema schema:SchemaBase, andOrigin origin:Vector2, andRotation rotation:Double)
     {
@@ -49,11 +57,28 @@ class Viewport
             value()
         }
     }
+    func registerToEventMove(block: () -> Void, key:String)
+    {
+        onMove[key] = block
+    }
+    func unregisterToEventMove(key:String)
+    {
+        onMove.removeValueForKey(key)
+    }
+    private func throwEventMove()
+    {
+        for (key, value) in onMove
+        {
+            value()
+        }
+    }
+    
     
     func translate(tx:Double, ty:Double)
     {
         schema.translate(self, tx: tx, ty: ty)
         schema.update(self)
+        self.throwEventMove()
     }
     func setTranslation(tx:Double, ty:Double)
     {

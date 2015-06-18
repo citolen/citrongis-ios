@@ -17,6 +17,14 @@ class Image: Feature {
         node = CCSprite()
         node.anchorPoint = ccp(0.5, 0.5)
     }
+    func copy() -> Image
+    {
+        var re = Image()
+        re.setLocation(self.location)
+        re.setSize(self.size)
+        re.node = self.node.copy() as! CCSprite
+        return re
+    }
     init(name:String) {
         node = CCSprite(imageNamed: name)
         node.anchorPoint = ccp(0.5, 0.5)

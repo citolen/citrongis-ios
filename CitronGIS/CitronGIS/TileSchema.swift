@@ -22,6 +22,7 @@ class TileSchema
     let _resolutions:[Double]
     let _originX:Double
     let _originY:Double
+    var _extent:Extent = Extent(minX: 0.0, andMinY: 0.0, andMaxX: 0.0, andMaxY: 0.0)
     var _bounds:[Int]
     var _resolution:Double
     var _unchangedTiles = [Int64: TileIndex]()
@@ -34,6 +35,18 @@ class TileSchema
     
     init(tileWidth:Double, tileHeight:Double, yAxisType:yAxisMode, resolutions:[Double], originX:Double, originY:Double, bounds:[Int], resolution:Double)
     {
+        _tileWidth = tileWidth
+        _tileHeight = tileHeight
+        _yAxisType = yAxisType
+        _resolutions = resolutions
+        _originX = originX
+        _originY = originY
+        _bounds = bounds
+        _resolution = resolution
+    }
+    init(extent:Extent, tileWidth:Double, tileHeight:Double, yAxisType:yAxisMode, resolutions:[Double], originX:Double, originY:Double, bounds:[Int], resolution:Double)
+    {
+        _extent = extent
         _tileWidth = tileWidth
         _tileHeight = tileHeight
         _yAxisType = yAxisType
@@ -284,6 +297,11 @@ class TileSchema
     }
     
 }
+
+func recursiveBlockSubstitute<T, U>(block: (T, U, (T, U)->Int)->Int) -> (T, U)->Int {
+    return { param in block(param.0, param.1, recursiveBlockSubstitute(block)) }
+}
+
 func recursiveBlockTile<T>(block: (T, T->Void)->Void) -> T->Void {
     return { param in block(param, recursiveBlockTile(block)) }
 }

@@ -118,6 +118,25 @@ class Layer {
         }, key: "FeatureDirty")
         throwEventFeatureAdded(feature)
     }
+    func removeFeature(feature:Feature) -> Bool
+    {
+        for var i = 0; i < features.count; ++i
+        {
+            let f = features[i]
+            
+            if f === feature {
+                features.removeAtIndex(i)
+                self.throwEventFeatureChanged(f, type: EventType.Removed)
+                self.throwEventFeatureRemoved(f)
+                return true
+            }
+        }
+        return false
+//        for f in features
+//        {
+//            features.rem
+//        }
+    }
     func onRemove()
     {
         

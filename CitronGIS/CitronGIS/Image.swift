@@ -17,14 +17,28 @@ class Image: Feature {
         node = CCSprite()
         node.anchorPoint = ccp(0.5, 0.5)
     }
+    
+    func createWithCrop(rect:CGRect) -> Image
+    {
+        var re = Image()
+        re.setLocation(self.location)
+        re.node = CCSprite()
+        re.node.anchorPoint = ccp(0.5, 0.5)
+        re.node.spriteFrame = CCSpriteFrame(texture:node.spriteFrame.texture, rectInPixels: rect, rotated: false, offset: CGPointZero, originalSize:CGSizeMake(CGFloat(rect.size.width), CGFloat(rect.size.height)))
+        re.setSize(self.size)
+        return re
+    }
     func copy() -> Image
     {
         var re = Image()
         re.setLocation(self.location)
         re.setSize(self.size)
-        re.node = self.node.copy() as! CCSprite
+        re.node = CCSprite()
+        re.node.anchorPoint = ccp(0.5, 0.5)
+        re.node.spriteFrame = self.node.spriteFrame
         return re
     }
+    
     init(name:String) {
         node = CCSprite(imageNamed: name)
         node.anchorPoint = ccp(0.5, 0.5)
@@ -45,7 +59,6 @@ class Image: Feature {
             {
 
                 var text = CCTexture(CGImage: img.CGImage, contentScale:CGFloat(2.0))
-                
                 
                 
                 strongSelf.node.spriteFrame = CCSpriteFrame(texture: text, rectInPixels: CGRectMake(0, 0, text.contentSizeInPixels.width, text.contentSizeInPixels.height), rotated: false, offset: ccp(0, 0), originalSize: text.contentSizeInPixels)
@@ -76,6 +89,9 @@ class Image: Feature {
         node.anchorPoint = pt
     }
     
+    override func removeFromScene() {
+        self.node.removeFromParentAndCleanup(true)
+    }
     func setSize(size:CGSize)
     {
         self.node.scaleX = Float(size.width / self.node.contentSize.width)

@@ -15,7 +15,7 @@ class TileSphericalMercator : TileSchema {
         9783.939618750, 4891.969809375, 2445.984904688, 1222.992452344,
         611.496226172, 305.748113086, 152.874056543, 76.437028271,
         38.218514136, 19.109257068, 9.554628534, 4.777314267,
-        2.388657133, 1.194328567, 0.597164283, 0.29858214168548586, 0.14929107084274293, 0.07464553542137146], originX: -20037508.342789, originY: -20037508.342789, bounds: [0], resolution: 0.5)
+        2.388657133, 1.194328567, 0.597164283, 0.29858214168548586, 0.14929107084274293, 0.07464553542137146], originX: -20037508.342789, originY: -20037508.342789, bounds: [], resolution: 0.5)
     }
     override func tileToWorld(index: TileIndex, resolution: Double, size: Double, anchor: Double) -> Vector2 {
         var worldX = _extent.minX + (index._x + anchor) * size * resolution
@@ -40,7 +40,7 @@ class TileSphericalMercator : TileSchema {
         }
         else
         {
-            tileY = self._extent.minY - tileY
+            tileY = self._extent.maxY - tileY
         }
         tileY = tileY / resolution / size
         var tileZ = self.getZoomLevel(resolution)

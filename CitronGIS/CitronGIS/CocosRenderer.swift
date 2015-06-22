@@ -18,6 +18,9 @@ class CocosRenderer: RendererBase {
             feature.addToScene(self)
             feature.render(self)
         }
+        if type == EventType.Dirty {
+            feature.render(self)
+        }
     }
     
     override func getLocationOfPoint(p: GeometryPoint) -> CGPoint {

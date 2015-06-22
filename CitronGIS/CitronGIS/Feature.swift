@@ -27,6 +27,7 @@ class Feature {
     //Events
     var eventDirty:[String:(Feature) -> Void] = [:]
     
+
     func registerToEventDirty(block: (Feature) -> Void, key:String)
     {
         eventDirty[key] = block
@@ -49,6 +50,10 @@ class Feature {
         
     }
     func addToScene(renderer:CocosRenderer)
+    {
+        
+    }
+    func removeFromScene()
     {
         
     }

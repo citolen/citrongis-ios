@@ -20,6 +20,7 @@ class Circle : Feature {
         super.init()
         node = CCDrawNode()
         node.anchorPoint = ccp(0.5, 0.5)
+        node.zOrder = 1
         updateDraw()
     }
     func updateDraw()

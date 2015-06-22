@@ -10,4 +10,6 @@
 #import "IntroScene.h"
 #import "TapDetectingWindow.h"
 #import "AFNetworking.h"
+#import "CCTextureCache.h"
+#import "CCTexture_Private.h"
 #include "proj_api.h"

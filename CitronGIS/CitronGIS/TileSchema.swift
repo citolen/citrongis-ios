@@ -43,6 +43,7 @@ class TileSchema
         _originY = originY
         _bounds = bounds
         _resolution = resolution
+        self.calculeBounds()
     }
     init(extent:Extent, tileWidth:Double, tileHeight:Double, yAxisType:yAxisMode, resolutions:[Double], originX:Double, originY:Double, bounds:[Int], resolution:Double)
     {
@@ -55,6 +56,7 @@ class TileSchema
         _originY = originY
         _bounds = bounds
         _resolution = resolution
+        self.calculeBounds()
     }
     func registerForEventRegister(block: ()->Void, key:String)
     {
@@ -136,8 +138,10 @@ class TileSchema
         for (var i = 0; i < _resolutions.count; ++i)
         {
             let bits = 1 << i
-            _bounds[i] = bits
+            _bounds.append(bits)
         }
+        
+        
     }
     func getZoomLevel(resolution:Double) -> Int
     {
@@ -145,7 +149,7 @@ class TileSchema
         {
             var res = _resolutions[i];
             
-            if (resolution > res && abs(resolution - res) < 0.0001)
+            if (resolution > res || abs(resolution - res) < 0.0001)
             {
                 return i > 0 ? i - 1 : 0
             }
@@ -153,17 +157,17 @@ class TileSchema
         return _resolutions.count - 1
     }
     
-    func fitToBounds(point:GeometryPoint, bound:Double, shouldFloor:Bool)
+    func fitToBounds(point:TileIndex, bound:Double, shouldFloor:Bool)
     {
         if (shouldFloor)
         {
-            point.x = floor(point.x)
-            point.y = floor(point.y)
+            point._x = floor(point._x)
+            point._y = floor(point._y)
         }
-        point.x = max(point.x, 0.0)
-        point.y = max(point.y, 0.0)
-        point.x = min(point.x, bound)
-        point.x = min(point.y, bound)
+        point._x = max(point._x, 0.0)
+        point._y = max(point._y, 0.0)
+        point._x = min(point._x, bound)
+        point._y = min(point._y, bound)
     }
     
     func mergeTiles()
@@ -210,16 +214,16 @@ class TileSchema
         let half = (size / 2) * resolution;
         let topLeft = Vector2(fromPosx: tcenter.x - half, andY: tcenter.y + half)
         let topRight = Vector2(fromPosx: tcenter.x + half, andY: tcenter.y + half)
-        let bottomLeft = Vector2(fromPosx: tcenter.x - half, andY: tcenter.y + half)
-        let bottomRight = Vector2(fromPosx: tcenter.x + half, andY: tcenter.y + half)
+        let bottomLeft = Vector2(fromPosx: tcenter.x - half, andY: tcenter.y - half)
+        let bottomRight = Vector2(fromPosx: tcenter.x + half, andY: tcenter.y - half)
         
-        return [topLeft, topRight, bottomLeft, bottomRight]
+        return [topLeft, topRight, bottomRight, bottomLeft]
     }
     
     
     func computeTile(viewport:Viewport)
     {
-        if (viewport.rotation == 0)
+        if (viewport.rotation != 0)
         {
             var zoom = self.getZoomLevel(viewport.resolution)
             _resolution = _resolutions[zoom]
@@ -246,11 +250,10 @@ class TileSchema
             var tiles = Set<Int64>()
 
             var rSearch:TileIndex->Void = recursiveBlockTile{tile, search in
-                
                 explored.insert(tile._BId)
                 var tilePoly = self.tileToPoly(tile, resolution: self._resolution, size: size)
 
-                
+//                println("polyBox:\(polyBox[0]), \(polyBox[1]), \(polyBox[2]), \(polyBox[3]), tilePoly:\(tilePoly[0]), \(tilePoly[1]), \(tilePoly[2]), \(tilePoly[3])")
                 if (IntersectionHelper.polygonContainsPolygon(polyBox, p2: tilePoly))
                 {
                     if (tile._x >= 0 && tile._x < Double(bound) && tile._y >= 0 && tile._y < Double(bound))
@@ -292,7 +295,71 @@ class TileSchema
         }
         else
         {
-            //ROtation
+            var zoom = self.getZoomLevel(viewport.resolution)
+            _resolution = _resolutions[zoom]
+            
+            var size = _resolution / VIEWPORT.resolution * _tileWidth
+            
+            
+            var topLeft = self.worldToTile(VIEWPORT.boundingBox.topLeft, resolution: VIEWPORT.resolution, size: size)
+            var topRight = self.worldToTile(VIEWPORT.boundingBox.topRight, resolution: VIEWPORT.resolution, size: size)
+            var bottomRight = self.worldToTile(VIEWPORT.boundingBox.botRight, resolution: VIEWPORT.resolution, size: size)
+            var bottomLeft = self.worldToTile(VIEWPORT.boundingBox.botLeft, resolution: VIEWPORT.resolution, size: size)
+            
+            var bound = Double(_bounds[zoom])
+            
+            self.fitToBounds(topLeft, bound: bound, shouldFloor: true)
+            self.fitToBounds(topRight, bound: bound, shouldFloor: false)
+            self.fitToBounds(bottomRight, bound: bound, shouldFloor: false)
+            self.fitToBounds(bottomLeft, bound: bound, shouldFloor: false)
+            
+            var tiles = [Int64: TileIndex]()
+            self.mergeTiles()
+            var addedTilesCount = 0
+            _addedTiles.removeAll(keepCapacity: true)
+            
+            var removedTilesCount = 0
+            _removedTiles.removeAll(keepCapacity: true)
+            
+            for var y = topLeft._y; y < bottomLeft._y; ++y {
+                for var x = topLeft._x; x < topRight._x; ++x {
+                    var tile = TileIndex(x: x, y: y, z: Double(zoom))
+                    tiles[tile._BId] = tile
+                    if _unchangedTiles[tile._BId] == nil {
+                        _addedTiles[tile._BId] = tile
+                        ++addedTilesCount
+                    }
+                }
+            }
+            
+//            println("topLeft:\(topLeft._y), bottomleft:\(bottomLeft._y)")
+//            println("zoom:\(zoom)")
+//            println("tiles : \(tiles.count)")
+//            if (tiles.count > 0) {
+//                println("toAff:\(tiles.count)")
+//            }
+//            if (_addedTiles.count > 0) {
+//                println("added:\(_addedTiles.count)")
+//            }
+//            if (_unchangedTiles.count > 0) {
+//                println("unchangedTiles:\(_unchangedTiles.count)")
+//            }
+            for key in _unchangedTiles {
+                if (tiles[key.0] == nil) {
+                    _removedTiles[key.0] = _unchangedTiles[key.0]
+                    _unchangedTiles.removeValueForKey(key.0)
+                    ++removedTilesCount
+                }
+            }
+//            if (removedTilesCount > 0) {
+//                println("removed:\(removedTilesCount)")
+//            }
+            if (removedTilesCount > 0) {
+                throwEventRemoveTiles()
+            }
+            if (addedTilesCount > 0) {
+                throwEventAddTiles()
+            }
         }
     }
     

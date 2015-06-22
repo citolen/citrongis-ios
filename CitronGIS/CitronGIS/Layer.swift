@@ -112,7 +112,6 @@ class Layer {
     func addFeature(feature:Feature)
     {
         features.append(feature)
-        
         feature.registerToEventDirty({ (feature:Feature) -> Void in
             self.throwEventDirty(feature)
         }, key: "FeatureDirty")
@@ -126,8 +125,10 @@ class Layer {
             
             if f === feature {
                 features.removeAtIndex(i)
+                f.removeFromScene()
                 self.throwEventFeatureChanged(f, type: EventType.Removed)
                 self.throwEventFeatureRemoved(f)
+                f.unregisterToEventDirty("FeatureDirty")
                 return true
             }
         }

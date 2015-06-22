@@ -109,6 +109,8 @@
 		6DA9F27D1B018430008A0981 /* TileIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9F27C1B018430008A0981 /* TileIndex.swift */; };
 		6DA9F27F1B01A8D4008A0981 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9F27E1B01A8D4008A0981 /* Vector3.swift */; };
 		6DAE583E1B31431900984B3E /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE583D1B31431900984B3E /* LRUCache.swift */; };
+		6DD070371B37763900BCE704 /* QueueTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD070361B37763900BCE704 /* QueueTask.swift */; };
+		6DD0703C1B37932800BCE704 /* TilesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0703B1B37932800BCE704 /* TilesCache.swift */; };
 		6DD6F6081AD20BA000656CBE /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD6F6071AD20BA000656CBE /* Polyline.swift */; };
 		6DD86B551AA64A53000F1AEE /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD86B541AA64A53000F1AEE /* Polygon.swift */; };
 		6DD86B591AA6753F000F1AEE /* libPods-proj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD86B581AA6753F000F1AEE /* libPods-proj4.a */; };
@@ -426,6 +428,8 @@
 		6DA9F27C1B018430008A0981 /* TileIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileIndex.swift; sourceTree = "<group>"; };
 		6DA9F27E1B01A8D4008A0981 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		6DAE583D1B31431900984B3E /* LRUCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
+		6DD070361B37763900BCE704 /* QueueTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTask.swift; sourceTree = "<group>"; };
+		6DD0703B1B37932800BCE704 /* TilesCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TilesCache.swift; sourceTree = "<group>"; };
 		6DD6F6071AD20BA000656CBE /* Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polyline.swift; sourceTree = "<group>"; };
 		6DD86B541AA64A53000F1AEE /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		6DD86B561AA670DC000F1AEE /* libProj4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libProj4.a; path = "../../../../../Library/Developer/Xcode/DerivedData/CitronGIS-hbleujvtpqvaycgaaxzelnfvkdxm/Build/Products/Debug-iphoneos/libProj4.a"; sourceTree = "<group>"; };
@@ -1009,6 +1013,8 @@
 				6DA30CFA1B178630007A3005 /* TileSource.swift */,
 				6DAE583D1B31431900984B3E /* LRUCache.swift */,
 				6D9004831B32AE1400EA2BC7 /* TileSphericalMercator.swift */,
+				6DD070361B37763900BCE704 /* QueueTask.swift */,
+				6DD0703B1B37932800BCE704 /* TilesCache.swift */,
 			);
 			name = SchemaBase;
 			sourceTree = "<group>";
@@ -2332,12 +2338,14 @@
 				6D3579761A8415B7001BCADA /* Extent.swift in Sources */,
 				6D19EB241A47918700956371 /* SignInViewController.swift in Sources */,
 				6DD8913C1A12A4E400C81F0E /* NSThread+performBlock.m in Sources */,
+				6DD0703C1B37932800BCE704 /* TilesCache.swift in Sources */,
 				6DD890D91A12A4E300C81F0E /* CCSpriteBatchNode.m in Sources */,
 				6DD890291A12A4E300C81F0E /* CCEffectBrightness.m in Sources */,
 				6DD8915E1A12A4E400C81F0E /* OALAudioTrackNotifications.m in Sources */,
 				6DD891251A12A4E400C81F0E /* CCFileUtils.m in Sources */,
 				6DD8904A1A12A4E300C81F0E /* CCAction.m in Sources */,
 				6DD891841A12A4E400C81F0E /* ALWrapper.m in Sources */,
+				6DD070371B37763900BCE704 /* QueueTask.swift in Sources */,
 				6DD891CE1A12A4E400C81F0E /* CCBsequence.m in Sources */,
 				6DD891B91A12A4E400C81F0E /* CCTableView.m in Sources */,
 				6DD6F6081AD20BA000656CBE /* Polyline.swift in Sources */,

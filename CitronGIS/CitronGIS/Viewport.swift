@@ -84,6 +84,7 @@ class Viewport
     {
         schema.setTranslation(self, tx: tx, ty: ty)
         schema.update(self)
+        self.throwEventMove()
     }
     func rotate(angle:Double)
     {
@@ -93,13 +94,16 @@ class Viewport
     func zoomT(resolution:Double)
     {
         self.resolution += resolution
-        println("\(self.resolution)")
         schema.update(self)
+        self.throwEventResolutionChange()
+        self.throwEventMove()
     }
     func zoom(resolution:Double)
     {
         self.resolution = resolution
         schema.update(self)
+        self.throwEventResolutionChange()
+        self.throwEventMove()
     }
     
     func resize(width:UInt, height:UInt)

@@ -89,7 +89,8 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         }
         else
         {
-            self.viewport.zoomT((firstZ - Double(scale)) * 30000)
+            var d = (firstZ - Double(scale)) / 2.0
+            self.viewport.zoom(self.viewport.resolution * (1 + d))
             firstZ = Double(scale)
             self.renderer.updatePositions(layerManager)
         }
@@ -109,7 +110,6 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         }
         else
         {
-            
             self.viewport.translate(Double(firstX - translatedPoint.x), ty: Double(firstY - translatedPoint.y))
             firstX = translatedPoint.x
             firstY = translatedPoint.y
@@ -161,40 +161,10 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
 //        let tiles = TileLayer(tileSource: , tileSchema: SphericalMercator())
         let tiles = TileLayer(tileSource: TMSSource(sourceUrl: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}.png", sourceServer: nil), tileSchema: TileSphericalMercator())
         
-        
-//        var osm = new C.Layer.Tile.TileLayer({
-//            
-//            name: 'Open Street Map',
-//            
-//            //http://bcdcspatial.blogspot.com/2012/01/onlineoffline-mapping-map-tiles-and.html
-//            source: new C.Layer.Tile.Source.TMSSource({
-//            //url: 'http://mt3.google.com/vt/lyrs=s,h&z={z}&x={x}&y={y}'/*,
-//            /*server: undefined*/
-//            url: 'http://{server}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-//            server: ['a', 'b', 'c']
-//            //url: 'http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}.png'
-//            //url: 'http://mt0.google.com/vt/lyrs=m@169000000&hl=en&x={x}&y={y}&z={z}&s=Ga'
-//            //url: 'https://a.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q'
-//            /*url: 'http://{server}.tile.stamen.com/toner/{z}/{x}/{y}.png',
-//            server: ['a', 'b', 'c']*/
-//        }),
-//        
-//        schema: C.Layer.Tile.Schema.SphericalMercator
-//        
-//    });
-        
         let layer = Layer()
         grp.addLayer(tiles)
+        grp.addLayer(layer)
         
-        let feature3 = Image(name: "baseImage.png")
-//        let feature3 = Image(url: "http://www.progonos.com/furuti/MapProj/Dither/ProjConf/Img/ad36-s200-0.5.png", success: { () -> () in
-//        
-//        }) { (op, err) -> () in
-//            
-//        }
-        feature3.setSize(CGSizeMake(256, 256))
-        feature3.location = GeometryPoint(fromPosx: 0, andY: 0, andZ: 0, andProj: ProjectionHelper.WSG84())
-        layer.addFeature(feature3)
         
         
         let feature2 = Circle()
@@ -294,7 +264,7 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         
         
 //        re = self.jscontext.evaluateScript("fileChanged(\"\(base64Str!)\");")
-//        
+//
 //        
 //        filePath = NSBundle.mainBundle().pathForResource("chat", ofType: "zip")
 //        data = NSFileManager.defaultManager().contentsAtPath(filePath!)

@@ -16,6 +16,9 @@
 // -----------------------------------------------------------------------
 
 @implementation IntroScene
+{
+    CCNodeColor *background;
+}
 
 // -----------------------------------------------------------------------
 #pragma mark - Create & Destroy
@@ -35,7 +38,7 @@
     
     
     // Create a colored background (Dark Grey)
-    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
+    background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
     [self addChild:background];
 //
 //    // Hello world
@@ -72,9 +75,18 @@
 
 -(void)update:(CCTime)delta
 {
+    if (background.parent == nil)
+    {
+        [self addChild:background];
+    }
 //    NSLog(@"update");
 }
 
+-(void)onEnter
+{
+    [super onEnter];
+
+}
 
 -(void)addChild:(CCNode *)node
 {

@@ -61,9 +61,12 @@ class IntersectionHelper {
         return true
     }
     
+    
+    
     class func polygonContainsPolygon(p1:[Vector2], p2:[Vector2]) -> Bool
     {
-        if (IntersectionHelper.polygonContainsPoint(p2, p: p2[0]))
+//        return (p1[0].x < p2[1].x && p1[1].x > p2[0].x && p1[0].y > p2[2].y && p1[2].y < p2[0].y)
+        if (IntersectionHelper.polygonContainsPoint(p2, p: p1[0]))
         {
             return true
         }
@@ -87,6 +90,6 @@ class IntersectionHelper {
             }
             ++i
         }
-        return (IntersectionHelper.polygonContainsPoint(p1, p: p2[0]))
+        return IntersectionHelper.polygonContainsPoint(p1, p: p2[0])
     }
 }

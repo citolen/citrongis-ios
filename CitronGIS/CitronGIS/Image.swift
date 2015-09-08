@@ -28,6 +28,33 @@ class Image: Feature {
         re.setSize(self.size)
         return re
     }
+    func fadeOut(dur:NSTimeInterval, done:()->())
+    {
+        var fadeOut = CCActionFadeIn(duration: dur)
+        var endBlock = CCActionCallBlock(block: done)
+        var action = CCActionSequence(one: fadeOut, two: endBlock)
+        action.tag = 1
+        
+        self.node.runAction(action)
+    }
+    func cancelActions()
+    {
+        if let action = node.getActionByTag(1) {
+            action.stop()
+        }
+    }
+    func fadeIn(dur:NSTimeInterval, done:()->())
+    {
+        var fadeIn = CCActionFadeIn(duration: dur)
+        var endBlock = CCActionCallBlock(block: done)
+        var action = CCActionSequence(one: fadeIn, two: endBlock)
+        action.tag = 1
+        self.node.runAction(action)
+    }
+    func setRotation(angle:Float)
+    {
+        node.rotation = (angle / Float(M_PI)) * 180.0
+    }
     func copy() -> Image
     {
         var re = Image()

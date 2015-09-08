@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Vector2
+class Vector2: Printable, DebugPrintable
 {
     var x: Double
     var y: Double
@@ -32,9 +32,15 @@ class Vector2
     {
         return p.x * x + p.y * y;
     }
-    var description: String {
-            return "\(x)-\(y)"
+    var description : String {
+        return "\(x),\(y)"
     }
+    var debugDescription : String {
+        return "\(x),\(y)"
+    }
+//    override var description: String {
+//            return "\(x)-\(y)"
+//    }
 }
 
 func ==(lhs: Vector2, rhs: Vector2) -> Bool

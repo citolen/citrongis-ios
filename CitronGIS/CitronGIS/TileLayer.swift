@@ -67,6 +67,7 @@ class TileLayer : Layer
             
             var location = self._tileSchema.tileToWorld(obj.1, resolution: VIEWPORT.resolution, size: rsize, anchor: 0.5)
             obj.0.setLocation(GeometryPoint(fromPosx: location.x, andY: location.y, andZ:0.0, andProj:ProjectionHelper.EPSG3857()))
+            obj.0.setRotation(Float(-VIEWPORT.rotation))
         }
         
 
@@ -83,6 +84,7 @@ class TileLayer : Layer
                 obj.0.setSize(CGSizeMake(CGFloat(trsize), CGFloat(trsize)))
                 let location = _tileSchema.tileToWorld(obj.1, resolution: VIEWPORT.resolution, size: trsize, anchor: 0.5)
                 obj.0.setLocation(GeometryPoint(fromPosx: location.x, andY: location.y, andZ:0.0, andProj:ProjectionHelper.EPSG3857()))
+                obj.0.setRotation(Float(-VIEWPORT.rotation))
             }
         }
     }
@@ -120,6 +122,7 @@ class TileLayer : Layer
         }
         feature.setLocation(pos)
         feature.setSize(CGSizeMake(CGFloat(rsize), CGFloat(rsize)))
+        feature.setRotation(Float(-VIEWPORT.rotation))
         self.addFeature(feature)
         
         _tileInView[key] = (feature, tile, -1)
@@ -130,9 +133,11 @@ class TileLayer : Layer
 //        {
 //            return
 //        }
-        
-        self.deleteSubstitute(key)
-        //animate fade in
+        if let o = _tileInView[key] {
+            o.0.fadeIn(0.3, done: { () -> () in
+                self.deleteSubstitute(key)
+            })
+        }
     }
     func addedTile(addedTiles:[Int64:TileIndex])
     {
@@ -146,10 +151,12 @@ class TileLayer : Layer
             {
                 _tileInView[key.0] = item
                 item.0.setSize(CGSizeMake(CGFloat(rsize), CGFloat(rsize)))
-                //item.0.rotation = -VIEWPORT.rotation
+                item.0.setRotation(Float(-VIEWPORT.rotation))
                 var location = _tileSchema.tileToWorld(item.1, resolution: VIEWPORT.resolution, size: rsize, anchor: 0.5)
                 item.0.setLocation(GeometryPoint(fromPosx: location.x, andY: location.y, andZ: 0.0, andProj: ProjectionHelper.EPSG3857()))
                 self.addFeature(item.0)
+                item.0.cancelActions()
+                item.0.node.opacity = 1.0
                 continue
             }
             else if (_loading.contains(key.0) == false)
@@ -216,7 +223,7 @@ class TileLayer : Layer
                     tiles.append((img, substitue.1, substitue.0))
                     self.addFeature(img)
                     
-                    //img.rotation = current rotation
+                    img.setRotation(Float(-VIEWPORT.rotation))
                     
                     
                 }
@@ -239,7 +246,7 @@ class TileLayer : Layer
                 f.setSize(CGSizeMake(CGFloat(trsize), CGFloat(trsize)))
                 var location = _tileSchema.tileToWorld(tile, resolution: VIEWPORT.resolution, size: trsize, anchor: 0.5)
                 f.setLocation(GeometryPoint(fromPosx: location.x, andY: location.y, andZ: 0, andProj: ProjectionHelper.EPSG3857()))
-                //                f.rotation = VIEWPORT.rotation
+                f.setRotation(Float(-VIEWPORT.rotation))
                 _substitution[tile._BId] = [(f, tile, -1)]
                 self.addFeature(f)
                 break

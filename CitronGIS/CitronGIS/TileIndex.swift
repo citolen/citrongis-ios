@@ -17,6 +17,15 @@ class TileIndex : Hashable {
         return Int(_BId)
     }
     
+    
+    init(x:Int, y:Int, z:Double, bid:Int64)
+    {
+        _x = Double(x)
+        _y = Double(y)
+        _z = z
+        _BId = bid
+    }
+    
     init(x:Double, y:Double, z:Double, bid:Int64)
     {
         _x = x
@@ -63,6 +72,11 @@ class TileIndex : Hashable {
         var y = floor(_y / 2.0)
         return TileIndex(x: x, y: y, z: z)
     }
+    func updateBid()
+    {
+        _BId = TileIndex.createBid(_x, y: _y, z: _z)
+    }
+    
     func levelDown() -> [TileIndex]
     {
         var z = _z + 1

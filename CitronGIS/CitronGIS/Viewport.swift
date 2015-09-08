@@ -29,6 +29,8 @@ class Viewport
     var scaleFactor = CCDirector.sharedDirector().contentScaleFactor
     var onResolutionChange:[String:() -> Void] = [:]
     var onMove:[String:() -> Void] = [:]
+    var resolutionDirty = true
+    var moveDirty = true
     
     init(width:UInt, andHeight height:UInt, andResolution resolution:Double, andSchema schema:SchemaBase, andOrigin origin:Vector2, andRotation rotation:Double)
     {
@@ -77,33 +79,51 @@ class Viewport
     func translate(tx:Double, ty:Double)
     {
         schema.translate(self, tx: tx, ty: ty)
-        schema.update(self)
-        self.throwEventMove()
+        self.moveDirty = true
     }
     func setTranslation(tx:Double, ty:Double)
     {
         schema.setTranslation(self, tx: tx, ty: ty)
-        schema.update(self)
-        self.throwEventMove()
+        self.moveDirty = true
     }
     func rotate(angle:Double)
     {
         schema.rotate(self, angle: angle)
-        schema.update(self)
+        self.resolutionDirty = true
     }
+    
+
+    
     func zoomT(resolution:Double)
     {
+
+        
         self.resolution += resolution
         schema.update(self)
         self.throwEventResolutionChange()
         self.throwEventMove()
     }
+    func update()
+    {
+        if (self.resolutionDirty)
+        {
+            schema.update(self)
+            self.throwEventResolutionChange()
+            self.throwEventMove()
+            self.moveDirty = false
+            self.resolutionDirty = false
+        }
+        if (self.moveDirty)
+        {
+            schema.update(self)
+            self.throwEventMove()
+            self.moveDirty = false
+        }
+    }
     func zoom(resolution:Double)
     {
         self.resolution = resolution
-        schema.update(self)
-        self.throwEventResolutionChange()
-        self.throwEventMove()
+        self.resolutionDirty = true
     }
     
     func resize(width:UInt, height:UInt)

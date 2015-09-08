@@ -19,9 +19,11 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
     
     var pangesture:UIPanGestureRecognizer!
     var pinchGesture:UIPinchGestureRecognizer!
-    var firstX:CGFloat!
-    var firstY:CGFloat!
+    var rotateGesture:UIRotationGestureRecognizer!
     var firstZ:Double!
+    var firstT:Double!
+    var currentSpeed = CGPointZero
+    
     
     let scriptToLoad = ["jszip",
                         "proj4",
@@ -64,7 +66,31 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         
     }
     
+
+    func inertia()
+    {
+        if (currentSpeed.x != 0 || currentSpeed.y != 0)
+        {
+            let deltaUpd = CGFloat(0.016)
+            
+            self.viewport.translate(Double(-deltaUpd * currentSpeed.x), ty: Double(-deltaUpd * currentSpeed.y))
+            currentSpeed.x *= 0.93
+            currentSpeed.y *= 0.93
+            
+            self.renderer.updatePositions(layerManager)
+            
+            if (abs(currentSpeed.x) < 0.1 && abs(currentSpeed.y) < 0.1)
+            {
+                currentSpeed = CGPointZero
+            }
+        }
+    }
+    
     override func mainLoop(sender: AnyObject!) {
+        if (self.viewport != nil) {
+            self.inertia()
+            self.viewport.update()
+        }
         super.mainLoop(sender)
     }
     
@@ -75,13 +101,36 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+    }
+    func didRotate(sender:UIRotationGestureRecognizer!)
+    {
+        var rotate = sender.rotation
+        if (sender.state == UIGestureRecognizerState.Began) {
+            firstT = Double(sender.rotation)
+        }
+        else if (sender.state == UIGestureRecognizerState.Ended)
+        {
+            firstT = nil
+        }
+        else
+        {
+            var delta = firstT - Double(rotate)
+            
+            firstT = Double(rotate)
+            
+            
+            self.viewport.rotate(delta)            
+        }
     }
     func didPinch(sender:UIPinchGestureRecognizer!)
     {
         var scale = sender.scale
+        let translatedPoint = sender.locationInView(self.webView)
+        let delta = CGPointMake(translatedPoint.x - self.webView.frame.size.width / 2.0, translatedPoint.y - self.webView.frame.size.height / 2.0)
+        
         if (sender.state == UIGestureRecognizerState.Began) {
             firstZ = Double(scale)
+            currentSpeed = CGPointZero
         }
         else if (sender.state == UIGestureRecognizerState.Ended)
         {
@@ -90,32 +139,33 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         else
         {
             var d = (firstZ - Double(scale)) / 2.0
+            self.viewport.translate(Double(delta.x), ty: Double(delta.y))
             self.viewport.zoom(self.viewport.resolution * (1 + d))
+            self.viewport.translate(Double(-delta.x), ty: Double(-delta.y))
             firstZ = Double(scale)
             self.renderer.updatePositions(layerManager)
         }
     }
     func didPan(sender:UIPanGestureRecognizer!)
     {
-        var translatedPoint = sender.translationInView(self.webView)
+        let translatedPoint = sender.translationInView(self.webView)
         
-        if (sender.state == UIGestureRecognizerState.Began) {
-            firstX = 0
-            firstY = 0
+        
+        
+
+        if (sender.state == UIGestureRecognizerState.Began)
+        {
+            self.currentSpeed = CGPointZero
         }
         else if (sender.state == UIGestureRecognizerState.Ended)
         {
-            firstX = nil
-            firstY = nil
-        }
-        else
-        {
-            self.viewport.translate(Double(firstX - translatedPoint.x), ty: Double(firstY - translatedPoint.y))
-            firstX = translatedPoint.x
-            firstY = translatedPoint.y
-            self.renderer.updatePositions(layerManager)
+            self.currentSpeed = sender.velocityInView(self.webView)
+            return
         }
         
+        self.viewport.translate(Double(-translatedPoint.x), ty: Double(-translatedPoint.y))
+        self.renderer.updatePositions(layerManager)
+        sender.setTranslation(CGPointZero, inView: self.webView)
     }
     
 
@@ -150,6 +200,7 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         webView.scrollView.scrollEnabled = false
         webView.addGestureRecognizer(pangesture)
         webView.addGestureRecognizer(pinchGesture)
+        webView.addGestureRecognizer(rotateGesture)
         self.currentScene = CCDirector.sharedDirector().runningScene
         
         
@@ -159,7 +210,7 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         
         
 //        let tiles = TileLayer(tileSource: , tileSchema: SphericalMercator())
-        let tiles = TileLayer(tileSource: TMSSource(sourceUrl: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}.png", sourceServer: nil), tileSchema: TileSphericalMercator())
+        let tiles = TileLayer(tileSource: TMSSource(sourceUrl: "http://mt0.google.com/vt/lyrs=m@169000000&hl=en&x={x}&y={y}&z={z}&s=Ga", sourceServer: nil), tileSchema: TileSphericalMercator())
         
         let layer = Layer()
         grp.addLayer(tiles)
@@ -313,7 +364,8 @@ class CitronGISMainViewController: CCDirectorDisplayLink, PullableViewDelegate, 
         pangesture.delegate = self
         pinchGesture = UIPinchGestureRecognizer(target: self, action: "didPinch:")
         pinchGesture.delegate = self
-        
+        rotateGesture = UIRotationGestureRecognizer(target: self, action: "didRotate:")
+        rotateGesture.delegate = self
         webView.delegate = self
         self.jscontext = webView.valueForKeyPath("documentView.webView.mainFrame.javaScriptContext") as! JSContext
         

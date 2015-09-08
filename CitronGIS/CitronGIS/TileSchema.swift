@@ -210,7 +210,7 @@ class TileSchema
         let x = floor(tile._x)
         let y = floor(tile._y)
   
-        let tcenter = tileToWorld(TileIndex(x: x + 0.5, y: y + 0.5, z: tile._z, bid: tile._BId), resolution: resolution, size: size)
+        let tcenter = tileToWorld(TileIndex(x: x + 0.5, y: y + 0.5, z: tile._z, bid: tile._BId), resolution: resolution, size: size, anchor:0.0)
         let half = (size / 2) * resolution;
         let topLeft = Vector2(fromPosx: tcenter.x - half, andY: tcenter.y + half)
         let topRight = Vector2(fromPosx: tcenter.x + half, andY: tcenter.y + half)
@@ -227,71 +227,61 @@ class TileSchema
         {
             var zoom = self.getZoomLevel(viewport.resolution)
             _resolution = _resolutions[zoom]
-            
             let size = Double(_resolution) / Double(viewport.resolution) * Double(_tileWidth)
-            
-            let bound = _bounds[zoom]
-            let center = self.worldToTile(viewport.origin, resolution: viewport.resolution, size: size)
-            center._x = floor(center._x)
-            center._y = floor(center._y)
-            
-            let polyBox = [viewport.boundingBox.topLeft, viewport.boundingBox.topRight, viewport.boundingBox.botLeft, viewport.boundingBox.botRight]
-            
-            var cost = 0
+            let bound = Double(_bounds[zoom])
+
             self.mergeTiles()
             
-            var addedTilesCount = 0
             _addedTiles.removeAll(keepCapacity: true)
-            
-            var removedTilesCount = 0
             _removedTiles.removeAll(keepCapacity: true)
             
-            var explored = Set<Int64>()
-            var tiles = Set<Int64>()
+            var tiles = [Int64: TileIndex]()
 
-            var rSearch:TileIndex->Void = recursiveBlockTile{tile, search in
-                explored.insert(tile._BId)
-                var tilePoly = self.tileToPoly(tile, resolution: self._resolution, size: size)
+            
 
-//                println("polyBox:\(polyBox[0]), \(polyBox[1]), \(polyBox[2]), \(polyBox[3]), tilePoly:\(tilePoly[0]), \(tilePoly[1]), \(tilePoly[2]), \(tilePoly[3])")
-                if (IntersectionHelper.polygonContainsPolygon(polyBox, p2: tilePoly))
-                {
-                    if (tile._x >= 0 && tile._x < Double(bound) && tile._y >= 0 && tile._y < Double(bound))
-                    {
-                        tiles.insert(tile._BId)
-                        if ((self._unchangedTiles[tile._BId]) != nil) {
-                            self._addedTiles[tile._BId] = tile
-                            ++addedTilesCount
-                        }
-                    }
-                    var x = floor(tile._x)
-                    var y = floor(tile._y)
-                    
-                    var nb = [TileIndex(x: x - 1, y: y, z: tile._z),
-                        TileIndex(x: x + 1, y: y, z: tile._z),
-                        TileIndex(x: x, y: y - 1, z: tile._z),
-                        TileIndex(x: x, y: y + 1, z: tile._z)]
-                    for idx in nb {
-                        if explored.contains(idx._BId) == false {
-                            search(idx)
-                        }
+            let bbox = [self.worldToTile(VIEWPORT.boundingBox.topLeft, resolution: VIEWPORT.resolution, size: size), self.worldToTile(VIEWPORT.boundingBox.topRight, resolution: VIEWPORT.resolution, size: size), self.worldToTile(VIEWPORT.boundingBox.botRight, resolution: VIEWPORT.resolution, size: size), self.worldToTile(VIEWPORT.boundingBox.botLeft, resolution: VIEWPORT.resolution, size: size)]
+            
+            
+            var minX = Double.infinity
+            var maxX = 0.0
+            var minY = Double.infinity
+            var maxY = 0.0
+            
+            for l in bbox {
+                minX = min(l._x, minX)
+                maxX = max(l._x, maxX)
+                minY = min(l._y, minY)
+                maxY = max(l._y, maxY)
+            }
+            minX = floor(minX)
+            maxX = ceil(maxX)
+            minY = floor(minY)
+            maxY = ceil(maxY)
+            
+            for var y = minY; y < maxY; ++y {
+                for var x = minX; x < maxX; ++x {
+                    var tile = TileIndex(x: x, y: y, z: bbox[0]._z)
+                    tiles[tile._BId] = tile
+                    if _unchangedTiles[tile._BId] == nil {
+                        _addedTiles[tile._BId] = tile
                     }
                 }
             }
-            rSearch(center)
             
             for key in _unchangedTiles {
-                if (tiles.contains(key.0) == false) {
+                if (tiles[key.0] == nil) {
                     _removedTiles[key.0] = _unchangedTiles[key.0]
-                    ++removedTilesCount
+                    _unchangedTiles.removeValueForKey(key.0)
                 }
             }
-            if (removedTilesCount > 0) {
+            
+            if (_removedTiles.count > 0) {
                 throwEventRemoveTiles()
             }
-            if (addedTilesCount > 0) {
+            if (_addedTiles.count > 0) {
                 throwEventAddTiles()
             }
+
         }
         else
         {

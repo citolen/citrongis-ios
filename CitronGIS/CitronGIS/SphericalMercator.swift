@@ -15,24 +15,32 @@ class SphericalMercator : SchemaBase
         super.init(name: "SphericalMercator", andCrs:ProjectionHelper.EPSG3857() , withOriginX: -20037508.342789, withOriginY: -20037508.342789, andBoudingBox: Extent(minX: -20037508.342789, andMinY: -20037508.342789, andMaxX: 20037508.342789, andMaxY: 20037508.342789))
     }
     override func translate(viewport: Viewport, tx: Double, ty: Double) {
-        var mx = viewport.resolution * Double(tx)
-        var my = viewport.resolution * Double(ty)
+        
+        var rx = tx, ry = ty
+        
+
+        if (VIEWPORT.rotation != 0) {
+            let cosAngle = cos(VIEWPORT.rotation)
+            let sinAngle = sin(VIEWPORT.rotation)
+            
+            
+            rx = tx * cosAngle - ty * sinAngle
+            ry = tx * sinAngle + ty * cosAngle
+        }
+        
+        var mx = viewport.resolution * Double(rx)
+        var my = viewport.resolution * Double(ry)
         
         viewport.origin.x += mx
         viewport.origin.y -= my
     }
-    override func setTranslation(viewport: Viewport, tx: Double, ty: Double) {
-        var mx = viewport.resolution * Double(tx)
-        var my = viewport.resolution * Double(ty)
-        
-        viewport.origin.x = -mx
-        viewport.origin.y = my
-    }
+    
     override func rotate(viewport: Viewport, angle: Double) {
         var pid = 2.0 * M_PI
         
-        viewport.rotation = (viewport.rotation + (angle * M_PI / 180) + pid) % pid
+        viewport.rotation = (viewport.rotation + (angle) + pid) % pid
     }
+    
     
     override func update(viewport: Viewport) {
         var halfScreenMX = (viewport.resolution * Double(viewport.width)) / 2
@@ -40,8 +48,8 @@ class SphericalMercator : SchemaBase
         
         if (abs(viewport.rotation) > 0.01)
         {
-            var cosAngle = cos(viewport.rotation)
-            var sinAngle = sin(viewport.rotation)
+            var cosAngle = cos(-viewport.rotation)
+            var sinAngle = sin(-viewport.rotation)
             
             var CosX = halfScreenMX * cosAngle;
             var SinX = halfScreenMX * sinAngle;

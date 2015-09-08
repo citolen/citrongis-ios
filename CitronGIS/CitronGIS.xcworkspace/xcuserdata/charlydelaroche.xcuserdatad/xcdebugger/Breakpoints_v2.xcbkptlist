@@ -19,22 +19,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CitronGIS/CitronGISMainViewController.swift"
-            timestampString = "456345055.645042"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "didPan(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CitronGIS/Classes/IntroScene.m"
             timestampString = "456348730.441298"
             startingColumnNumber = "9223372036854775807"
@@ -244,7 +228,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/Viewport.swift"
-            timestampString = "456622043.308489"
+            timestampString = "463144312.684387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -324,11 +308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/SphericalMercator.swift"
-            timestampString = "447114161.081411"
+            timestampString = "463144673.145041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "worldToScreen(_:wx:wy:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -340,11 +324,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/SphericalMercator.swift"
-            timestampString = "447114473.444247"
+            timestampString = "463144673.145041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "worldToScreen(_:wx:wy:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -372,11 +356,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/SphericalMercator.swift"
-            timestampString = "447115578.126723"
+            timestampString = "463144673.145041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "worldToScreen(_:wx:wy:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -420,11 +404,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/CitronGISMainViewController.swift"
-            timestampString = "456345055.645042"
+            timestampString = "463151558.914375"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "didPinch(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -436,12 +420,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/Image.swift"
-            timestampString = "456628308.517308"
+            timestampString = "462976484.533065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "setAnchorPoint(_:)"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "setSize(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -452,11 +436,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/Image.swift"
-            timestampString = "456628308.517308"
+            timestampString = "462976484.533065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "setImageWithUrl(_:success:error:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -484,11 +468,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456611102.465335"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "369"
-            endingLineNumber = "369"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "recursiveBlockSubstitute(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -500,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456342836.655934"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -515,44 +499,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CitronGIS/CitronGISMainViewController.swift"
-            timestampString = "456609693.703485"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "didPan(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CitronGIS/Viewport.swift"
-            timestampString = "456609656.398057"
+            timestampString = "458186656.501681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "translate(_:ty:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/Viewport.swift"
-            timestampString = "456309155.68567"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "registerToEventMove(_:key:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -628,11 +580,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456344263.760297"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -644,103 +596,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456344263.760297"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "computeTile(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456342836.655934"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
-            landmarkName = "computeTile(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456344263.760297"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
-            landmarkName = "computeTile(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/IntersectionHelper.swift"
-            timestampString = "456338275.803679"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "polygonContainsPolygon(_:p2:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/IntersectionHelper.swift"
-            timestampString = "456338313.068689"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "polygonContainsPolygon(_:p2:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456344263.760297"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
-            landmarkName = "computeTile(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456344263.760297"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "298"
@@ -756,11 +612,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456611102.465335"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "361"
-            endingLineNumber = "361"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -772,39 +628,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456611102.465335"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
-            landmarkName = "computeTile(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
-            landmarkName = "computeTile(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "304"
@@ -820,11 +644,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -836,11 +660,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "323"
-            endingLineNumber = "323"
+            startingLineNumber = "366"
+            endingLineNumber = "366"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -852,7 +676,55 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "329"
@@ -868,11 +740,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -996,11 +884,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1012,11 +900,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1028,11 +916,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1044,11 +932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/Viewport.swift"
-            timestampString = "456343124.765111"
+            timestampString = "458186656.501681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "init(width:andHeight:andResolution:andSchema:andOrigin:andRotation:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1092,11 +980,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456611102.465335"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "358"
-            endingLineNumber = "358"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1108,11 +996,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456611102.465335"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1124,11 +1012,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456611102.465335"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1139,28 +1027,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CitronGIS/Viewport.swift"
-            timestampString = "456622043.308489"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "zoomT(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456611102.465335"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1188,11 +1060,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1204,11 +1076,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1268,11 +1140,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileSchema.swift"
-            timestampString = "456610940.74844"
+            timestampString = "463393238.153979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
             landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1316,13 +1188,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/Image.swift"
-            timestampString = "456628308.517308"
+            timestampString = "462976484.533065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "render(_:)"
-            landmarkType = "5">
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "Image"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1380,11 +1252,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileLayer.swift"
-            timestampString = "456621198.816632"
+            timestampString = "462975904.256856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "resolutionChanged()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1396,11 +1268,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileLayer.swift"
-            timestampString = "456621198.816632"
+            timestampString = "462975904.256856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "resolutionChanged()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1412,7 +1284,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/Image.swift"
-            timestampString = "456616559.227709"
+            timestampString = "459110596.118797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -1428,11 +1300,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileLayer.swift"
-            timestampString = "456621589.641285"
+            timestampString = "462976264.598532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "TileLayer"
             landmarkType = "3">
          </BreakpointContent>
@@ -1444,11 +1316,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileLayer.swift"
-            timestampString = "456621589.641285"
+            timestampString = "462976264.598532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "createSubstitute(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1460,11 +1332,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileLayer.swift"
-            timestampString = "456621589.641285"
+            timestampString = "462976264.598532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
             landmarkName = "createSubstitute(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1476,11 +1348,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/TileLayer.swift"
-            timestampString = "456621198.816632"
+            timestampString = "462975904.256856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "loadTile(_:callbackuuid:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1536,7 +1408,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CitronGIS/LRUCache.swift"
@@ -1578,6 +1450,326 @@
             startingLineNumber = "72"
             endingLineNumber = "72"
             landmarkName = "add(_:value:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/Viewport.swift"
+            timestampString = "463144312.684387"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "rotate(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/CitronGISMainViewController.swift"
+            timestampString = "463151558.914375"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "didRotate(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/Image.swift"
+            timestampString = "462976371.692998"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setRotation(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/Image.swift"
+            timestampString = "462976484.533065"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "setRotation(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/CitronGISMainViewController.swift"
+            timestampString = "463151558.914375"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "didRotate(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/IntersectionHelper.swift"
+            timestampString = "462983186.094372"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "polygonContainsPoint(_:p:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/IntersectionHelper.swift"
+            timestampString = "462983194.36348"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "polygonContainsPoint(_:p:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "462996411.927457"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "tileToPoly(_:resolution:size:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "462996429.94916"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "tileToPoly(_:resolution:size:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/SphericalMercator.swift"
+            timestampString = "463144673.145041"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "update(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/SphericalMercator.swift"
+            timestampString = "463144673.145041"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "update(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/SphericalMercator.swift"
+            timestampString = "463144673.145041"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "update(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463086213.753408"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "tileToPoly(_:resolution:size:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463086222.231982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "tileToPoly(_:resolution:size:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "computeTile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CitronGIS/TileSchema.swift"
+            timestampString = "463393238.153979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "computeTile(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
